@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 
 const backgrounds = [
   "/assets/images/back01.webp",
-  "/assets/images/back02.webp",
+  "/assets/images/back02.png",
   "/assets/images/back03.jpg",
   "/assets/images/back04.jpg"
 ];
