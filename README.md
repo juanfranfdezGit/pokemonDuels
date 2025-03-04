@@ -1,8 +1,7 @@
-Pokémon Card Game
+Pokémon Duels!
 
 
-
-Bienvenido a Pokémon Duels, un juego de cartas inspirado en el universo Pokémon, construido con React, SASS y utilizando la API de PokeAPI para obtener datos dinámicos sobre los Pokémon.
+Bienvenido a Pokémon Duels, un juego de cartas inspirado en el universo Pokémon, construido con React, SASS y utilizando la API de PokeAPI para obtener datos dinámicos sobre los Pokémon. Este proyecto es solo para practicar programación y sin ánimo de lucro.
 
 🚀 Tecnologías Utilizadas
 
