@@ -1,0 +1,22 @@
+@import '_variables.scss';
+@import '_opening.scss';
+@import '_mainMenu.scss';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: $white;
+    overflow: hidden;
+}
+
+a {
+    color: $textColorPrimary;
+}
+
+li {
+    list-style: none;
+}

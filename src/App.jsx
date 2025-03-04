@@ -1,11 +1,13 @@
-import PokemonService from "./services/pokeService";
+import Opening from "./views/opening";
+import MainMenu from "./views/mainMenu";
 
 function App() {
 
   return (
     <>
-      <h1>Pokémon Duels! Card Game</h1>
-      <PokemonService /> {/* Renderiza el servicio */}
+      <Opening />
+
+      <MainMenu />
     </>
   );
 }
