@@ -1,70 +1,58 @@
-# Getting Started with Create React App
+Pokémon Card Game
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
 
-In the project directory, you can run:
+Bienvenido al Pokémon Card Game, un juego de cartas inspirado en el universo Pokémon, construido con React, SASS y utilizando la API de PokeAPI para obtener datos dinámicos sobre los Pokémon.
 
-### `npm start`
+🚀 Tecnologías Utilizadas
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+React ⚛️ - Para una interfaz interactiva y dinámica.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+SASS 🎨 - Para estilos más organizados y reutilizables.
 
-### `npm test`
+PokeAPI 🐉 - Para obtener datos en tiempo real de los Pokémon.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+🛠 Instalación y Configuración
 
-### `npm run build`
+Sigue estos pasos para clonar y ejecutar el proyecto en tu entorno local:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1️⃣ Clonar el repositorio
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+  git clone https://github.com/tu-usuario/pokemonDuels.git
+  cd pokemonDuels
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+2️⃣ Instalar dependencias
 
-### `npm run eject`
+  npm install
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+3️⃣ Ejecutar el servidor de desarrollo
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+  npm start
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Luego, abre http://localhost:3000 en tu navegador para ver el proyecto en acción.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+🌟 Contribuciones
 
-## Learn More
+Este proyecto está en constante desarrollo, y cualquier aporte es bienvenido. Si deseas contribuir:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Haz un fork del repositorio.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Crea una rama con tu nueva funcionalidad o corrección de errores.
 
-### Code Splitting
+git checkout -b feature/nueva-funcionalidad
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Realiza tus cambios y haz un commit.
 
-### Analyzing the Bundle Size
+git commit -m "Agregada nueva funcionalidad X"
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Envía un pull request y lo revisaremos pronto. 😊
 
-### Making a Progressive Web App
+📌 Roadmap y Futuras Mejoras
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+✅ Implementación de las cartas con datos de PokéAPI.🔜 Sistema de combate entre cartas.🔜 Creación de oponentes a los que enfrentar.🔜 Mejoras en el diseño y animaciones. 🔜 Guardar partida en local para no perder progreso.
 
-### Advanced Configuration
+🤝 Contacto y Comunidad
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Si tienes dudas, sugerencias o simplemente quieres comentar sobre el proyecto, ¡no dudes en escribir un issue o unirte a la comunidad! 🎮
 
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+📧 Email: jfranromfdez@gmail.com
