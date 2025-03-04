@@ -2,7 +2,7 @@ Pokémon Card Game
 
 
 
-Bienvenido al Pokémon Card Game, un juego de cartas inspirado en el universo Pokémon, construido con React, SASS y utilizando la API de PokeAPI para obtener datos dinámicos sobre los Pokémon.
+Bienvenido a Pokémon Duels, un juego de cartas inspirado en el universo Pokémon, construido con React, SASS y utilizando la API de PokeAPI para obtener datos dinámicos sobre los Pokémon.
 
 🚀 Tecnologías Utilizadas
 
@@ -18,7 +18,7 @@ Sigue estos pasos para clonar y ejecutar el proyecto en tu entorno local:
 
 1️⃣ Clonar el repositorio
 
-  git clone https://github.com/tu-usuario/pokemonDuels.git
+  git clone https://github.com/juanfranfdezGit/pokemonDuels
   cd pokemonDuels
 
 2️⃣ Instalar dependencias
