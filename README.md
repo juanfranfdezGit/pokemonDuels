@@ -9,7 +9,7 @@ React ⚛️ - Para una interfaz interactiva y dinámica.
 
 SASS 🎨 - Para estilos más organizados y reutilizables.
 
-PokeAPI 🐉 - Para obtener datos en tiempo real de los Pokémon.
+API 🐉 - Los datos de los Pokemons serán agregados desde un JSON.
 
 
 ## 🛠 Instalación y Configuración
@@ -52,7 +52,7 @@ Envía un pull request y lo revisaremos pronto. 😊
 
 ## 📌 Roadmap y Futuras Mejoras
 
-✅ Implementación de las cartas con datos de PokéAPI.\
+🔜 Creación de la API .\
 🔜 Sistema de combate entre cartas.\
 🔜 Creación de oponentes a los que enfrentar.\
 🔜 Mejoras en el diseño y animaciones.\
