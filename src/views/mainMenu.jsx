@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import Pokedex from "./pokedex";
 
 const backgrounds = [
   "/assets/images/back01.webp",
@@ -33,6 +34,7 @@ function MainMenu() {
       <section className={`gameMenu ${goGame ? "goGame" : ""}`}>
         <h2>IN GAME</h2>
         <button onClick={handleGoGame}>OUT</button>
+        <Pokedex />
       </section>
     </>
   );
