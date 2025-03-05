@@ -20,3 +20,12 @@ a {
 li {
     list-style: none;
 }
+
+button {
+    border: none;
+    transition: all .5s;
+
+    &:hover {
+        cursor: pointer;
+    }
+}

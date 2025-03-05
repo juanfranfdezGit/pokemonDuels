@@ -1,3 +1,7 @@
+@font-face {
+  font-family: "graffiti";
+  src: url("../../public/assets/fonts/freshmarker.ttf");
+}
 .pokeball__opening {
   width: 100vw;
   height: 100vh;
@@ -62,12 +66,60 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
   width: 100vw;
   height: 100vh;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  position: relative;
+}
+.mainMenu .mainMenu__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: rgba(255, 255, 255, 0.7882352941);
+  padding: 5rem 5rem 10rem 5rem;
+  border-radius: 15px;
+}
+.mainMenu .mainMenu__container .mainMenu__container-logo {
+  width: 20vw;
+  filter: drop-shadow(0 0 5px #111);
+}
+.mainMenu .mainMenu__container .mainMenu__container-title {
+  font-family: "graffiti";
+  font-size: 5rem;
+  font-weight: 400;
+  color: #111;
+  position: relative;
+  bottom: 30px;
+}
+.mainMenu .mainMenu__container .mainMenu__container-button {
+  padding: 1rem 4rem;
+  background: #3466af;
+  border-radius: 28px;
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: #f1f1f1;
+  margin-top: 2rem;
+}
+.mainMenu .mainMenu__container .mainMenu__container-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 5px #111;
+}
+
+.gameMenu {
+  width: 100vw;
+  height: 100vw;
+  background: #f1f1f1;
+  z-index: 10;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+}
+.gameMenu.goGame {
+  display: flex;
 }
 
 * {
@@ -87,6 +139,14 @@ a {
 
 li {
   list-style: none;
+}
+
+button {
+  border: none;
+  transition: all 0.5s;
+}
+button:hover {
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=style.css.map */

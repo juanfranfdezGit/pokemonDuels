@@ -1,11 +1,59 @@
+@import '_mixin.scss';
+
 .mainMenu {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+    @include set-flex;
     width: 100vw;
     height: 100vh;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    position: relative;
+
+    .mainMenu__container {
+        @include set-flex;
+        flex-direction: column;
+        background: $whiteOpacity;
+        padding: 5rem 5rem 10rem 5rem;
+        border-radius: 15px;
+        
+        .mainMenu__container-logo {
+            width: 20vw;
+            filter: drop-shadow(0 0 5px $secondaryColor);
+        }
+
+        .mainMenu__container-title {
+            font-family: 'graffiti';
+            @include font(5rem, 400, $secondaryColor);
+            position: relative;
+            bottom: 30px;
+        }
+
+        .mainMenu__container-button {
+            padding: 1rem 4rem;
+            background: $bluePoke;
+            border-radius: 28px;
+            @include font(1.3rem, 500, $white);
+            margin-top: 2rem;
+
+            &:hover {
+                transform: scale(1.05);
+                box-shadow: 0 0 5px $secondaryColor;
+            }
+        }
+    }
+}
+
+.gameMenu {
+    width: 100vw;
+    height: 100vw;
+    background: $white;
+    z-index: 10;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+
+    &.goGame {
+        display: flex;
+    }
 }
