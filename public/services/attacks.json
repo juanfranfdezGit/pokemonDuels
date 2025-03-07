@@ -1,0 +1,62 @@
+[
+    {
+        "Habilidad": "Látigo cepa",
+        "PH": 5,
+        "Efecto": "Sin efecto",
+        "Tipo": "Planta"
+    },
+    {
+        "Habilidad": "Hoja Afilada",
+        "PH": 5,
+        "Efecto": "Sin efecto",
+        "Tipo": "Planta"
+    },
+    {
+        "Habilidad": "Rayo Solar",
+        "PH": 3,
+        "Efecto": "Sin efecto",
+        "Tipo": "Planta"
+    },
+    {
+        "Habilidad": "Ascuas",
+        "PH": 5,
+        "Efecto": "Sin efecto",
+        "Tipo": "Fuego"
+    },
+    {
+        "Habilidad": "Llamarada",
+        "PH": 5,
+        "Efecto": "Quemadura",
+        "Tipo": "Fuego"
+    },
+    {
+        "Habilidad": "Mar de Llamas",
+        "PH": 3,
+        "Efecto": "Quemadura",
+        "Tipo": "Fuego"
+    },
+    {
+        "Habilidad": "Pistola Agua",
+        "PH": 5,
+        "Efecto": "Sin efecto",
+        "Tipo": "Agua"
+    },
+    {
+        "Habilidad": "Torrente",
+        "PH": 5,
+        "Efecto": "Sin efecto",
+        "Tipo": "Agua"
+    },
+    {
+        "Habilidad": "Polvo Escudo",
+        "PH": 7,
+        "Efecto": "+Defensa",
+        "Tipo": "Bicho"
+    },
+    {
+        "Habilidad": "Coraza",
+        "PH": 7,
+        "Efecto": "++Defensa",
+        "Tipo": "Bicho"
+    }
+]

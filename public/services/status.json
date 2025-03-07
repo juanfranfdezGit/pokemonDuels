@@ -1,0 +1,28 @@
+[
+    {
+        "Condición": "Quemadura",
+        "Efecto": "Reduce 1 punto de vida por turno",
+        "Duración": "2 turnos",
+        "Stats Afectados": {
+            "PS": -1
+        }
+    },
+    {
+        "Condición": "+Defensa",
+        "Efecto": "Aumenta 1 punto de defensa por turno",
+        "Duración": "3 turnos",
+        "Stats Afectados": {
+            "Defensa": 1,
+            "Defensa Especial": 1
+        }
+    },
+    {
+        "Condición": "++Defensa",
+        "Efecto": "Aumenta 3 punto de defensa por turno",
+        "Duración": "3 turnos",
+        "Stats Afectados": {
+            "Defensa": 3,
+            "Defensa Especial": 3
+        }
+    }
+]

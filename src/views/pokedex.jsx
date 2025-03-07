@@ -58,7 +58,8 @@ function Pokedex() {
                                         </div>
                                         <div>
                                             <p className="pokedex__pokemons__selected-info--label">Habilidad:</p>
-                                            <p className="pokedex__pokemons__selected-info--data">{selectedPokemon.Habilidad}</p>
+                                            <p className="pokedex__pokemons__selected-info--data 
+                                            pokedex__pokemons__selected-info--data-move">{selectedPokemon.Habilidad} <span>?</span></p>
                                         </div>         
                                     </div>
                                 </div>
