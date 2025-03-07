@@ -48,7 +48,7 @@ Realiza tus cambios y haz un commit.
    ```sh
 git commit -m "Agregada nueva funcionalidad X"
 ```
-Envía un pull request y lo revisaremos pronto. 😊
+Envía un pull request y lo reviso. 😊
 
 ## 📌 Roadmap y Futuras Mejoras
 
