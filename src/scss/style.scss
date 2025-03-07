@@ -1,6 +1,7 @@
 @import '_variables.scss';
 @import '_opening.scss';
 @import '_mainMenu.scss';
+@import '_pokedex.scss';
 
 * {
     margin: 0;
@@ -11,6 +12,7 @@
 body {
     background: $white;
     overflow: hidden;
+    font-family: 'satoshi';
 }
 
 a {

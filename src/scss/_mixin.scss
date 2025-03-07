@@ -9,3 +9,8 @@
     font-weight: $weight;
     color: $color;
 }
+
+@mixin typeColor ($type, $color) {
+    background: $type;
+    color: $color;
+}

@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import Pokedex from "./pokedex";
+import { useNavigate } from "react-router-dom";
 
 const backgrounds = [
   "/assets/images/back01.webp",
@@ -11,6 +11,7 @@ const backgrounds = [
 function MainMenu() {
   const [background, setBackground] = useState("");
   const [goGame, setGoGame] = useState(false);
+  const Navigate = useNavigate();
 
   useEffect(() => {
     const randomBg = backgrounds[Math.floor(Math.random() * backgrounds.length)];
@@ -19,6 +20,10 @@ function MainMenu() {
 
   function handleGoGame() {
     setGoGame(!goGame);
+  }
+
+  function navPokedex() {
+    Navigate('./pokedex')
   }
 
   return (
@@ -34,7 +39,7 @@ function MainMenu() {
       <section className={`gameMenu ${goGame ? "goGame" : ""}`}>
         <h2>IN GAME</h2>
         <button onClick={handleGoGame}>OUT</button>
-        <Pokedex />
+        <button onClick={navPokedex}>Pokedex</button>
       </section>
     </>
   );

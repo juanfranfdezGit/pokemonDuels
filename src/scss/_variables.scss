@@ -3,11 +3,30 @@
     src: url('../../public/assets/fonts/freshmarker.ttf');
 }
 
+@font-face {
+    font-family: 'satoshi';
+    src: url('../../public/assets/fonts/satoshi.ttf');
+}
+
 $textColorPrimary: #111;
 $primaryColor: #FF0000;
 $secondaryColor: #111;
 $white: #f1f1f1;
 $whiteOpacity: #ffffffc9;
+$grey: #9e9e9e;
 $activeBlue: #a0f0e2;
 $yellowPoke: #ffcb05;
 $bluePoke: #3466af;
+$typePlanta: #007336;
+$typeVeneno: #572364;
+$typeFuego: #ff5f1f;
+$typeVolador: #bceeff;
+$typeHielo: #b5d7dc;
+$typeAgua: #02d8e9;
+$typeBicho: #87b690;
+$typeElectrico: #f4c454;
+$typePsiquico: #c47ac0;
+$typeTierra: #997700;
+$typeRoca: #513a2a;
+$typeNormal: #8a9597;
+$typeLucha: #8f4931;

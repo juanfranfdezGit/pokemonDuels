@@ -1,6 +1,11 @@
+@charset "UTF-8";
 @font-face {
   font-family: "graffiti";
   src: url("../../public/assets/fonts/freshmarker.ttf");
+}
+@font-face {
+  font-family: "satoshi";
+  src: url("../../public/assets/fonts/satoshi.ttf");
 }
 .pokeball__opening {
   width: 100vw;
@@ -122,6 +127,243 @@
   display: flex;
 }
 
+@font-face {
+  font-family: "graffiti";
+  src: url("../../public/assets/fonts/freshmarker.ttf");
+}
+@font-face {
+  font-family: "satoshi";
+  src: url("../../public/assets/fonts/satoshi.ttf");
+}
+.pokedex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.pokedex .pokedex__title {
+  font-size: 3rem;
+  font-weight: 400;
+  color: #f1f1f1;
+  background: #3466af;
+  width: 100vw;
+  text-align: center;
+  padding: 1rem;
+  border-bottom: 5px solid #111;
+}
+.pokedex .pokedex__pokemons {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-items: flex-start;
+  height: 90vh;
+  overflow-y: scroll;
+  position: relative;
+}
+.pokedex .pokedex__pokemons .pokedex__pokemons__selected {
+  width: 55%;
+  position: fixed;
+  left: -1vw;
+  top: 0;
+  height: 100vh;
+  z-index: -1;
+}
+.pokedex .pokedex__pokemons .pokedex__pokemons__selected .pokedex__pokemons__selected-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 95%;
+  height: 90%;
+  margin: 10% 0 0 0;
+}
+.pokedex .pokedex__pokemons .pokedex__pokemons__selected .pokedex__pokemons__selected-info .pokedex__pokemons__selected-info-data01 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.pokedex .pokedex__pokemons .pokedex__pokemons__selected .pokedex__pokemons__selected-info .pokedex__pokemons__selected-info-data01 .pokedex__pokemons__selected-info--id, .pokedex .pokedex__pokemons .pokedex__pokemons__selected .pokedex__pokemons__selected-info .pokedex__pokemons__selected-info-data01 .pokedex__pokemons__selected-info--name {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #111;
+}
+.pokedex .pokedex__pokemons .pokedex__pokemons__selected .pokedex__pokemons__selected-info .pokedex__pokemons__selected-info-data01 .pokedex__pokemons__selected-info--id {
+  color: #9e9e9e;
+}
+.pokedex .pokedex__pokemons .pokedex__pokemons__selected .pokedex__pokemons__selected-info .pokedex__pokemons__selected-info-data02 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  height: 50%;
+  width: 100%;
+}
+.pokedex .pokedex__pokemons .pokedex__pokemons__selected .pokedex__pokemons__selected-info .pokedex__pokemons__selected-info-data02 .pokedex__pokemons__selected-info-imageContainer {
+  width: 70%;
+  height: 100%;
+  padding: 2rem;
+}
+.pokedex .pokedex__pokemons .pokedex__pokemons__selected .pokedex__pokemons__selected-info .pokedex__pokemons__selected-info-data02 .pokedex__pokemons__selected-info-imageContainer .pokedex__pokemons__selected-info-imageContainer-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: drop-shadow(0 5px 5px #111);
+}
+.pokedex .pokedex__pokemons .pokedex__pokemons__selected .pokedex__pokemons__selected-info .pokedex__pokemons__selected-info-data02 .pokedex__pokemons__selected-info-dataTable {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  width: 40%;
+  background: #3466af;
+  padding: 2rem;
+  border-radius: 5px;
+  border: 1px solid rgba(255, 255, 255, 0.7882352941);
+  box-shadow: 0 0 5px #111;
+}
+.pokedex .pokedex__pokemons .pokedex__pokemons__selected .pokedex__pokemons__selected-info .pokedex__pokemons__selected-info-data02 .pokedex__pokemons__selected-info-dataTable .pokedex__pokemons__selected-info--descriptionContainer {
+  grid-column: span 2;
+}
+.pokedex .pokedex__pokemons .pokedex__pokemons__selected .pokedex__pokemons__selected-info .pokedex__pokemons__selected-info-data02 .pokedex__pokemons__selected-info-dataTable .pokedex__pokemons__selected-info--descriptionContainer .pokedex__pokemons__selected-info--description {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #f1f1f1;
+  line-height: 1.2rem;
+}
+.pokedex .pokedex__pokemons .pokedex__pokemons__selected .pokedex__pokemons__selected-info .pokedex__pokemons__selected-info-data02 .pokedex__pokemons__selected-info-dataTable .pokedex__pokemons__selected-info--label {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #f1f1f1;
+  margin-bottom: 4px;
+}
+.pokedex .pokedex__pokemons .pokedex__pokemons__selected .pokedex__pokemons__selected-info .pokedex__pokemons__selected-info-data02 .pokedex__pokemons__selected-info-dataTable .pokedex__pokemons__selected-info--data {
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: #f1f1f1;
+}
+.pokedex .pokedex__pokemons .pokedex__pokemons__selected .pokedex__pokemons__selected-info .pokedex__pokemons__selected-info-data03 {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
+  margin-top: 2rem;
+}
+.pokedex .pokedex__pokemons .pokedex__pokemons__selected .pokedex__pokemons__selected-info .pokedex__pokemons__selected-info-data03 .pokedex-type-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #111;
+}
+.pokedex .pokedex__pokemons .pokedex__pokemons__list {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-left: 55%;
+  padding: 5vh 0;
+  background: rgba(255, 255, 255, 0.7882352941);
+}
+.pokedex .pokedex__pokemons .pokedex__pokemons__list .pokedex__pokemons__list__item {
+  width: 13vw;
+  height: 30vh;
+  padding: 2rem;
+  transition: all 0.5s;
+  border-radius: 5px;
+}
+.pokedex .pokedex__pokemons .pokedex__pokemons__list .pokedex__pokemons__list__item:hover {
+  cursor: pointer;
+  background: #9e9e9e;
+  border: rgba(255, 255, 255, 0.7882352941);
+  box-shadow: 0 0 5px #111;
+}
+.pokedex .pokedex__pokemons .pokedex__pokemons__list .pokedex__pokemons__list__item .pokedex__pokemons__list__item-imgContainer {
+  width: 100%;
+  height: 60%;
+}
+.pokedex .pokedex__pokemons .pokedex__pokemons__list .pokedex__pokemons__list__item .pokedex__pokemons__list__item-imgContainer .pokedex__pokemons__list__item-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: drop-shadow(0 5px 5px #111);
+}
+.pokedex .pokedex__pokemons .pokedex__pokemons__list .pokedex__pokemons__list__item .pokedex__pokemons__list__item-id {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #9e9e9e;
+  margin-top: 1rem;
+}
+.pokedex .pokedex__pokemons .pokedex__pokemons__list .pokedex__pokemons__list__item .pokedex__pokemons__list__item-name {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #111;
+}
+
+.pokedex-type {
+  display: inline-flex;
+  margin-top: 12px;
+  margin-right: 8px;
+  padding: 4px 12px;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #111;
+}
+.pokedex-type.pokedex-type--Planta {
+  background: #007336;
+  color: #f1f1f1;
+}
+.pokedex-type.pokedex-type--Veneno {
+  background: #572364;
+  color: #f1f1f1;
+}
+.pokedex-type.pokedex-type--Fuego {
+  background: #ff5f1f;
+  color: #f1f1f1;
+}
+.pokedex-type.pokedex-type--Volador {
+  background: #bceeff;
+  color: #111;
+}
+.pokedex-type.pokedex-type--Agua {
+  background: #02d8e9;
+  color: #111;
+}
+.pokedex-type.pokedex-type--Bicho {
+  background: #87b690;
+  color: #111;
+}
+.pokedex-type.pokedex-type--Eléctrico {
+  background: #f4c454;
+  color: #111;
+}
+.pokedex-type.pokedex-type--Hielo {
+  background: #b5d7dc;
+  color: #111;
+}
+.pokedex-type.pokedex-type--Psíquico {
+  background: #c47ac0;
+  color: #f1f1f1;
+}
+.pokedex-type.pokedex-type--Tierra {
+  background: #997700;
+  color: #f1f1f1;
+}
+.pokedex-type.pokedex-type--Roca {
+  background: #513a2a;
+  color: #f1f1f1;
+}
+.pokedex-type.pokedex-type--Normal {
+  background: #8a9597;
+  color: #f1f1f1;
+}
+.pokedex-type.pokedex-type--Lucha {
+  background: #8f4931;
+  color: #f1f1f1;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -131,6 +373,7 @@
 body {
   background: #f1f1f1;
   overflow: hidden;
+  font-family: "satoshi";
 }
 
 a {

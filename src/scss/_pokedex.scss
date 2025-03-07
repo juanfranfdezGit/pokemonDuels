@@ -1,0 +1,223 @@
+@import '_mixin.scss';
+@import '_variables.scss';
+
+.pokedex {
+    @include set-flex;
+    flex-direction: column;
+
+    .pokedex__title {
+        @include font(3rem, 400, $white);
+        background: $bluePoke;
+        width: 100vw;
+        text-align: center;
+        padding: 1rem;
+        border-bottom: 5px solid $secondaryColor;
+    }
+
+    .pokedex__pokemons {
+        width: 100vw;
+        @include set-flex;
+        align-items: flex-start;
+        height: 90vh;
+        overflow-y: scroll;
+        position: relative;
+
+        .pokedex__pokemons__selected {
+            width:55%;
+            position: fixed;
+            left: -1vw;
+            top: 0;
+            height: 100vh;
+            z-index: -1;
+
+            .pokedex__pokemons__selected-info {
+                @include set-flex;
+                flex-direction: column;
+                width: 95%;
+                height: 90%;
+                margin: 10% 0 0 0;
+                
+                .pokedex__pokemons__selected-info-data01 {
+                    @include set-flex;
+                    gap: 1rem;
+
+                    .pokedex__pokemons__selected-info--id, .pokedex__pokemons__selected-info--name {
+                        @include font(2rem, 700, $secondaryColor)
+                    }
+
+                    .pokedex__pokemons__selected-info--id {
+                        color: $grey;
+                    }
+                }
+
+                .pokedex__pokemons__selected-info-data02 {
+                    @include set-flex;
+                    gap: 2rem;
+                    height: 50%;
+                    width: 100%;
+
+                    .pokedex__pokemons__selected-info-imageContainer {
+                        width: 70%;
+                        height: 100%;
+                        padding: 2rem;
+
+                        .pokedex__pokemons__selected-info-imageContainer-img {
+                            width: 100%;
+                            height: 100%;
+                            object-fit: contain;
+                            filter: drop-shadow(0 5px 5px $secondaryColor)
+                        }
+                    }
+
+                    .pokedex__pokemons__selected-info-dataTable {
+                        display: grid;
+                        grid-template-columns: repeat(2, 1fr);
+                        gap: 1.5rem;
+                        width: 40%;
+                        background: $bluePoke;
+                        padding: 2rem;
+                        border-radius: 5px;
+                        border: 1px solid $whiteOpacity;
+                        box-shadow: 0 0 5px $secondaryColor;
+
+                        .pokedex__pokemons__selected-info--descriptionContainer {
+                            grid-column: span 2;
+
+                            .pokedex__pokemons__selected-info--description {
+                                @include font(1rem, 400, $white);
+                                line-height: 1.2rem;
+                            }
+                        }
+                        
+                        .pokedex__pokemons__selected-info--label {
+                            @include font(1.2rem, 600, $white);
+                            margin-bottom: 4px;
+                        }
+
+                        .pokedex__pokemons__selected-info--data {
+                            @include font(1.1rem, 400, $white);
+                        }
+                    }
+                }
+
+                .pokedex__pokemons__selected-info-data03 {
+                    width: 100%;
+                    @include set-flex;
+                    gap: 100px;
+                    margin-top: 2rem;
+
+                    .pokedex-type-title {
+                        @include font(1.2rem, 600, $secondaryColor);
+                    }
+                }
+            }
+        }
+
+        .pokedex__pokemons__list {
+            width: 50%;
+            @include set-flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            margin-left: 55%;
+            padding: 5vh 0;
+            background: $whiteOpacity;
+
+            .pokedex__pokemons__list__item {
+                width: 13vw;
+                height: 30vh;
+                padding: 2rem;
+                transition: all .5s;
+                border-radius: 5px;
+
+                &:hover {
+                    cursor: pointer;
+                    background: $grey;
+                    border: $whiteOpacity;
+                    box-shadow: 0 0 5px $secondaryColor;
+                }
+
+                .pokedex__pokemons__list__item-imgContainer {
+                    width: 100%;
+                    height: 60%;
+                    
+                    .pokedex__pokemons__list__item-image {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: contain;
+                        filter: drop-shadow(0 5px 5px $secondaryColor)
+                    }
+                }
+
+                .pokedex__pokemons__list__item-id {
+                    @include font(1rem, 700, $grey);
+                    margin-top: 1rem;
+                }
+
+                .pokedex__pokemons__list__item-name {
+                    @include font(1.2rem, 700, $secondaryColor)
+                }
+            }
+        }
+    }
+}
+
+.pokedex-type {
+    display: inline-flex;
+    margin-top: 12px;
+    margin-right: 8px;
+    padding: 4px 12px;
+    border-radius: 5px;
+    @include font(1rem, 500, $secondaryColor);
+
+    &.pokedex-type--Planta {
+        @include typeColor($typePlanta, $white);
+    }
+
+    &.pokedex-type--Veneno {
+        @include typeColor($typeVeneno, $white);
+    }
+
+    &.pokedex-type--Fuego {
+        @include typeColor($typeFuego, $white);
+    }
+
+    &.pokedex-type--Volador {
+        @include typeColor($typeVolador, $secondaryColor);
+    }
+
+    &.pokedex-type--Agua {
+        @include typeColor($typeAgua, $secondaryColor);
+    }
+
+    &.pokedex-type--Bicho {
+        @include typeColor($typeBicho, $secondaryColor);
+    }
+
+    &.pokedex-type--Eléctrico {
+        @include typeColor($typeElectrico, $secondaryColor);
+    }
+
+    &.pokedex-type--Hielo {
+        @include typeColor($typeHielo, $secondaryColor);
+    }
+
+    &.pokedex-type--Psíquico {
+        @include typeColor($typePsiquico, $white);
+    }
+
+    &.pokedex-type--Tierra {
+        @include typeColor($typeTierra, $white);
+    }
+
+    &.pokedex-type--Roca {
+        @include typeColor($typeRoca, $white);
+    }
+    
+    &.pokedex-type--Normal {
+        @include typeColor($typeNormal, $white);
+    }
+    
+    &.pokedex-type--Lucha {
+        @include typeColor($typeLucha, $white);
+    }
+}

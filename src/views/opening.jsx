@@ -1,4 +1,5 @@
 import { useState } from "react";
+import MainMenu from "./mainMenu";
 
 function Opening() {
 
@@ -14,6 +15,8 @@ function Opening() {
           <div onClick={handleStarted} className={`pokeball__opening-button ${started ? "started" : ""}`}>
           </div>
         </main>
+
+        <MainMenu />
       </>
     );
   }
