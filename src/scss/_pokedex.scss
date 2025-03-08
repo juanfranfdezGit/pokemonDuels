@@ -14,6 +14,25 @@
         border-bottom: 5px solid $secondaryColor;
     }
 
+    .pokedex__button {
+        @include set-flex;
+        position: absolute;
+        left: 3vw;
+        top: 3vh;
+        background: none;
+        @include font(2rem, 500, $white);
+        gap: 8px;
+        z-index: 10;
+
+        img {
+            width: 40px;
+        }
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
     .pokedex__pokemons {
         width: 100vw;
         @include set-flex;
@@ -152,7 +171,7 @@
 
                 &:hover {
                     cursor: pointer;
-                    background: $grey;
+                    background: $greyLight;
                     border: $whiteOpacity;
                     box-shadow: 0 0 5px $secondaryColor;
                 }

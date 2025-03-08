@@ -114,17 +114,75 @@
 }
 
 .gameMenu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100vw;
-  height: 100vw;
+  height: 100vh;
   background: #f1f1f1;
   z-index: 10;
   position: absolute;
   top: 0;
   left: 0;
   display: none;
+  background: url(../../public/assets/images/backGameMenu.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 .gameMenu.goGame {
   display: flex;
+}
+.gameMenu .gameMenu__sidebar {
+  width: 25%;
+  height: 100%;
+  background: rgba(255, 0, 0, 0.6980392157);
+  position: absolute;
+  right: 0;
+  box-shadow: 0 5px 15px #111;
+  border-left: 1px solid #FF0000;
+}
+.gameMenu .gameMenu__sidebar .gameMenu__sidebar-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 2.8rem;
+}
+.gameMenu .gameMenu__sidebar .gameMenu__sidebar-list .gameMenu__logo__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 3rem 5rem 0 5rem;
+  border-radius: 15px;
+  margin-bottom: -3vh;
+}
+.gameMenu .gameMenu__sidebar .gameMenu__sidebar-list .gameMenu__logo__container .gameMenu__logo__container-logo {
+  width: 20vw;
+  filter: drop-shadow(0 0 15px #111);
+}
+.gameMenu .gameMenu__sidebar .gameMenu__sidebar-list .gameMenu__logo__container .gameMenu__logo__container-title {
+  font-family: "graffiti";
+  font-size: 5rem;
+  font-weight: 400;
+  color: #111;
+  position: relative;
+  bottom: 30px;
+}
+.gameMenu .gameMenu__sidebar .gameMenu__sidebar-list .gameMenu__sidebar-button {
+  width: 15vw;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #f1f1f1;
+  background: #3466af;
+  padding: 1rem;
+  box-shadow: 0 0 15px #111;
+  border-radius: 15px;
+}
+.gameMenu .gameMenu__sidebar .gameMenu__sidebar-list .gameMenu__sidebar-button:hover {
+  cursor: pointer;
+  transform: scale(1.09);
 }
 
 @font-face {
@@ -150,6 +208,26 @@
   text-align: center;
   padding: 1rem;
   border-bottom: 5px solid #111;
+}
+.pokedex .pokedex__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: 3vw;
+  top: 3vh;
+  background: none;
+  font-size: 2rem;
+  font-weight: 500;
+  color: #f1f1f1;
+  gap: 8px;
+  z-index: 10;
+}
+.pokedex .pokedex__button img {
+  width: 40px;
+}
+.pokedex .pokedex__button:hover {
+  cursor: pointer;
 }
 .pokedex .pokedex__pokemons {
   width: 100vw;
@@ -297,7 +375,7 @@
 }
 .pokedex .pokedex__pokemons .pokedex__pokemons__list .pokedex__pokemons__list__item:hover {
   cursor: pointer;
-  background: #9e9e9e;
+  background: #e4e4e4;
   border: rgba(255, 255, 255, 0.7882352941);
   box-shadow: 0 0 5px #111;
 }

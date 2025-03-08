@@ -1,8 +1,10 @@
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 function Pokedex() {
     const [cards, setCards] = useState([]);
     const [selectedPokemon, setSelectedPokemon] = useState(null);
+    const Navigate = useNavigate();
 
     useEffect(() => {
       fetch("/services/pokedex.json")
@@ -19,13 +21,16 @@ function Pokedex() {
     function selectPokemon(pokemon) {
         setSelectedPokemon(pokemon) 
     }
-    
-    console.log(selectedPokemon)
+
+    function navMainMenu() {
+        Navigate('/')
+      }
 
     return (
         <>
             <section className="pokedex">
                 <h2 className="pokedex__title">Pokédex</h2>
+                <button className="pokedex__button" onClick={navMainMenu}><img src="/assets/logos/arrowBack.png" />Volver</button>
 
                 <div className="pokedex__pokemons">
                     <div className="pokedex__pokemons__selected">
@@ -83,7 +88,6 @@ function Pokedex() {
                         )}
                     </div>
 
-                
                     <ul className="pokedex__pokemons__list">
                         {cards.map((card) => (
                         <li 

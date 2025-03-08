@@ -1,62 +1,142 @@
 [
     {
+        "id": 1,
         "Habilidad": "Látigo cepa",
         "PH": 5,
         "Efecto": "Sin efecto",
         "Tipo": "Planta"
     },
     {
+        "id": 2,
         "Habilidad": "Hoja Afilada",
         "PH": 5,
         "Efecto": "Sin efecto",
         "Tipo": "Planta"
     },
     {
+        "id": 3,
         "Habilidad": "Rayo Solar",
         "PH": 3,
         "Efecto": "Sin efecto",
         "Tipo": "Planta"
     },
     {
+        "id": 4,
         "Habilidad": "Ascuas",
         "PH": 5,
         "Efecto": "Sin efecto",
         "Tipo": "Fuego"
     },
     {
+        "id": 5,
         "Habilidad": "Llamarada",
         "PH": 5,
         "Efecto": "Quemadura",
         "Tipo": "Fuego"
     },
     {
+        "id": 7,
         "Habilidad": "Mar de Llamas",
         "PH": 3,
         "Efecto": "Quemadura",
         "Tipo": "Fuego"
     },
     {
+        "id": 8,
         "Habilidad": "Pistola Agua",
         "PH": 5,
         "Efecto": "Sin efecto",
         "Tipo": "Agua"
     },
     {
+        "id": 9,
         "Habilidad": "Torrente",
         "PH": 5,
         "Efecto": "Sin efecto",
         "Tipo": "Agua"
     },
     {
+        "id": 10,
         "Habilidad": "Polvo Escudo",
         "PH": 7,
         "Efecto": "+Defensa",
         "Tipo": "Bicho"
     },
     {
+        "id": 11,
         "Habilidad": "Coraza",
         "PH": 7,
         "Efecto": "++Defensa",
-        "Tipo": "Bicho"
+        "Tipo": "Normal"
+    },
+    {
+        "id": 12,
+        "Habilidad": "Confusión",
+        "PH": 5,
+        "Efecto": "Confusión",
+        "Tipo": "Psíquico"
+    },
+    {
+        "id": 13,
+        "Habilidad": "Púas Tóxicas",
+        "PH": 5,
+        "Efecto": "Veneno",
+        "Tipo": "Veneno"
+    },
+    {
+        "id": 14,
+        "Habilidad": "Ataque Ala",
+        "PH": 5,
+        "Efecto": "Sin efecto",
+        "Tipo": "Volador"
+    },
+    {
+        "id": 15,
+        "Habilidad": "Tornado",
+        "PH": 5,
+        "Efecto": "Sin efecto",
+        "Tipo": "Volador"
+    },
+    {
+        "id": 16,
+        "Habilidad": "Colmillo",
+        "PH": 5,
+        "Efecto": "Sin efecto",
+        "Tipo": "Normal"
+    },
+    {
+        "id": 17,
+        "Habilidad": "Picotazo",
+        "PH": 5,
+        "Efecto": "Sin efecto",
+        "Tipo": "Volador"
+    },
+    {
+        "id": 18,
+        "Habilidad": "Picotazo Venenoso",
+        "PH": 5,
+        "Efecto": "Veneno",
+        "Tipo": "Veneno"
+    },
+    {
+        "id": 19,
+        "Habilidad": "Impactrueno",
+        "PH": 5,
+        "Efecto": "Sin efecto",
+        "Tipo": "Eléctrico"
+    },
+    {
+        "id": 20,
+        "Habilidad": "Rayo",
+        "PH": 5,
+        "Efecto": "Paralisis",
+        "Tipo": "Eléctrico"
+    },
+    {
+        "id": 21,
+        "Habilidad": "Terremoto",
+        "PH": 5,
+        "Efecto": "Sin efecto",
+        "Tipo": "Roca"
     }
 ]

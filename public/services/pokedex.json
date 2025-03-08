@@ -319,7 +319,7 @@
         "altura": 1.2,
         "peso": 38.0,
         "categoría": "Pico",
-        "Habilidad": "Picotazo",
+        "Habilidad": "Tornado",
         "tipo": ["Normal", "Volador"],
         "debilidad": ["Eléctrico", "Hielo", "Roca"],
         "stats": [4, 6, 4, 4, 4],

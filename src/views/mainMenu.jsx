@@ -37,9 +37,19 @@ function MainMenu() {
       </section>
 
       <section className={`gameMenu ${goGame ? "goGame" : ""}`}>
-        <h2>IN GAME</h2>
-        <button onClick={handleGoGame}>OUT</button>
-        <button onClick={navPokedex}>Pokedex</button>
+        <div className="gameMenu__sidebar">
+          <ul className="gameMenu__sidebar-list">
+            <div className="gameMenu__logo__container">
+                <img className="gameMenu__logo__container-logo" src="/assets/images/pokemonLogo.png" alt="Pokemon logo" />
+                <h1 className="gameMenu__logo__container-title">Duels!</h1>
+            </div>
+            <li><button className="gameMenu__sidebar-button" onClick={navPokedex}>Pokedex</button></li>
+            <li><button className="gameMenu__sidebar-button" onClick={navPokedex}>Mis Cartas</button></li>
+            <li><button className="gameMenu__sidebar-button" onClick={navPokedex}>Oponentes</button></li>
+            <li><button className="gameMenu__sidebar-button" onClick={navPokedex}>Tienda de Sobres</button></li>
+            <li><button className="gameMenu__sidebar-button" onClick={navPokedex}>Ayuda</button></li>
+          </ul>
+        </div>
       </section>
     </>
   );
