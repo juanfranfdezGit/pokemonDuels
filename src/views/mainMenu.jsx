@@ -26,6 +26,10 @@ function MainMenu() {
     Navigate('./pokedex')
   }
 
+  function navMyCards() {
+    Navigate('./myCards')
+  }
+
   return (
     <>
       <section className="mainMenu" style={{ backgroundImage: `url(${background})` }}> 
@@ -44,7 +48,7 @@ function MainMenu() {
                 <h1 className="gameMenu__logo__container-title">Duels!</h1>
             </div>
             <li><button className="gameMenu__sidebar-button" onClick={navPokedex}>Pokedex</button></li>
-            <li><button className="gameMenu__sidebar-button" onClick={navPokedex}>Mis Cartas</button></li>
+            <li><button className="gameMenu__sidebar-button" onClick={navMyCards}>Mis Cartas</button></li>
             <li><button className="gameMenu__sidebar-button" onClick={navPokedex}>Oponentes</button></li>
             <li><button className="gameMenu__sidebar-button" onClick={navPokedex}>Tienda de Sobres</button></li>
             <li><button className="gameMenu__sidebar-button" onClick={navPokedex}>Ayuda</button></li>

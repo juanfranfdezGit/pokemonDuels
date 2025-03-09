@@ -24,7 +24,7 @@ function Pokedex() {
 
     function navMainMenu() {
         Navigate('/')
-      }
+    }
 
     return (
         <>
