@@ -199,36 +199,6 @@
   align-items: center;
   flex-direction: column;
 }
-.pokedex .pokedex__title {
-  font-size: 3rem;
-  font-weight: 400;
-  color: #f1f1f1;
-  background: #3466af;
-  width: 100vw;
-  text-align: center;
-  padding: 1rem;
-  border-bottom: 5px solid #111;
-}
-.pokedex .pokedex__button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  left: 3vw;
-  top: 3vh;
-  background: none;
-  font-size: 2rem;
-  font-weight: 500;
-  color: #f1f1f1;
-  gap: 8px;
-  z-index: 10;
-}
-.pokedex .pokedex__button img {
-  width: 40px;
-}
-.pokedex .pokedex__button:hover {
-  cursor: pointer;
-}
 .pokedex .pokedex__pokemons {
   width: 100vw;
   display: flex;
@@ -411,57 +381,425 @@
   font-weight: 500;
   color: #111;
 }
-.pokedex-type.pokedex-type--Planta {
-  background: #007336;
-  color: #f1f1f1;
-}
-.pokedex-type.pokedex-type--Veneno {
-  background: #572364;
-  color: #f1f1f1;
-}
-.pokedex-type.pokedex-type--Fuego {
-  background: #ff5f1f;
-  color: #f1f1f1;
-}
-.pokedex-type.pokedex-type--Volador {
-  background: #bceeff;
-  color: #111;
-}
-.pokedex-type.pokedex-type--Agua {
-  background: #02d8e9;
-  color: #111;
-}
-.pokedex-type.pokedex-type--Bicho {
-  background: #87b690;
-  color: #111;
-}
-.pokedex-type.pokedex-type--Eléctrico {
+
+.pokedex-type--Eléctrico {
   background: #f4c454;
   color: #111;
 }
-.pokedex-type.pokedex-type--Hielo {
+
+.pokedex-type--Planta {
+  background: #007336;
+  color: #f1f1f1;
+}
+
+.pokedex-type--Veneno {
+  background: #642b72;
+  color: #f1f1f1;
+}
+
+.pokedex-type--Fuego {
+  background: #ff5f1f;
+  color: #f1f1f1;
+}
+
+.pokedex-type--Volador {
+  background: #bceeff;
+  color: #111;
+}
+
+.pokedex-type--Agua {
+  background: #02d8e9;
+  color: #111;
+}
+
+.pokedex-type--Bicho {
+  background: #87b690;
+  color: #111;
+}
+
+.pokedex-type--Hielo {
   background: #b5d7dc;
   color: #111;
 }
-.pokedex-type.pokedex-type--Psíquico {
+
+.pokedex-type--Psíquico {
   background: #c47ac0;
   color: #f1f1f1;
 }
-.pokedex-type.pokedex-type--Tierra {
+
+.pokedex-type--Tierra {
   background: #997700;
   color: #f1f1f1;
 }
-.pokedex-type.pokedex-type--Roca {
+
+.pokedex-type--Roca {
   background: #513a2a;
   color: #f1f1f1;
 }
-.pokedex-type.pokedex-type--Normal {
+
+.pokedex-type--Normal {
   background: #8a9597;
   color: #f1f1f1;
 }
-.pokedex-type.pokedex-type--Lucha {
+
+.pokedex-type--Lucha {
   background: #8f4931;
   color: #f1f1f1;
+}
+
+.myCards .myCards__container {
+  width: 100vw;
+}
+.myCards .myCards__container .myCards__container__list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  overflow-y: scroll;
+  height: 90vh;
+  position: relative;
+  padding: 2rem;
+}
+.myCards .myCards__container .myCards__container__list .myCards__container__list__item {
+  width: 17vw;
+  height: 50vh;
+  border-radius: 12px;
+  padding: 2rem;
+  position: relative;
+  box-shadow: 0 0 15px #111;
+}
+.myCards .myCards__container .myCards__container__list .myCards__container__list__item .myCards__container__list__item-nameContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  position: relative;
+  z-index: 10;
+}
+.myCards .myCards__container .myCards__container__list .myCards__container__list__item .myCards__container__list__item-nameContainer .myCards__container__list__item-name {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #111;
+}
+.myCards .myCards__container .myCards__container__list .myCards__container__list__item .myCards__container__list__item-nameContainer .myCards__container__list__item-PS {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #111;
+}
+.myCards .myCards__container .myCards__container__list .myCards__container__list__item .myCards__container__list__item-nameContainer .myCards__container__list__item-PS span {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #111;
+  opacity: 0.8;
+  margin-right: 2px;
+}
+.myCards .myCards__container .myCards__container__list .myCards__container__list__item .myCards__container__list__item-imgContainer {
+  width: 100%;
+  height: 45%;
+  position: relative;
+  z-index: 6;
+  border-radius: 4px;
+}
+.myCards .myCards__container .myCards__container__list .myCards__container__list__item .myCards__container__list__item-imgContainer .myCards__container__list__item-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  position: absolute;
+  top: 0;
+  left: 0;
+  filter: drop-shadow(0 5px 8px #111);
+  z-index: 2;
+}
+.myCards .myCards__container .myCards__container__list .myCards__container__list__item .myCards__container__list__item-imgContainer .cards-typeContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+  bottom: -5px;
+  left: 50%;
+  transform: translate(-50%);
+  z-index: 3;
+}
+.myCards .myCards__container .myCards__container__list .myCards__container__list__item .myCards__container__list__item-imgContainer .cards-typeContainer .cards-type:first-child {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #111;
+  width: 60%;
+  clip-path: polygon(0 0, 100% 0, 72% 100%, 0% 100%);
+  position: absolute;
+  left: 0;
+  padding: 4px 4px 4px 20px;
+}
+.myCards .myCards__container .myCards__container__list .myCards__container__list__item .myCards__container__list__item-imgContainer .cards-typeContainer .cards-type:nth-child(2) {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #111;
+  width: 60%;
+  clip-path: polygon(29% 0, 100% 0, 100% 100%, 0% 100%);
+  position: absolute;
+  right: 0;
+  padding: 4px 4px 4px 20%;
+}
+.myCards .myCards__container .myCards__container__list .myCards__container__list__item .myCards__container__list__item-description {
+  position: relative;
+  z-index: 10;
+  margin-top: 38px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #111;
+  line-height: 1.1rem;
+}
+.myCards .myCards__container .myCards__container__list .myCards__container__list__item .myCards__container__list__item-habilityContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  z-index: 10;
+  margin-top: 2rem;
+  transition: all 0.5s;
+}
+.myCards .myCards__container .myCards__container__list .myCards__container__list__item .myCards__container__list__item-habilityContainer .myCards__container__list__item-hability {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #111;
+}
+.myCards .myCards__container .myCards__container__list .myCards__container__list__item .myCards__container__list__item-habilityContainer .myCards__container__list__item-hability:hover {
+  cursor: pointer;
+}
+.myCards .myCards__container .myCards__container__list .myCards__container__list__item .myCards__container__list__item-habilityContainer .myCards__container__list__item-PH {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #111;
+}
+.myCards .myCards__container .myCards__container__list .myCards__container__list__item .myCards__container__list__item-habilityContainer .myCards__container__list__item-PH span {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #111;
+}
+
+.card-type--Eléctrico {
+  background: #c8cbcc;
+  border: 1px solid #9e9e9e;
+}
+.card-type--Eléctrico::before {
+  content: "";
+  width: 92%;
+  height: 95%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background: #ffbf28;
+  color: #f1f1f1;
+  position: absolute;
+  z-index: 1;
+  border-radius: 8px;
+}
+
+.card-type--Planta {
+  background: #c8cbcc;
+  color: #f1f1f1;
+  border: 1px solid #8a9597;
+}
+.card-type--Planta::before {
+  content: "";
+  width: 92%;
+  height: 95%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background: #1abb65;
+  color: #f1f1f1;
+  position: absolute;
+  z-index: 1;
+  border-radius: 8px;
+}
+
+.card-type--Veneno {
+  background: #ffbf28;
+  color: #f1f1f1;
+  border: 1px solid #f4c454;
+}
+.card-type--Veneno::before {
+  content: "";
+  width: 92%;
+  height: 95%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background: #8f22aa;
+  color: #f1f1f1;
+  position: absolute;
+  z-index: 1;
+  border-radius: 8px;
+}
+
+.card-type--Fuego {
+  background: #ffbf28;
+  color: #f1f1f1;
+  border: 1px solid #f4c454;
+}
+.card-type--Fuego::before {
+  content: "";
+  width: 92%;
+  height: 95%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background: #df4204;
+  color: #f1f1f1;
+  position: absolute;
+  z-index: 1;
+  border-radius: 8px;
+}
+
+.card-type--Volador {
+  background: #009ace;
+  color: #111;
+  border: 1px solid #bceeff;
+}
+
+.card-type--Agua {
+  background: #c8cbcc;
+  color: #111;
+  border: 1px solid #8a9597;
+}
+.card-type--Agua::before {
+  content: "";
+  width: 92%;
+  height: 95%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background: #1bcad6;
+  color: #f1f1f1;
+  position: absolute;
+  z-index: 1;
+  border-radius: 8px;
+}
+
+.card-type--Bicho {
+  background: #ffbf28;
+  color: #111;
+  border: 1px solid #f4c454;
+}
+.card-type--Bicho::before {
+  content: "";
+  width: 92%;
+  height: 95%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background: #69c47a;
+  color: #f1f1f1;
+  position: absolute;
+  z-index: 1;
+  border-radius: 8px;
+}
+
+.card-type--Hielo {
+  background: #b5d7dc;
+  color: #111;
+  border: 1px solid #b5d7dc;
+}
+
+.card-type--Psíquico {
+  background: #c47ac0;
+  color: #f1f1f1;
+  border: 1px solid #c47ac0;
+}
+
+.card-type--Tierra {
+  background: #f4c454;
+  color: #f1f1f1;
+  border: 1px solid #ffbf28;
+}
+.card-type--Tierra::before {
+  content: "";
+  width: 92%;
+  height: 95%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background: #b16f19;
+  color: #f1f1f1;
+  position: absolute;
+  z-index: 1;
+  border-radius: 8px;
+}
+
+.card-type--Roca {
+  background: #79441e;
+  color: #f1f1f1;
+  border: 1px solid #513a2a;
+}
+
+.card-type--Normal {
+  background: #ffcb05;
+  border: 1px solid #f4c454;
+  z-index: 2;
+}
+.card-type--Normal::before {
+  content: "";
+  width: 92%;
+  height: 95%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background: #c8cbcc;
+  color: #f1f1f1;
+  position: absolute;
+  z-index: 1;
+  border-radius: 8px;
+}
+
+.card-type--Lucha {
+  background: #8f4931;
+  color: #f1f1f1;
+  border: 1px solid #8f4931;
+}
+
+.myCards__container__list__item-imgContainer--Eléctrico {
+  background: #e7b02e;
+  box-shadow: inset 0 0 25px #111;
+}
+
+.myCards__container__list__item-imgContainer--Tierra {
+  background: #d1821c;
+  box-shadow: inset 0 0 25px #111;
+}
+
+.myCards__container__list__item-imgContainer--Normal {
+  background: #ebebeb;
+  box-shadow: inset 0 0 25px #111;
+}
+
+.myCards__container__list__item-imgContainer--Planta {
+  background: #27b86b;
+  box-shadow: inset 0 0 25px #111;
+}
+
+.myCards__container__list__item-imgContainer--Fuego {
+  background: #db683a;
+  box-shadow: inset 0 0 25px #111;
+}
+
+.myCards__container__list__item-imgContainer--Agua {
+  background: #65e8f1;
+  box-shadow: inset 0 0 25px #111;
+}
+
+.myCards__container__list__item-imgContainer--Bicho {
+  background: #b4f5c0;
+  box-shadow: inset 0 0 25px #111;
+}
+
+.myCards__container__list__item-imgContainer--Veneno {
+  background: #b648d1;
+  box-shadow: inset 0 0 25px #111;
 }
 
 * {
@@ -490,6 +828,38 @@ button {
 }
 button:hover {
   cursor: pointer;
+}
+
+.back__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: 3vw;
+  top: 3vh;
+  background: none;
+  font-size: 2rem;
+  font-weight: 500;
+  color: #f1f1f1;
+  gap: 8px;
+  z-index: 10;
+}
+.back__button img {
+  width: 40px;
+}
+.back__button:hover {
+  cursor: pointer;
+}
+
+.pages__title {
+  font-size: 3rem;
+  font-weight: 400;
+  color: #f1f1f1;
+  background: #3466af;
+  width: 100vw;
+  text-align: center;
+  padding: 1rem;
+  border-bottom: 5px solid #111;
 }
 
 /*# sourceMappingURL=style.css.map */

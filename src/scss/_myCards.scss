@@ -1,0 +1,337 @@
+@import '_mixin.scss';
+.myCards{
+    .myCards__container {
+        width: 100vw;
+
+        .myCards__container__list {
+            @include set-flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            overflow-y: scroll;
+            height: 90vh;
+            position: relative;
+            padding: 2rem;
+
+            .myCards__container__list__item {
+                width: 17vw;
+                height: 50vh;
+                border-radius: 12px;
+                padding: 2rem;
+                position: relative;
+                box-shadow: 0 0 15px $secondaryColor;
+
+                .myCards__container__list__item-nameContainer {
+                    @include set-flex;
+                    justify-content: space-between;
+                    margin-bottom: 1rem;
+                    position: relative;
+                    z-index: 10;
+
+                    .myCards__container__list__item-name {
+                        @include font(1.15rem, 700, $secondaryColor);
+                    }
+
+                    .myCards__container__list__item-PS {
+                        @include font(1.4rem, 700, $secondaryColor);
+
+                        span {
+                            @include font(1rem, 700, $secondaryColor);
+                            opacity: .8;
+                            margin-right: 2px;
+                        }
+                    }
+                }
+
+                .myCards__container__list__item-imgContainer {
+                    width: 100%;
+                    height: 45%;
+                    position: relative;
+                    z-index: 6;
+                    border-radius: 4px;
+
+                    .myCards__container__list__item-image {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: contain;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        filter: drop-shadow(0 5px 8px $secondaryColor);
+                        z-index: 2;
+                    }
+
+                    .cards-typeContainer {
+                        @include set-flex;
+                        position: absolute;
+                        width: 100%;
+                        bottom: -5px;
+                        left: 50%;
+                        transform: translate(-50%);
+                        z-index: 3;
+
+                        .cards-type:first-child {
+                            @include font(1rem, 600, $secondaryColor);
+                            width: 60%;
+                            clip-path: polygon(0 0, 100% 0, 72% 100%, 0% 100%);
+                            position: absolute;
+                            left: 0;
+                            padding: 4px 4px 4px 20px;
+                        }
+
+                        .cards-type:nth-child(2) {
+                            @include font(1rem, 600, $secondaryColor);
+                            width: 60%;
+                            clip-path: polygon(29% 0, 100% 0, 100% 100%, 0% 100%);
+                            position: absolute;
+                            right: 0;
+                            padding: 4px 4px 4px 20%;
+                        }
+                    }               
+                }
+
+                .myCards__container__list__item-description {
+                    position: relative;
+                    z-index: 10;
+                    margin-top: 38px;
+                    @include font(.9rem, 500, $secondaryColor);
+                    line-height: 1.1rem;
+                }
+
+                .myCards__container__list__item-habilityContainer {
+                    @include set-flex;
+                    justify-content: space-between;
+                    position: relative;
+                    z-index: 10;
+                    margin-top: 2rem;
+                    transition: all .5s;
+
+                    .myCards__container__list__item-hability {
+                        @include font(1.15rem, 700, $secondaryColor);
+                        
+                        &:hover {
+                            cursor: pointer;
+                        }
+                    }
+
+                    .myCards__container__list__item-PH {
+                        @include font(1.15rem, 700, $secondaryColor);
+
+                        span {
+                            @include font(1rem, 700, $secondaryColor);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.card-type--Eléctrico {
+    background: $backNormal;
+    border: 1px solid $grey;
+
+    &::before {
+        content: '';
+        width: 92%;
+        height: 95%;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        @include typeColor($backElectrico, $white);
+        position: absolute;
+        z-index: 1;
+        border-radius: 8px;
+    }
+}
+
+.card-type--Planta {
+    @include typeColor($backNormal, $white);
+    border: 1px solid $typeNormal;
+
+    &::before {
+        content: '';
+        width: 92%;
+        height: 95%;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        @include typeColor($backPlanta, $white);
+        position: absolute;
+        z-index: 1;
+        border-radius: 8px;
+    }
+}
+
+.card-type--Veneno {
+    @include typeColor($backElectrico, $white);
+    border: 1px solid $typeElectrico;
+
+    &::before {
+        content: '';
+        width: 92%;
+        height: 95%;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        @include typeColor($backVeneno, $white);
+        position: absolute;
+        z-index: 1;
+        border-radius: 8px;
+    }
+}
+
+.card-type--Fuego {
+    @include typeColor($backElectrico, $white);
+    border: 1px solid $typeElectrico;
+
+    &::before {
+        content: '';
+        width: 92%;
+        height: 95%;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        @include typeColor($backFuego, $white);
+        position: absolute;
+        z-index: 1;
+        border-radius: 8px;
+    }
+}
+
+.card-type--Volador {
+    @include typeColor($backVolador, $secondaryColor);
+    border: 1px solid $typeVolador;
+}
+
+.card-type--Agua {
+    @include typeColor($backNormal, $secondaryColor);
+    border: 1px solid $typeNormal;
+
+    &::before {
+        content: '';
+        width: 92%;
+        height: 95%;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        @include typeColor($backAgua, $white);
+        position: absolute;
+        z-index: 1;
+        border-radius: 8px;
+    }
+}
+
+.card-type--Bicho {
+    @include typeColor($backElectrico, $secondaryColor);
+    border: 1px solid $typeElectrico;
+
+    &::before {
+        content: '';
+        width: 92%;
+        height: 95%;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        @include typeColor($backBicho, $white);
+        position: absolute;
+        z-index: 1;
+        border-radius: 8px;
+    }
+}
+
+.card-type--Hielo {
+    @include typeColor($backHielo, $secondaryColor);
+    border: 1px solid $typeHielo;
+}
+
+.card-type--Psíquico {
+    @include typeColor($backPsiquico, $white);
+    border: 1px solid $typePsiquico;
+}
+
+.card-type--Tierra {
+    @include typeColor($typeElectrico, $white);
+    border: 1px solid $backElectrico;
+
+    &::before {
+        content: '';
+        width: 92%;
+        height: 95%;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        @include typeColor($backTierra, $white);
+        position: absolute;
+        z-index: 1;
+        border-radius: 8px;
+    }
+}
+
+.card-type--Roca {
+    @include typeColor($backRoca, $white);
+    border: 1px solid $typeRoca;
+}
+
+.card-type--Normal {
+    background: $yellowPoke;
+    border: 1px solid $typeElectrico;
+    z-index: 2;
+
+    &::before {
+        content: '';
+        width: 92%;
+        height: 95%;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        @include typeColor($backNormal, $white);
+        position: absolute;
+        z-index: 1;
+        border-radius: 8px;
+    }
+}
+
+.card-type--Lucha {
+    @include typeColor($backLucha, $white);
+    border: 1px solid $typeLucha;
+}
+
+.myCards__container__list__item-imgContainer--Eléctrico {
+    background: $imgBackElectrico;
+    box-shadow: inset 0 0 25px $secondaryColor;
+}
+
+.myCards__container__list__item-imgContainer--Tierra {
+    background: $imgBackTierra;
+    box-shadow: inset 0 0 25px $secondaryColor;
+}
+
+.myCards__container__list__item-imgContainer--Normal {
+    background: $imgBackNormal;
+    box-shadow: inset 0 0 25px $secondaryColor;
+}
+
+.myCards__container__list__item-imgContainer--Planta {
+    background: $imgBackPlanta;
+    box-shadow: inset 0 0 25px $secondaryColor;
+}
+
+.myCards__container__list__item-imgContainer--Fuego {
+    background: $imgBackFuego;
+    box-shadow: inset 0 0 25px $secondaryColor;
+}
+
+.myCards__container__list__item-imgContainer--Agua {
+    background: $imgBackAgua;
+    box-shadow: inset 0 0 25px $secondaryColor;
+}
+
+.myCards__container__list__item-imgContainer--Bicho {
+    background: $imgBackBicho;
+    box-shadow: inset 0 0 25px $secondaryColor;
+}
+
+.myCards__container__list__item-imgContainer--Veneno {
+    background: $imgBackVeneno;
+    box-shadow: inset 0 0 25px $secondaryColor;
+}

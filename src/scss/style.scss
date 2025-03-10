@@ -32,3 +32,31 @@ button {
         cursor: pointer;
     }
 }
+
+.back__button {
+    @include set-flex;
+    position: absolute;
+    left: 3vw;
+    top: 3vh;
+    background: none;
+    @include font(2rem, 500, $white);
+    gap: 8px;
+    z-index: 10;
+
+    img {
+        width: 40px;
+    }
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.pages__title {
+    @include font(3rem, 400, $white);
+    background: $bluePoke;
+    width: 100vw;
+    text-align: center;
+    padding: 1rem;
+    border-bottom: 5px solid $secondaryColor;
+}

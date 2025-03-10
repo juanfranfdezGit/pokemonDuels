@@ -10,7 +10,9 @@ const backgrounds = [
 
 function MainMenu() {
   const [background, setBackground] = useState("");
-  const [goGame, setGoGame] = useState(false);
+  const [goGame, setGoGame] = useState(() => {
+    return localStorage.getItem("goGame") === "true";
+  });
   const Navigate = useNavigate();
 
   useEffect(() => {
@@ -19,7 +21,9 @@ function MainMenu() {
   }, []);
 
   function handleGoGame() {
-    setGoGame(!goGame);
+    const newGoGameState = !goGame;
+    setGoGame(newGoGameState);
+    localStorage.setItem("goGame", newGoGameState);
   }
 
   function navPokedex() {

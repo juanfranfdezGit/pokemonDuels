@@ -138,5 +138,12 @@
         "PH": 5,
         "Efecto": "Sin efecto",
         "Tipo": "Roca"
+    },
+    {
+        "id": 22,
+        "Habilidad": "Ataque Arena",
+        "PH": 5,
+        "Efecto": "Ceguera",
+        "Tipo": "Roca"
     }
 ]

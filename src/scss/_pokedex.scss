@@ -5,34 +5,6 @@
     @include set-flex;
     flex-direction: column;
 
-    .pokedex__title {
-        @include font(3rem, 400, $white);
-        background: $bluePoke;
-        width: 100vw;
-        text-align: center;
-        padding: 1rem;
-        border-bottom: 5px solid $secondaryColor;
-    }
-
-    .pokedex__button {
-        @include set-flex;
-        position: absolute;
-        left: 3vw;
-        top: 3vh;
-        background: none;
-        @include font(2rem, 500, $white);
-        gap: 8px;
-        z-index: 10;
-
-        img {
-            width: 40px;
-        }
-
-        &:hover {
-            cursor: pointer;
-        }
-    }
-
     .pokedex__pokemons {
         width: 100vw;
         @include set-flex;
@@ -208,56 +180,56 @@
     padding: 4px 12px;
     border-radius: 5px;
     @include font(1rem, 500, $secondaryColor);
+}
 
-    &.pokedex-type--Planta {
-        @include typeColor($typePlanta, $white);
-    }
+.pokedex-type--Eléctrico {
+    @include typeColor($typeElectrico, $secondaryColor);
+}
 
-    &.pokedex-type--Veneno {
-        @include typeColor($typeVeneno, $white);
-    }
+.pokedex-type--Planta {
+    @include typeColor($typePlanta, $white);
+}
 
-    &.pokedex-type--Fuego {
-        @include typeColor($typeFuego, $white);
-    }
+.pokedex-type--Veneno {
+    @include typeColor($typeVeneno, $white);
+}
 
-    &.pokedex-type--Volador {
-        @include typeColor($typeVolador, $secondaryColor);
-    }
+.pokedex-type--Fuego {
+    @include typeColor($typeFuego, $white);
+}
 
-    &.pokedex-type--Agua {
-        @include typeColor($typeAgua, $secondaryColor);
-    }
+.pokedex-type--Volador {
+    @include typeColor($typeVolador, $secondaryColor);
+}
 
-    &.pokedex-type--Bicho {
-        @include typeColor($typeBicho, $secondaryColor);
-    }
+.pokedex-type--Agua {
+    @include typeColor($typeAgua, $secondaryColor);
+}
 
-    &.pokedex-type--Eléctrico {
-        @include typeColor($typeElectrico, $secondaryColor);
-    }
+.pokedex-type--Bicho {
+    @include typeColor($typeBicho, $secondaryColor);
+}
 
-    &.pokedex-type--Hielo {
-        @include typeColor($typeHielo, $secondaryColor);
-    }
+.pokedex-type--Hielo {
+    @include typeColor($typeHielo, $secondaryColor);
+}
 
-    &.pokedex-type--Psíquico {
-        @include typeColor($typePsiquico, $white);
-    }
+.pokedex-type--Psíquico {
+    @include typeColor($typePsiquico, $white);
+}
 
-    &.pokedex-type--Tierra {
-        @include typeColor($typeTierra, $white);
-    }
+.pokedex-type--Tierra {
+    @include typeColor($typeTierra, $white);
+}
 
-    &.pokedex-type--Roca {
-        @include typeColor($typeRoca, $white);
-    }
-    
-    &.pokedex-type--Normal {
-        @include typeColor($typeNormal, $white);
-    }
-    
-    &.pokedex-type--Lucha {
-        @include typeColor($typeLucha, $white);
-    }
+.pokedex-type--Roca {
+    @include typeColor($typeRoca, $white);
+}
+
+.pokedex-type--Normal {
+    @include typeColor($typeNormal, $white);
+}
+
+.pokedex-type--Lucha {
+    @include typeColor($typeLucha, $white);
 }
