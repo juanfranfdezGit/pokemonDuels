@@ -461,7 +461,8 @@
   position: relative;
   padding: 2rem;
 }
-.myCards .myCards__container .myCards__container__list .myCards__container__list__item {
+
+.myCards__container__list__item {
   width: 17vw;
   height: 50vh;
   border-radius: 12px;
@@ -469,7 +470,7 @@
   position: relative;
   box-shadow: 0 0 15px #111;
 }
-.myCards .myCards__container .myCards__container__list .myCards__container__list__item .myCards__container__list__item-nameContainer {
+.myCards__container__list__item .myCards__container__list__item-nameContainer {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -478,31 +479,31 @@
   position: relative;
   z-index: 10;
 }
-.myCards .myCards__container .myCards__container__list .myCards__container__list__item .myCards__container__list__item-nameContainer .myCards__container__list__item-name {
+.myCards__container__list__item .myCards__container__list__item-nameContainer .myCards__container__list__item-name {
   font-size: 1.15rem;
   font-weight: 700;
   color: #111;
 }
-.myCards .myCards__container .myCards__container__list .myCards__container__list__item .myCards__container__list__item-nameContainer .myCards__container__list__item-PS {
+.myCards__container__list__item .myCards__container__list__item-nameContainer .myCards__container__list__item-PS {
   font-size: 1.4rem;
   font-weight: 700;
   color: #111;
 }
-.myCards .myCards__container .myCards__container__list .myCards__container__list__item .myCards__container__list__item-nameContainer .myCards__container__list__item-PS span {
+.myCards__container__list__item .myCards__container__list__item-nameContainer .myCards__container__list__item-PS span {
   font-size: 1rem;
   font-weight: 700;
   color: #111;
   opacity: 0.8;
   margin-right: 2px;
 }
-.myCards .myCards__container .myCards__container__list .myCards__container__list__item .myCards__container__list__item-imgContainer {
+.myCards__container__list__item .myCards__container__list__item-imgContainer {
   width: 100%;
   height: 45%;
   position: relative;
   z-index: 6;
   border-radius: 4px;
 }
-.myCards .myCards__container .myCards__container__list .myCards__container__list__item .myCards__container__list__item-imgContainer .myCards__container__list__item-image {
+.myCards__container__list__item .myCards__container__list__item-imgContainer .myCards__container__list__item-image {
   width: 100%;
   height: 100%;
   object-fit: contain;
@@ -512,7 +513,7 @@
   filter: drop-shadow(0 5px 8px #111);
   z-index: 2;
 }
-.myCards .myCards__container .myCards__container__list .myCards__container__list__item .myCards__container__list__item-imgContainer .cards-typeContainer {
+.myCards__container__list__item .myCards__container__list__item-imgContainer .cards-typeContainer {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -523,7 +524,7 @@
   transform: translate(-50%);
   z-index: 3;
 }
-.myCards .myCards__container .myCards__container__list .myCards__container__list__item .myCards__container__list__item-imgContainer .cards-typeContainer .cards-type:first-child {
+.myCards__container__list__item .myCards__container__list__item-imgContainer .cards-typeContainer .cards-type:first-child {
   font-size: 1rem;
   font-weight: 600;
   color: #111;
@@ -533,7 +534,7 @@
   left: 0;
   padding: 4px 4px 4px 20px;
 }
-.myCards .myCards__container .myCards__container__list .myCards__container__list__item .myCards__container__list__item-imgContainer .cards-typeContainer .cards-type:nth-child(2) {
+.myCards__container__list__item .myCards__container__list__item-imgContainer .cards-typeContainer .cards-type:nth-child(2) {
   font-size: 1rem;
   font-weight: 600;
   color: #111;
@@ -543,7 +544,7 @@
   right: 0;
   padding: 4px 4px 4px 20%;
 }
-.myCards .myCards__container .myCards__container__list .myCards__container__list__item .myCards__container__list__item-description {
+.myCards__container__list__item .myCards__container__list__item-description {
   position: relative;
   z-index: 10;
   margin-top: 38px;
@@ -552,7 +553,7 @@
   color: #111;
   line-height: 1.1rem;
 }
-.myCards .myCards__container .myCards__container__list .myCards__container__list__item .myCards__container__list__item-habilityContainer {
+.myCards__container__list__item .myCards__container__list__item-habilityContainer {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -562,7 +563,7 @@
   margin-top: 2rem;
   transition: all 0.5s;
 }
-.myCards .myCards__container .myCards__container__list .myCards__container__list__item .myCards__container__list__item-habilityContainer .myCards__container__list__item-hability {
+.myCards__container__list__item .myCards__container__list__item-habilityContainer .myCards__container__list__item-hability {
   font-size: 1.15rem;
   font-weight: 700;
   color: #111;
@@ -571,10 +572,10 @@
   align-items: center;
   gap: 8px;
 }
-.myCards .myCards__container .myCards__container__list .myCards__container__list__item .myCards__container__list__item-habilityContainer .myCards__container__list__item-hability:hover {
+.myCards__container__list__item .myCards__container__list__item-habilityContainer .myCards__container__list__item-hability:hover {
   cursor: pointer;
 }
-.myCards .myCards__container .myCards__container__list .myCards__container__list__item .myCards__container__list__item-habilityContainer .myCards__container__list__item-hability span {
+.myCards__container__list__item .myCards__container__list__item-habilityContainer .myCards__container__list__item-hability span {
   font-size: 0.8rem;
   font-weight: 600;
   color: #3466af;
@@ -589,12 +590,12 @@
   position: relative;
   top: 2px;
 }
-.myCards .myCards__container .myCards__container__list .myCards__container__list__item .myCards__container__list__item-habilityContainer .myCards__container__list__item-PH {
+.myCards__container__list__item .myCards__container__list__item-habilityContainer .myCards__container__list__item-PH {
   font-size: 1.15rem;
   font-weight: 700;
   color: #111;
 }
-.myCards .myCards__container .myCards__container__list .myCards__container__list__item .myCards__container__list__item-habilityContainer .myCards__container__list__item-PH span {
+.myCards__container__list__item .myCards__container__list__item-habilityContainer .myCards__container__list__item-PH span {
   font-size: 1rem;
   font-weight: 700;
   color: #111;
@@ -883,6 +884,124 @@
   top: 15%;
 }
 
+.oponentsFight {
+  width: 100vw;
+  height: 100vh;
+  background: url(../../public/assets/images/backOponents.webp);
+  background-position: bottom;
+}
+.oponentsFight .oponentsFight__Menu {
+  width: 100vw;
+  height: 10vh;
+  position: absolute;
+  top: 0;
+  background: rgba(255, 0, 0, 0.6980392157);
+  border-bottom: 1px solid #FF0000;
+  box-shadow: 0 0 15px #111;
+}
+.oponentsFight .oponentsFight__Oponent-container {
+  padding: 7rem 1rem;
+}
+.oponentsFight .oponentsFight__Oponent-container .oponentsFight__Oponent-visual {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: flex-start;
+  align-items: start;
+  height: 20vh;
+}
+.oponentsFight .oponentsFight__Oponent-container .oponentsFight__Oponent-visual .oponentsFight__Oponent-visual-name {
+  font-size: 2rem;
+  font-weight: 900;
+  color: #111;
+  text-align: center;
+  margin-bottom: -1rem;
+}
+.oponentsFight .oponentsFight__Oponent-container .oponentsFight__Oponent-visual .oponentsFight__Oponent-visual-image {
+  filter: drop-shadow(0 0 5px #111);
+  height: 30vh;
+  position: absolute;
+  top: 16vh;
+  left: 3vw;
+}
+.oponentsFight .oponentsFight__Oponent-container .oponentsFight__Oponent-visual .oponentsFight__Oponent-visual-cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  height: 70%;
+  gap: 1rem;
+  margin-top: 2rem;
+  position: relative;
+  bottom: 20px;
+  left: 30px;
+}
+.oponentsFight .oponentsFight__Oponent-container .oponentsFight__Oponent-visual .oponentsFight__Oponent-visual-cards .oponentsFight__Oponent-visual-cards--item {
+  height: 100%;
+  filter: drop-shadow(0 0 5px #111);
+}
+
+.oponentsFight__Board {
+  background: rgba(255, 255, 255, 0.7882352941);
+  border-radius: 20px;
+  box-shadow: 0 0 15px #111;
+  position: absolute;
+  top: 33vh;
+  left: 25vw;
+  width: 50vw;
+  height: 45vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  overflow: hidden;
+}
+.oponentsFight__Board .oponentsFight__Board-top {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  width: 100%;
+  height: 50%;
+}
+.oponentsFight__Board .oponentsFight__Board-top div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #111;
+}
+.oponentsFight__Board .oponentsFight__Board-bottom {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  width: 100%;
+  height: 50%;
+}
+.oponentsFight__Board .oponentsFight__Board-bottom div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #111;
+}
+
+.myCardsFight-container {
+  width: 90vw;
+  height: 18vh;
+  position: absolute;
+  bottom: 1vh;
+  right: 5vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.myCardsFight-container .myCards__container__list__item {
+  position: relative;
+  top: 12vh;
+  transition: all 1s;
+}
+.myCardsFight-container .myCards__container__list__item:hover {
+  cursor: pointer;
+  top: -15vh;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -975,6 +1094,16 @@ button:hover {
 
 .cards__button {
   background: #3466af;
+}
+
+.loading {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  object-fit: contain;
+  background: #181B1D;
 }
 
 /*# sourceMappingURL=style.css.map */

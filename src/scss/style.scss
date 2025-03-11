@@ -4,6 +4,7 @@
 @import '_pokedex.scss';
 @import '_myCards.scss';
 @import '_oponents.scss';
+@import '_oponentsFight.scss';
 
 * {
     margin: 0;
@@ -90,4 +91,14 @@ button {
 
 .cards__button {
     background: $bluePoke;
+}
+
+.loading {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: contain;
+    background: #181B1D;
 }

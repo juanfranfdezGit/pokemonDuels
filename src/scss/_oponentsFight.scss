@@ -1,0 +1,119 @@
+@import '_mixin.scss';
+
+.oponentsFight {
+    width: 100vw;
+    height: 100vh;
+    background: url(../../public/assets/images/backOponents.webp);
+    background-position: bottom;
+
+    .oponentsFight__Menu {
+        width: 100vw;
+        height: 10vh;
+        position: absolute;
+        top: 0;
+        background: $primaryColorOp;
+        border-bottom: 1px solid $primaryColor;
+        box-shadow: 0 0 15px $secondaryColor;
+
+    }
+
+    .oponentsFight__Oponent-container {
+        padding: 7rem 1rem;
+
+        .oponentsFight__Oponent-visual {
+            @include set-flex;
+            justify-content: flex-start;
+            align-items: start;
+            height: 20vh;
+
+            .oponentsFight__Oponent-visual-name {
+                @include font(2rem, 900, $secondaryColor);
+                text-align: center;
+                margin-bottom: -1rem;
+            }
+
+            .oponentsFight__Oponent-visual-image {
+                filter: drop-shadow(0 0 5px $secondaryColor);
+                height: 30vh;
+                position: absolute;
+                top: 16vh;
+                left: 3vw
+            }
+
+            .oponentsFight__Oponent-visual-cards {
+                @include set-flex;
+                flex-wrap: wrap;
+                height: 70%;
+                gap: 1rem;
+                margin-top: 2rem;
+                position: relative;
+                bottom: 20px;
+                left: 30px;
+
+                .oponentsFight__Oponent-visual-cards--item {
+                    height: 100%;
+                    filter: drop-shadow(0 0 5px $secondaryColor);
+                }
+            }
+        }
+    }
+}
+
+.oponentsFight__Board {
+    background: $whiteOpacity;
+    border-radius: 20px;
+    box-shadow: 0 0 15px $secondaryColor;
+    position: absolute;
+    top: 33vh;
+    left: 25vw;
+    width: 50vw;
+    height: 45vh;
+    @include set-flex;
+    flex-direction: column;
+    overflow: hidden;
+
+    .oponentsFight__Board-top {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        width: 100%;
+        height: 50%;
+
+        div {
+            @include set-flex;
+            border: 1px solid $secondaryColor;
+        }
+    }
+
+    .oponentsFight__Board-bottom {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        width: 100%;
+        height: 50%;
+
+        div {
+            @include set-flex;
+            border: 1px solid $secondaryColor;
+        }
+    }
+}
+
+.myCardsFight-container {
+    width: 90vw;
+    height: 18vh;
+    position: absolute;
+    bottom: 1vh;
+    right: 5vw;
+    @include set-flex;
+    gap: 1rem;
+
+    .myCards__container__list__item {
+        position: relative;
+        top: 12vh;
+        transition: all 1s;
+
+        &:hover {
+            cursor: pointer;
+            top: -15vh;
+        }
+    }
+}

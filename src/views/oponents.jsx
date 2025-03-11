@@ -2,9 +2,11 @@ import BackButton from "../components/backButton";
 import MyCardsButton from "../components/myCardsButton";
 import ShopButton from "../components/shopButton";
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 function Oponents() {
     const [oponentCards, setoponentCards] = useState([]);
+    const Navigate = useNavigate();
 
     useEffect(() => {
       fetch("/services/oponents.json")
@@ -12,6 +14,10 @@ function Oponents() {
         .then((data) => {setoponentCards(data);})
         .catch((error) => console.error("Error cargando JSON:", error));
     }, []);
+
+    function navOponentFight(name) {
+        Navigate(`/oponents/${name}`)
+    }
 
     return (
       <>
@@ -26,7 +32,7 @@ function Oponents() {
             <div className="oponents__oponentsList-container">
                 <ul className="oponents__oponentsList">
                     {oponentCards.map((oponent) => (
-                        <li key={oponent.id} className="oponents__oponentsList-item">
+                        <li onClick={() => {navOponentFight(oponent.name)}} key={oponent.id} className="oponents__oponentsList-item">
                             <p className="oponents__oponentsList-item--name">{oponent.name} </p>
                             <p className="oponents__oponentsList-item--difficulty">{oponent.difficulty} </p>
                             <div className="oponents__oponentsList-item--img">
