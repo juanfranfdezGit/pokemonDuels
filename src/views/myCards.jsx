@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import BackButton from "../components/backButton";
+import ShopButton from "../components/shopButton";
 
 function MyCards() {
     const [cards, setCards] = useState([]);
@@ -24,6 +25,7 @@ function MyCards() {
             <section className="myCards">
                 <h2 className="pages__title">Mi Colección</h2>
                 <BackButton></BackButton>
+                <ShopButton></ShopButton>
 
                 <div className="myCards__container">
                     <ul className="myCards__container__list">
@@ -45,7 +47,7 @@ function MyCards() {
                             </div>
                             <p className="myCards__container__list__item-description">{card.description}</p>
                             <div className="myCards__container__list__item-habilityContainer">
-                                <p className="myCards__container__list__item-hability">{card.Habilidad}</p>
+                                <p className="myCards__container__list__item-hability">{card.Habilidad} <span>?</span></p>
                                 {(() => {
                                     const attackFind = attack.find(a => a.Habilidad === card.Habilidad);
                                     return attackFind ? <p className="myCards__container__list__item-PH"><span>PH:</span> {attackFind.PH}</p> : "Ataque no encontrado";

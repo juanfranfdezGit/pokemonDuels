@@ -107,9 +107,23 @@
 
                     .myCards__container__list__item-hability {
                         @include font(1.15rem, 700, $secondaryColor);
+                        @include set-flex;
+                        gap: 8px;
                         
                         &:hover {
                             cursor: pointer;
+                        }
+
+                        span {
+                            @include font(.8rem, 600, $bluePoke);
+                            @include set-flex;
+                            width: 12px;
+                            height: 12px;
+                            padding: 8px;
+                            background: $white;
+                            border-radius: 50%;
+                            position: relative;
+                            top: 2px;
                         }
                     }
 
@@ -222,8 +236,8 @@
 }
 
 .card-type--Bicho {
-    @include typeColor($backElectrico, $secondaryColor);
-    border: 1px solid $typeElectrico;
+    @include typeColor($typeElectrico, $secondaryColor);
+    border: 1px solid $backElectrico;
 
     &::before {
         content: '';

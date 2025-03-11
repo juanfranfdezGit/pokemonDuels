@@ -8,7 +8,7 @@ function BackButton() {
     }
 
     return (
-        <button className="back__button" onClick={navMainMenu}><img src="/assets/logos/arrowBack.png" alt="back button" />Volver</button>
+        <button className="back__button" onClick={navMainMenu}><img src="/assets/logos/arrowBack.png" alt="back button" />Main Menú</button>
     )
 }
 

@@ -1,0 +1,70 @@
+@import '_mixin.scss';
+
+.oponents {
+    width: 100vw;
+    height: 100vh;
+    background: url(../../public/assets/images/backOponents.webp);
+    background-position: bottom;
+
+    .oponents__menu {
+        width: 100vw;
+        height: 10vh;
+        position: absolute;
+        top: 0;
+        background: $primaryColorOp;
+        border-bottom: 1px solid $primaryColor;
+        box-shadow: 0 0 15px $secondaryColor;
+
+        .oponents__menu__list {
+            .shop__button {
+                background: $bluePoke;
+                right: 13vw;
+            }
+        }
+    }
+
+    .oponents__oponentsList-container {
+        padding: 10rem 5rem;
+
+        .oponents__oponentsList {
+            @include set-flex;
+            flex-wrap: wrap;
+            gap: 3rem;
+
+            .oponents__oponentsList-item {
+                background: $whiteOpacity;
+                padding: 2rem 3rem;
+                border-radius: 24px;
+                box-shadow: 0 0 15px $secondaryColor;
+                height: 43vh;
+                width: 20vw;
+                overflow: hidden;
+                transition: all .5s;
+                position: relative;
+
+                &:hover {
+                    cursor: pointer;
+                    transform: scale(1.05);
+                }
+
+                .oponents__oponentsList-item--name {
+                    text-align: center;
+                    @include font(1.6rem, 900, $secondaryColor);
+                    margin-bottom: 2rem;
+                }
+
+                .oponents__oponentsList-item--img {
+                    width: 100%;
+
+                    img {
+                        width: 90%;
+                        object-fit: cover;
+                        filter: drop-shadow(0 5px 5px $secondaryColor);
+                        position: absolute;
+                        top: 15%;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -566,9 +566,28 @@
   font-size: 1.15rem;
   font-weight: 700;
   color: #111;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
 }
 .myCards .myCards__container .myCards__container__list .myCards__container__list__item .myCards__container__list__item-habilityContainer .myCards__container__list__item-hability:hover {
   cursor: pointer;
+}
+.myCards .myCards__container .myCards__container__list .myCards__container__list__item .myCards__container__list__item-habilityContainer .myCards__container__list__item-hability span {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #3466af;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 12px;
+  height: 12px;
+  padding: 8px;
+  background: #f1f1f1;
+  border-radius: 50%;
+  position: relative;
+  top: 2px;
 }
 .myCards .myCards__container .myCards__container__list .myCards__container__list__item .myCards__container__list__item-habilityContainer .myCards__container__list__item-PH {
   font-size: 1.15rem;
@@ -682,9 +701,9 @@
 }
 
 .card-type--Bicho {
-  background: #ffbf28;
+  background: #f4c454;
   color: #111;
-  border: 1px solid #f4c454;
+  border: 1px solid #ffbf28;
 }
 .card-type--Bicho::before {
   content: "";
@@ -802,6 +821,68 @@
   box-shadow: inset 0 0 25px #111;
 }
 
+.oponents {
+  width: 100vw;
+  height: 100vh;
+  background: url(../../public/assets/images/backOponents.webp);
+  background-position: bottom;
+}
+.oponents .oponents__menu {
+  width: 100vw;
+  height: 10vh;
+  position: absolute;
+  top: 0;
+  background: rgba(255, 0, 0, 0.6980392157);
+  border-bottom: 1px solid #FF0000;
+  box-shadow: 0 0 15px #111;
+}
+.oponents .oponents__menu .oponents__menu__list .shop__button {
+  background: #3466af;
+  right: 13vw;
+}
+.oponents .oponents__oponentsList-container {
+  padding: 10rem 5rem;
+}
+.oponents .oponents__oponentsList-container .oponents__oponentsList {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 3rem;
+}
+.oponents .oponents__oponentsList-container .oponents__oponentsList .oponents__oponentsList-item {
+  background: rgba(255, 255, 255, 0.7882352941);
+  padding: 2rem 3rem;
+  border-radius: 24px;
+  box-shadow: 0 0 15px #111;
+  height: 43vh;
+  width: 20vw;
+  overflow: hidden;
+  transition: all 0.5s;
+  position: relative;
+}
+.oponents .oponents__oponentsList-container .oponents__oponentsList .oponents__oponentsList-item:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+}
+.oponents .oponents__oponentsList-container .oponents__oponentsList .oponents__oponentsList-item .oponents__oponentsList-item--name {
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: 900;
+  color: #111;
+  margin-bottom: 2rem;
+}
+.oponents .oponents__oponentsList-container .oponents__oponentsList .oponents__oponentsList-item .oponents__oponentsList-item--img {
+  width: 100%;
+}
+.oponents .oponents__oponentsList-container .oponents__oponentsList .oponents__oponentsList-item .oponents__oponentsList-item--img img {
+  width: 90%;
+  object-fit: cover;
+  filter: drop-shadow(0 5px 5px #111);
+  position: absolute;
+  top: 15%;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -860,6 +941,40 @@ button:hover {
   text-align: center;
   padding: 1rem;
   border-bottom: 5px solid #111;
+}
+
+.shop__button,
+.cards__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: 3vw;
+  top: 2.2vh;
+  background: none;
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: #f1f1f1;
+  gap: 8px;
+  z-index: 10;
+  padding: 0.9rem 2rem;
+  border-radius: 28px;
+  background: #FF0000;
+  border: 1px solid #3466af;
+  box-shadow: 0 0 5px #111;
+}
+.shop__button img,
+.cards__button img {
+  width: 40px;
+}
+.shop__button:hover,
+.cards__button:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+}
+
+.cards__button {
+  background: #3466af;
 }
 
 /*# sourceMappingURL=style.css.map */
