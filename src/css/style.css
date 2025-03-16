@@ -505,13 +505,22 @@
 }
 .myCards__container__list__item .myCards__container__list__item-imgContainer .myCards__container__list__item-image {
   width: 100%;
-  height: 100%;
+  height: 90%;
   object-fit: contain;
   position: absolute;
-  top: 0;
+  top: 5%;
   left: 0;
   filter: drop-shadow(0 5px 8px #111);
   z-index: 2;
+}
+.myCards__container__list__item .myCards__container__list__item-imgContainer .myCards__container__list__item-back {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
 }
 .myCards__container__list__item .myCards__container__list__item-imgContainer .cards-typeContainer {
   display: flex;
@@ -968,6 +977,9 @@
   align-items: center;
   border: 1px solid #111;
 }
+.oponentsFight__Board .oponentsFight__Board-top div:hover {
+  cursor: pointer;
+}
 .oponentsFight__Board .oponentsFight__Board-bottom {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
@@ -979,6 +991,17 @@
   justify-content: center;
   align-items: center;
   border: 1px solid #111;
+}
+.oponentsFight__Board .oponentsFight__Board-bottom div:hover {
+  cursor: pointer;
+}
+
+.possible {
+  box-shadow: inset 0 0 15px #1abb65;
+}
+
+.occupied img {
+  width: 90%;
 }
 
 .myCardsFight-container {
@@ -1000,6 +1023,10 @@
 .myCardsFight-container .myCards__container__list__item:hover {
   cursor: pointer;
   top: -15vh;
+}
+
+.myCards__container__list__item.selected {
+  box-shadow: 0 0 15px 15px #1abb65;
 }
 
 * {

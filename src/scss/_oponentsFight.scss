@@ -81,6 +81,10 @@
         div {
             @include set-flex;
             border: 1px solid $secondaryColor;
+
+            &:hover {
+                cursor: pointer;
+            }
         }
     }
 
@@ -93,7 +97,21 @@
         div {
             @include set-flex;
             border: 1px solid $secondaryColor;
+
+            &:hover {
+                cursor: pointer;
+            }
         }
+    }
+}
+
+.possible {
+    box-shadow: inset 0 0 15px $backPlanta;
+}
+
+.occupied {
+    img {
+        width: 90%;
     }
 }
 
@@ -116,4 +134,8 @@
             top: -15vh;
         }
     }
+}
+
+.myCards__container__list__item.selected {
+    box-shadow: 0 0 15px 15px $backPlanta;
 }

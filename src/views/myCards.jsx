@@ -39,6 +39,7 @@ function MyCards() {
                             </div>
                             <div className={`myCards__container__list__item-imgContainer myCards__container__list__item-imgContainer--`+card.tipo[0]}>
                                 <img className="myCards__container__list__item-image" src={card.isShiny ? card.imageShiny : card.image} alt={card.name+` image`} />
+                                <img className="myCards__container__list__item-back" src="/assets/images/brillo.png" alt={card.name+` image`} />
                                 <div className="cards-typeContainer">
                                     {card.tipo.map((type, index) => (
                                             <p key={index} className={`cards-type pokedex-type--`+type}>{type}</p>

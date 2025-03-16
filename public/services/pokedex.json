@@ -11,8 +11,8 @@
         "debilidad": ["Fuego", "Hielo", "Volador", "Psíquico"],
         "stats": [3, 3, 3, 4, 4],
         "stats_info": ["PS", "Ataque", "Defensa", "Ataque Especial", "Defensa Especial"],
-        "evolucion": "Ivysaur",
-        "image": "/assets/images/pokemons/0001bulbasaur.png"
+        "image": "/assets/images/pokemons/0001bulbasaur.png",
+        "deck": false
     },
     {
         "id": 2, 
@@ -26,10 +26,11 @@
         "debilidad": ["Fuego", "Hielo", "Volador", "Psíquico"],
         "stats": [4, 4, 4, 5, 5],
         "stats_info": ["PS", "Ataque", "Defensa", "Ataque Especial", "Defensa Especial"],
-        "evolucion": "Venasaur",
         "image": "/assets/images/pokemons/0002ivysaur.png",
         "imageShiny": "/assets/images/pokemons/0002ivysaurShiny.png",
-        "isShiny": false
+        "preEvolucion": "Bulbasaur",
+        "isShiny": false,
+        "deck": false
     },
     {
         "id": 3, 
@@ -43,7 +44,9 @@
         "debilidad": ["Fuego", "Hielo", "Volador", "Psíquico"],
         "stats": [5, 5, 5, 7, 6],
         "stats_info": ["PS", "Ataque", "Defensa", "Ataque Especial", "Defensa Especial"],
-        "image": "/assets/images/pokemons/0003venasaur.png"
+        "preEvolucion": "Ivysaur",
+        "image": "/assets/images/pokemons/0003venasaur.png",
+        "deck": false
     },
     {
         "id": 4, 
@@ -57,8 +60,8 @@
         "debilidad": ["Agua", "Tierra", "Roca"],
         "stats": [3, 4, 3, 4, 3],
         "stats_info": ["PS", "Ataque", "Defensa", "Ataque Especial", "Defensa Especial"],
-        "evolucion": "charmeleon",
-        "image": "/assets/images/pokemons/0004charmander.png"
+        "image": "/assets/images/pokemons/0004charmander.png",
+        "deck": false
     },
     {
         "id": 5, 
@@ -72,8 +75,9 @@
         "debilidad": ["Agua", "Tierra", "Roca"],
         "stats": [4, 4, 4, 5, 4],
         "stats_info": ["PS", "Ataque", "Defensa", "Ataque Especial", "Defensa Especial"],
-        "evolucion": "charizard",
-        "image": "/assets/images/pokemons/0005charmeleon.png"
+        "preEvolucion": "Charmander",
+        "image": "/assets/images/pokemons/0005charmeleon.png",
+        "deck": false
     },
     {
         "id": 6, 
@@ -89,7 +93,9 @@
         "stats_info": ["PS", "Ataque", "Defensa", "Ataque Especial", "Defensa Especial"],
         "image": "/assets/images/pokemons/0006charizard.png",
         "imageShiny": "/assets/images/pokemons/0006charizardShiny.png",
-        "isShiny": false
+        "preEvolucion": "Charmeleon",
+        "isShiny": false,
+        "deck": false
     },
     {
         "id": 7, 
@@ -103,10 +109,10 @@
         "debilidad": ["Planta", "Eléctrico"],
         "stats": [3, 3, 4, 3, 4],
         "stats_info": ["PS", "Ataque", "Defensa", "Ataque Especial", "Defensa Especial"],
-        "evolucion": "Wartortle",
         "image": "/assets/images/pokemons/0007squirtle.png",
         "imageShiny": "/assets/images/pokemons/0007squirtleShiny.webp",
-        "isShiny": false
+        "isShiny": false,
+        "deck": false
     },
     {
         "id": 8, 
@@ -120,8 +126,9 @@
         "debilidad": ["Planta", "Eléctrico"],
         "stats": [4, 4, 5, 4, 5],
         "stats_info": ["PS", "Ataque", "Defensa", "Ataque Especial", "Defensa Especial"],
-        "evolucion": "Blastoise",
-        "image": "/assets/images/pokemons/0008wartortle.png"
+        "image": "/assets/images/pokemons/0008wartortle.png",
+        "preEvolucion": "Squirtle",
+        "deck": false
     },
     {
         "id": 9, 
@@ -135,7 +142,9 @@
         "debilidad": ["Planta", "Eléctrico"],
         "stats": [5, 5, 6, 5, 7],
         "stats_info": ["PS", "Ataque", "Defensa", "Ataque Especial", "Defensa Especial"],
-        "image": "/assets/images/pokemons/0009blastoise.png"
+        "image": "/assets/images/pokemons/0009blastoise.png",
+        "preEvolucion": "Wartotle",
+        "deck": false
     },
     {
         "id": 10, 
@@ -149,8 +158,8 @@
         "debilidad": ["Fuego", "Volador", "Roca"],
         "stats": [3, 2, 3, 2, 2],
         "stats_info": ["PS", "Ataque", "Defensa", "Ataque Especial", "Defensa Especial"],
-        "evolucion": "Metapod",
-        "image": "/assets/images/pokemons/0010caterpie.png"
+        "image": "/assets/images/pokemons/0010caterpie.png",
+        "deck": false
     },
     {
         "id": 11, 
@@ -164,8 +173,9 @@
         "debilidad": ["Fuego", "Volador", "Roca"],
         "stats": [4, 1, 5, 1, 5],
         "stats_info": ["PS", "Ataque", "Defensa", "Ataque Especial", "Defensa Especial"],
-        "evolucion": "Butterfree",
-        "image": "/assets/images/pokemons/0011metapod.png"
+        "image": "/assets/images/pokemons/0011metapod.png",
+        "preEvolucion": "Caterpie",
+        "deck": false
     },
     {
         "id": 12, 
@@ -181,7 +191,9 @@
         "stats_info": ["PS", "Ataque", "Defensa", "Ataque Especial", "Defensa Especial"],
         "image": "/assets/images/pokemons/0012butterfree.webp",
         "imageShiny": "/assets/images/pokemons/0012butterfreeShiny.png",
-        "isShiny": false
+        "preEvolucion": "Metapod",
+        "isShiny": false,
+        "deck": false
     },
    {
         "id": 13, 
@@ -195,8 +207,8 @@
         "debilidad": ["Fuego", "Psíquico", "Volador", "Roca"],
         "stats": [4, 1, 5, 1, 5],
         "stats_info": ["PS", "Ataque", "Defensa", "Ataque Especial", "Defensa Especial"],
-        "evolucion": "Kakuna",
-        "image": "/assets/images/pokemons/0013weedle.png"
+        "image": "/assets/images/pokemons/0013weedle.png",
+        "deck": false
     },
     {
         "id": 14, 
@@ -210,8 +222,9 @@
         "debilidad": ["Fuego", "Psíquico", "Volador", "Roca"],
         "stats": [4, 1, 5, 1, 5],
         "stats_info": ["PS", "Ataque", "Defensa", "Ataque Especial", "Defensa Especial"],
-        "evolucion": "Beedrill",
-        "image": "/assets/images/pokemons/0014kakuna.png"
+        "image": "/assets/images/pokemons/0014kakuna.png",
+        "preEvolucion": "Weedle",
+        "deck": false
     },
     {
         "id": 15, 
@@ -225,7 +238,9 @@
         "debilidad": ["Fuego", "Psíquico", "Volador", "Roca"],
         "stats": [4, 6, 3, 3, 5],
         "stats_info": ["PS", "Ataque", "Defensa", "Ataque Especial", "Defensa Especial"],
-        "image": "/assets/images/pokemons/0015beedrill.png"
+        "image": "/assets/images/pokemons/0015beedrill.png",
+        "preEvolucion": "Kakuna",
+        "deck": false
     },
     {
         "id": 16, 
@@ -239,8 +254,8 @@
         "debilidad": ["Eléctrico", "Hielo", "Roca"],
         "stats": [3, 3, 3, 3, 3],
         "stats_info": ["PS", "Ataque", "Defensa", "Ataque Especial", "Defensa Especial"],
-        "evolucion": "Pidgeotto",
-        "image": "/assets/images/pokemons/0016pidgey.png"
+        "image": "/assets/images/pokemons/0016pidgey.png",
+        "deck": false
     },
     {
         "id": 17, 
@@ -254,8 +269,9 @@
         "debilidad": ["Eléctrico", "Hielo", "Roca"],
         "stats": [4, 4, 4, 3, 3],
         "stats_info": ["PS", "Ataque", "Defensa", "Ataque Especial", "Defensa Especial"],
-        "evolucion": "Pidgeot",
-        "image": "/assets/images/pokemons/0017pidgeotto.png"
+        "image": "/assets/images/pokemons/0017pidgeotto.png",
+        "preEvolucion": "Pidgey",
+        "deck": false
     },
     {
         "id": 18, 
@@ -271,7 +287,9 @@
         "stats_info": ["PS", "Ataque", "Defensa", "Ataque Especial", "Defensa Especial"],
         "image": "/assets/images/pokemons/0018pidgeot.webp",
         "imageShiny": "/assets/images/pokemons/0018pidgeotShiny.png",
-        "isShiny": false
+        "preEvolucion": "Pidgeotto",
+        "isShiny": false,
+        "deck": false
     },
     {
         "id": 19, 
@@ -285,8 +303,8 @@
         "debilidad": ["Lucha"],
         "stats": [2, 4, 3, 2, 3],
         "stats_info": ["PS", "Ataque", "Defensa", "Ataque Especial", "Defensa Especial"],
-        "evolucion": "Raticate",
-        "image": "/assets/images/pokemons/0019rattata.png"
+        "image": "/assets/images/pokemons/0019rattata.png",
+        "deck": false
     },
     {
         "id": 20, 
@@ -300,7 +318,9 @@
         "debilidad": ["Lucha"],
         "stats": [4, 5, 4, 3, 5],
         "stats_info": ["PS", "Ataque", "Defensa", "Ataque Especial", "Defensa Especial"],
-        "image": "/assets/images/pokemons/0020raticate.png"
+        "image": "/assets/images/pokemons/0020raticate.png",
+        "preEvolucion": "Rattata",
+        "deck": false
     },
     {
         "id": 21, 
@@ -314,8 +334,8 @@
         "debilidad": ["Eléctrico", "Hielo", "Roca"],
         "stats": [3, 4, 2, 2, 2],
         "stats_info": ["PS", "Ataque", "Defensa", "Ataque Especial", "Defensa Especial"],
-        "evolucion": "Fearow",
-        "image": "/assets/images/pokemons/0021spearow.png"
+        "image": "/assets/images/pokemons/0021spearow.png",
+        "deck": false
     },
     {
         "id": 22, 
@@ -329,7 +349,9 @@
         "debilidad": ["Eléctrico", "Hielo", "Roca"],
         "stats": [4, 6, 4, 4, 4],
         "stats_info": ["PS", "Ataque", "Defensa", "Ataque Especial", "Defensa Especial"],
-        "image": "/assets/images/pokemons/0022fearow.webp"
+        "image": "/assets/images/pokemons/0022fearow.webp",
+        "preEvolucion": "Spearow",
+        "deck": false
     },
     {
         "id": 23, 
@@ -343,8 +365,8 @@
         "debilidad": ["Tierra", "Psíquico"],
         "stats": [3, 4, 3, 3, 4],
         "stats_info": ["PS", "Ataque", "Defensa", "Ataque Especial", "Defensa Especial"],
-        "evolucion": "Arbok",
-        "image": "/assets/images/pokemons/0023ekans.png"
+        "image": "/assets/images/pokemons/0023ekans.png",
+        "deck": false
     },
     {
         "id": 24, 
@@ -360,7 +382,9 @@
         "stats_info": ["PS", "Ataque", "Defensa", "Ataque Especial", "Defensa Especial"],
         "image": "/assets/images/pokemons/0024arbok.png",
         "imageShiny": "/assets/images/pokemons/0024arbokShiny.png",
-        "isShiny": false
+        "preEvolucion": "Ekans",
+        "isShiny": false,
+        "deck": false
     },
     {
         "id": 25, 
@@ -376,7 +400,8 @@
         "stats_info": ["PS", "Ataque", "Defensa", "Ataque Especial", "Defensa Especial"],
         "image": "/assets/images/pokemons/0025pikachu.png",
         "imageShiny": "/assets/images/pokemons/0025pikachuShiny.png",
-        "isShiny": false
+        "isShiny": false,
+        "deck": false
     },
     {
         "id": 26, 
@@ -390,7 +415,9 @@
         "debilidad": ["Tierra"],
         "stats": [4, 6, 4, 6, 5],
         "stats_info": ["PS", "Ataque", "Defensa", "Ataque Especial", "Defensa Especial"],
-        "image": "/assets/images/pokemons/0026raichu.png"
+        "image": "/assets/images/pokemons/0026raichu.png",
+        "preEvolucion": "Pikachu",
+        "deck": false
     },
     {
         "id": 27, 
@@ -404,7 +431,8 @@
         "debilidad": ["Agua", "Planta", "Hielo"],
         "stats": [3, 5, 5, 2, 2],
         "stats_info": ["PS", "Ataque", "Defensa", "Ataque Especial", "Defensa Especial"],
-        "image": "/assets/images/pokemons/0027sandshrew.png"
+        "image": "/assets/images/pokemons/0027sandshrew.png",
+        "deck": false
     },
     {
         "id": 28, 
@@ -418,6 +446,8 @@
         "debilidad": ["Agua", "Planta", "Hielo"],
         "stats": [4, 5, 6, 3, 4],
         "stats_info": ["PS", "Ataque", "Defensa", "Ataque Especial", "Defensa Especial"],
-        "image": "/assets/images/pokemons/0028sandslash.png"
+        "image": "/assets/images/pokemons/0028sandslash.png",
+        "preEvolucion": "Sandshrew",
+        "deck": false
     }
 ]
