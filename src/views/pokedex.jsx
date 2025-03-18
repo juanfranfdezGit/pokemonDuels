@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import BackButton from "../components/backButton";
+import Header from "../components/header";
 
 function Pokedex() {
     const [cards, setCards] = useState([]);
@@ -24,8 +24,7 @@ function Pokedex() {
     return (
         <>
             <section className="pokedex">
-                <h2 className="pages__title">Pokédex</h2>
-                <BackButton></BackButton>
+                <Header></Header>
 
                 <div className="pokedex__pokemons">
                     <div className="pokedex__pokemons__selected">

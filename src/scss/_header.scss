@@ -1,0 +1,38 @@
+.header {
+    @include set-flex;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 10vh;
+    background: $bluePoke;
+    padding: 2rem;
+    position: relative;
+    border-bottom: 4px solid $bluePokeDark;
+    box-shadow: 0 0 15px $secondaryColor;
+    z-index: 20;
+
+    .back__button {
+        @include set-flex;
+        background: none;
+        @include font(1.7rem, 500, $white);
+        gap: 8px;
+        position: absolute;
+        left: 2rem;
+    
+        img {
+            width: 32px;
+        }
+    
+        &:hover {
+            cursor: pointer;
+            transform: scale(1.02)
+        }
+    }
+    
+    .pages__title {
+        @include font(2.5rem, 600, $white);
+    }
+}
+
+
+

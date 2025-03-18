@@ -1,6 +1,3 @@
-import BackButton from "../components/backButton";
-import MyCardsButton from "../components/myCardsButton";
-import ShopButton from "../components/shopButton";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
@@ -24,9 +21,7 @@ function Oponents() {
           <div className="oponents">
             <div className="oponents__menu">
                 <ul className="oponents__menu__list">
-                    <BackButton></BackButton>
-                    <MyCardsButton></MyCardsButton>
-                    <ShopButton></ShopButton>
+                    
                 </ul>
             </div>
             <div className="oponents__oponentsList-container">

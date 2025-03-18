@@ -5,6 +5,7 @@ import MyCards from "./views/myCards";
 import Shop from "./views/shop";
 import Oponents from "./views/oponents";
 import OponentsFight from "./views/oponentFight";
+import Help from "./views/help"
 
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
         <Route path="/shop" element={<Shop />} />
         <Route path="/oponents" element={<Oponents />} />
         <Route path="/oponents/:name" element={<OponentsFight />} />
+        <Route path="/help" element={<Help />} />
       </Routes>
     </>
   );

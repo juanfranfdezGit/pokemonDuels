@@ -1,0 +1,104 @@
+.shop {
+    width: 100vw;
+    height: 100vh;
+    background: url(../../public/assets/images/shopBack.webp);
+    background-size: cover;
+    background-position: center;
+    @include set-flex;
+
+    .shop__menu {
+        @include set-flex;
+        flex-direction: column;
+        gap: 2rem;
+        transition: all 2s;
+        position: relative;
+
+        .shop__menu-item {
+            @include set-flex;
+            padding: 1.4rem;
+            background: $primaryColorOp;
+            border-radius: 40px;
+            transition: all .5s;
+            width: 20vw;
+            box-shadow: 0 0 5px $secondaryColor;
+            @include font(1.4rem, 600, $white);
+
+            &:hover {
+                cursor: pointer;
+                background: $primaryColor;
+                transform: scale(1.05);
+            }
+        }
+
+        &.allow {
+            bottom: 12vh;
+        }
+
+        &.disallow {
+            bottom: 80vh;
+        }
+    }
+}
+
+.opening {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    @include set-flex;
+    transition: all 3s;
+
+    .envelops {
+        @include set-flex;
+        position: relative;
+        transition: all 2s;
+
+        .envelops__container {
+            position: relative;
+            transition: all 2s;
+
+            .envelops__container-img {
+                transform: scale(1.1);
+                cursor: pointer;
+                filter: drop-shadow(0 0 25px $secondaryColor);
+                transition: all .5s;
+                z-index: 10;
+                position: relative;
+    
+                &:hover {
+                    transform: scale(1.2);
+                    filter: drop-shadow(0 0 35px $secondaryColor);
+                }
+            }
+
+            .envelops__container-cards {
+                @include set-flex;
+
+                .shopCards {
+                    z-index: 1;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    width: 9vw;
+                    height: 30vh;
+                    overflow: hidden;
+                    transition: all 2s;
+                }
+            }
+        }
+        
+        .nonSelected {
+            transform: translateY(100vh);
+        }
+    }
+
+    &.disallow {
+        top: 100vh;
+        left: 0;
+    }
+
+    &.allow {
+        top: 0;
+        left: 0;
+    }
+}

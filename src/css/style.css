@@ -184,6 +184,13 @@
   cursor: pointer;
   transform: scale(1.09);
 }
+.gameMenu .gameMenu__sidebar .gameMenu__sidebar-list .gameMenu__sidebar-button.disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+.gameMenu .gameMenu__sidebar .gameMenu__sidebar-list .gameMenu__sidebar-button.disabled:hover {
+  transform: scale(1);
+}
 
 @font-face {
   font-family: "graffiti";
@@ -1029,6 +1036,151 @@
   box-shadow: 0 0 15px 15px #1abb65;
 }
 
+.shop {
+  width: 100vw;
+  height: 100vh;
+  background: url(../../public/assets/images/shopBack.webp);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.shop .shop__menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
+  transition: all 2s;
+  position: relative;
+}
+.shop .shop__menu .shop__menu-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.4rem;
+  background: rgba(255, 0, 0, 0.6980392157);
+  border-radius: 40px;
+  transition: all 0.5s;
+  width: 20vw;
+  box-shadow: 0 0 5px #111;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #f1f1f1;
+}
+.shop .shop__menu .shop__menu-item:hover {
+  cursor: pointer;
+  background: #FF0000;
+  transform: scale(1.05);
+}
+.shop .shop__menu.allow {
+  bottom: 12vh;
+}
+.shop .shop__menu.disallow {
+  bottom: 80vh;
+}
+
+.opening {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 3s;
+}
+.opening .envelops {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  transition: all 2s;
+}
+.opening .envelops .envelops__container {
+  position: relative;
+  transition: all 2s;
+}
+.opening .envelops .envelops__container .envelops__container-img {
+  transform: scale(1.1);
+  cursor: pointer;
+  filter: drop-shadow(0 0 25px #111);
+  transition: all 0.5s;
+  z-index: 10;
+  position: relative;
+}
+.opening .envelops .envelops__container .envelops__container-img:hover {
+  transform: scale(1.2);
+  filter: drop-shadow(0 0 35px #111);
+}
+.opening .envelops .envelops__container .envelops__container-cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.opening .envelops .envelops__container .envelops__container-cards .shopCards {
+  z-index: 1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 9vw;
+  height: 30vh;
+  overflow: hidden;
+  transition: all 2s;
+}
+.opening .envelops .nonSelected {
+  transform: translateY(100vh);
+}
+.opening.disallow {
+  top: 100vh;
+  left: 0;
+}
+.opening.allow {
+  top: 0;
+  left: 0;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  height: 10vh;
+  background: #3466af;
+  padding: 2rem;
+  position: relative;
+  border-bottom: 4px solid rgb(17, 59, 122) f;
+  box-shadow: 0 0 15px #111;
+  z-index: 20;
+}
+.header .back__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: none;
+  font-size: 1.7rem;
+  font-weight: 500;
+  color: #f1f1f1;
+  gap: 8px;
+  position: absolute;
+  left: 2rem;
+}
+.header .back__button img {
+  width: 32px;
+}
+.header .back__button:hover {
+  cursor: pointer;
+  transform: scale(1.02);
+}
+.header .pages__title {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #f1f1f1;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -1055,72 +1207,6 @@ button {
 }
 button:hover {
   cursor: pointer;
-}
-
-.back__button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  left: 3vw;
-  top: 3vh;
-  background: none;
-  font-size: 2rem;
-  font-weight: 500;
-  color: #f1f1f1;
-  gap: 8px;
-  z-index: 10;
-}
-.back__button img {
-  width: 40px;
-}
-.back__button:hover {
-  cursor: pointer;
-}
-
-.pages__title {
-  font-size: 3rem;
-  font-weight: 400;
-  color: #f1f1f1;
-  background: #3466af;
-  width: 100vw;
-  text-align: center;
-  padding: 1rem;
-  border-bottom: 5px solid #111;
-}
-
-.shop__button,
-.cards__button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  right: 3vw;
-  top: 2.2vh;
-  background: none;
-  font-size: 1.3rem;
-  font-weight: 500;
-  color: #f1f1f1;
-  gap: 8px;
-  z-index: 10;
-  padding: 0.9rem 2rem;
-  border-radius: 28px;
-  background: #FF0000;
-  border: 1px solid #3466af;
-  box-shadow: 0 0 5px #111;
-}
-.shop__button img,
-.cards__button img {
-  width: 40px;
-}
-.shop__button:hover,
-.cards__button:hover {
-  cursor: pointer;
-  transform: scale(1.05);
-}
-
-.cards__button {
-  background: #3466af;
 }
 
 .loading {

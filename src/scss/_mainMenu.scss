@@ -108,6 +108,15 @@
                     cursor: pointer;
                     transform: scale(1.09);
                 }
+
+                &.disabled {
+                    opacity: .6;
+                    cursor: default;
+
+                    &:hover {
+                        transform: scale(1);
+                    }
+                }
             }
         }
     }

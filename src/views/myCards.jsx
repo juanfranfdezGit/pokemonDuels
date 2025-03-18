@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
-import BackButton from "../components/backButton";
-import ShopButton from "../components/shopButton";
+import Header from "../components/header";
 
 function MyCards() {
     const [cards, setCards] = useState([]);
@@ -23,9 +22,7 @@ function MyCards() {
     return (
         <>
             <section className="myCards">
-                <h2 className="pages__title">Mi Colección</h2>
-                <BackButton></BackButton>
-                <ShopButton></ShopButton>
+                <Header></Header>
 
                 <div className="myCards__container">
                     <ul className="myCards__container__list">

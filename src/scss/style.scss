@@ -5,6 +5,8 @@
 @import '_myCards.scss';
 @import '_oponents.scss';
 @import '_oponentsFight.scss';
+@import '_shop.scss';
+@import '_header.scss';
 
 * {
     margin: 0;
@@ -33,64 +35,6 @@ button {
     &:hover {
         cursor: pointer;
     }
-}
-
-.back__button {
-    @include set-flex;
-    position: absolute;
-    left: 3vw;
-    top: 3vh;
-    background: none;
-    @include font(2rem, 500, $white);
-    gap: 8px;
-    z-index: 10;
-
-    img {
-        width: 40px;
-    }
-
-    &:hover {
-        cursor: pointer;
-    }
-}
-
-.pages__title {
-    @include font(3rem, 400, $white);
-    background: $bluePoke;
-    width: 100vw;
-    text-align: center;
-    padding: 1rem;
-    border-bottom: 5px solid $secondaryColor;
-}
-
-.shop__button, 
-.cards__button {
-    @include set-flex;
-    position: absolute;
-    right: 3vw;
-    top: 2.2vh;
-    background: none;
-    @include font(1.3rem, 500, $white);
-    gap: 8px;
-    z-index: 10;
-    padding: .9rem 2rem;
-    border-radius: 28px;
-    background: $primaryColor;
-    border: 1px solid $bluePoke;
-    box-shadow: 0 0 5px $secondaryColor;
-
-    img {
-        width: 40px;
-    }
-
-    &:hover {
-        cursor: pointer;
-        transform: scale(1.05);
-    }
-}
-
-.cards__button {
-    background: $bluePoke;
 }
 
 .loading {
