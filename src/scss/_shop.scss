@@ -53,8 +53,21 @@
         transition: all 2s;
 
         .envelops__container {
-            position: relative;
+            position: absolute;
+            left: -45vw;
             transition: all 2s;
+
+            &:nth-child(2) {
+                left: -27vw;
+            }
+
+            &:nth-child(3) {
+                left: -8vw;
+            }
+
+            &:nth-child(4) {
+                left: 10vw;
+            }
 
             .envelops__container-img {
                 transform: scale(1.1);
@@ -79,16 +92,49 @@
                     top: 50%;
                     left: 50%;
                     transform: translate(-50%, -50%);
-                    width: 9vw;
-                    height: 30vh;
+                    width: 0vw;
+                    height: 0vh;
                     overflow: hidden;
                     transition: all 2s;
+
+                    &:hover {
+                        transform: translate(-50%, -50%) scale(1.1);
+                        cursor: pointer;
+                    }
                 }
             }
         }
         
         .nonSelected {
             transform: translateY(100vh);
+        }
+
+        .selectedCard {
+            left: -52vw !important;
+
+            .envelops__container-img {
+                pointer-events: none;
+            }
+
+            .shopCards:first-child {
+                animation: appear01 1s forwards;
+                animation-delay: 1.5s;
+            }
+
+            .shopCards:nth-child(2) {
+                animation: appear02 1s forwards;
+                animation-delay: 1.7s;
+            }
+
+            .shopCards:nth-child(3) {
+                animation: appear03 1s forwards;
+                animation-delay: 1.9s;
+            }
+
+            .shopCards:nth-child(4) {
+                animation: appear04 1s forwards;
+                animation-delay: 2.1s;
+            }
         }
     }
 
@@ -100,5 +146,88 @@
     &.allow {
         top: 0;
         left: 0;
+    }
+}
+
+.actionsAllow {
+    position: fixed;
+    z-index: 10;
+    bottom: 4vh;
+    @include set-flex;
+    gap: 2rem;
+    transition: all 4s;
+    
+    .actionsAllow-item {
+        @include set-flex;
+        padding: 1.4rem;
+        background: $primaryColorOp;
+        border-radius: 40px;
+        transition: all .5s;
+        width: 16vw;
+        box-shadow: 0 0 5px $secondaryColor;
+        @include font(1.4rem, 600, $white);
+
+        &:hover {
+            cursor: pointer;
+            background: $primaryColor;
+            transform: scale(1.05);
+        }
+    }
+}
+
+.actionsDisallow {
+    position: fixed;
+    z-index: 10;
+    bottom: -4vh;
+    @include set-flex;
+    gap: 2rem;
+}
+
+@keyframes appear01 {
+    from {
+        left: 50%;
+        width: 0vw;
+        height: 0vh;
+    }
+    to {
+        left: 27vw;
+        width: 16vw;
+        height: 50vh;
+    }
+}
+@keyframes appear02 {
+    from {
+        left: 50%;
+        width: 0vw;
+        height: 0vh;
+    }
+    to {
+        left: 45vw;
+        width: 16vw;
+        height: 50vh;
+    }
+}
+@keyframes appear03 {
+    from {
+        left: 50%;
+        width: 0vw;
+        height: 0vh;
+    }
+    to {
+        left: 63vw;
+        width: 16vw;
+        height: 50vh;
+    }
+}
+@keyframes appear04 {
+    from {
+        left: 50%;
+        width: 0vw;
+        height: 0vh;
+    }
+    to {
+        left: 81vw;
+        width: 16vw;
+        height: 50vh;
     }
 }

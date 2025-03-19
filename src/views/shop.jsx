@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 
 function Shop() {
   const [opening, setOpening] = useState(false);
-  const [selectedEnvelop, setSelectedEnvelop] = useState([true, true, true, true]);
+  const [selectedEnvelop, setSelectedEnvelop] = useState([null, null, null, null]);
   const [cards, setCards] = useState([]);
   const [randomCards, setRandomCards] = useState([[], [], [], []]);
   const [attack, setAttacks] = useState([]);
@@ -30,8 +30,8 @@ function Shop() {
     const selectEnvelop = selectedEnvelop.map((_, index) => index === i);
     setSelectedEnvelop(selectEnvelop);
 
-      const shuffle = [...cards].sort(() => Math.random() - 0.5);
-      const selected = shuffle.slice(0, 5);
+      const shuffle = [...cards].sort(() => Math.random() - 0.4);
+      const selected = shuffle.slice(0, 4);
   
       const shinyCards = selected.map(card => {
         if (card.isShiny === false) {
@@ -60,6 +60,7 @@ function Shop() {
 
   function startOpening() {
     setOpening(true);
+    setSelectedEnvelop([null, null, null, null]);
   }
 
   return (
@@ -76,7 +77,7 @@ function Shop() {
         <section className={opening === true ? "opening allow" : "opening disallow"}>
           <div className="envelops">
             {selectedEnvelop.map((isSelected, i) => (
-              <div className={`envelops__container ${isSelected ? "selectedCard" : "nonSelected"}`}>
+              <div className={`envelops__container ${isSelected === null ? "" : isSelected === true ? "selectedCard" : "nonSelected"}`}>
               <img onClick={() => selectingEnvelop(i)} className="envelops__container-img" src="/assets/images/envelop.webp" alt="card envelop" />
               <ul className="envelops__container-cards">
               {randomCards[i].map((card) => (
@@ -110,6 +111,13 @@ function Shop() {
             </div>
             ))}
           </div>
+
+          {selectedEnvelop.map((isSelected, _) => (
+              <div className={isSelected === true ? "actionsAllow" : "actionsDisallow"}>
+                <button className="actionsAllow-item" onClick={startOpening}>Abrir Más</button>
+                <button className="actionsAllow-item" onClick={navMyCards}>Mis Cartas</button>
+              </div>
+          ))}
         </section>
     </>
   );

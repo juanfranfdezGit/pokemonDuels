@@ -1098,8 +1098,18 @@
   transition: all 2s;
 }
 .opening .envelops .envelops__container {
-  position: relative;
+  position: absolute;
+  left: -45vw;
   transition: all 2s;
+}
+.opening .envelops .envelops__container:nth-child(2) {
+  left: -27vw;
+}
+.opening .envelops .envelops__container:nth-child(3) {
+  left: -8vw;
+}
+.opening .envelops .envelops__container:nth-child(4) {
+  left: 10vw;
 }
 .opening .envelops .envelops__container .envelops__container-img {
   transform: scale(1.1);
@@ -1124,13 +1134,39 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 9vw;
-  height: 30vh;
+  width: 0vw;
+  height: 0vh;
   overflow: hidden;
   transition: all 2s;
 }
+.opening .envelops .envelops__container .envelops__container-cards .shopCards:hover {
+  transform: translate(-50%, -50%) scale(1.1);
+  cursor: pointer;
+}
 .opening .envelops .nonSelected {
   transform: translateY(100vh);
+}
+.opening .envelops .selectedCard {
+  left: -52vw !important;
+}
+.opening .envelops .selectedCard .envelops__container-img {
+  pointer-events: none;
+}
+.opening .envelops .selectedCard .shopCards:first-child {
+  animation: appear01 1s forwards;
+  animation-delay: 1.5s;
+}
+.opening .envelops .selectedCard .shopCards:nth-child(2) {
+  animation: appear02 1s forwards;
+  animation-delay: 1.7s;
+}
+.opening .envelops .selectedCard .shopCards:nth-child(3) {
+  animation: appear03 1s forwards;
+  animation-delay: 1.9s;
+}
+.opening .envelops .selectedCard .shopCards:nth-child(4) {
+  animation: appear04 1s forwards;
+  animation-delay: 2.1s;
 }
 .opening.disallow {
   top: 100vh;
@@ -1141,6 +1177,94 @@
   left: 0;
 }
 
+.actionsAllow {
+  position: fixed;
+  z-index: 10;
+  bottom: 4vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  transition: all 4s;
+}
+.actionsAllow .actionsAllow-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.4rem;
+  background: rgba(255, 0, 0, 0.6980392157);
+  border-radius: 40px;
+  transition: all 0.5s;
+  width: 16vw;
+  box-shadow: 0 0 5px #111;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #f1f1f1;
+}
+.actionsAllow .actionsAllow-item:hover {
+  cursor: pointer;
+  background: #FF0000;
+  transform: scale(1.05);
+}
+
+.actionsDisallow {
+  position: fixed;
+  z-index: 10;
+  bottom: -4vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+@keyframes appear01 {
+  from {
+    left: 50%;
+    width: 0vw;
+    height: 0vh;
+  }
+  to {
+    left: 27vw;
+    width: 16vw;
+    height: 50vh;
+  }
+}
+@keyframes appear02 {
+  from {
+    left: 50%;
+    width: 0vw;
+    height: 0vh;
+  }
+  to {
+    left: 45vw;
+    width: 16vw;
+    height: 50vh;
+  }
+}
+@keyframes appear03 {
+  from {
+    left: 50%;
+    width: 0vw;
+    height: 0vh;
+  }
+  to {
+    left: 63vw;
+    width: 16vw;
+    height: 50vh;
+  }
+}
+@keyframes appear04 {
+  from {
+    left: 50%;
+    width: 0vw;
+    height: 0vh;
+  }
+  to {
+    left: 81vw;
+    width: 16vw;
+    height: 50vh;
+  }
+}
 .header {
   display: flex;
   justify-content: center;
