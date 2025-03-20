@@ -19,10 +19,16 @@ function BackButton() {
         pageTitle = "Tienda";
     } else if (pathname === "oponents") {
         pageTitle = "Oponentes";
+    }   else if (pathname === "newUser") {
+        pageTitle = "Nuevo Usuario";
     }
     
     function navMainMenu() {
-        Navigate('/')
+        if (pageTitle === "Nuevo Usuario") {
+            Navigate('/')
+        } else {
+            Navigate('/menu')
+        }
     }
 
     return (
