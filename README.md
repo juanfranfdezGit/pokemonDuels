@@ -1,65 +1,74 @@
+
 # Pokémon Duels!
 
 
-Bienvenido a Pokémon Duels, un juego de cartas inspirado en el universo Pokémon, construido con React, SASS y utilizando la API de PokeAPI para obtener datos dinámicos sobre los Pokémon. Este proyecto es solo para practicar programación y sin ánimo de lucro.
+Bienvenido a **Pokémon Duels**, un juego de cartas inspirado en el universo Pokémon, construido con **React**, **SASS** y utilizando **JSON** como API para obtener datos dinámicos sobre los Pokémon. Este proyecto ha sido creado con fines educativos y sin ánimo de lucro, con el objetivo de practicar y mejorar mis habilidades de programación en JavaScript, React y el uso de APIs.
 
-🚀 Tecnologías Utilizadas
+## Características del Proyecto 🔧
 
-React ⚛️ - Para una interfaz interactiva y dinámica.
+- **Interfaz de usuario**: Un diseño atractivo y funcional creado con **React** y **SASS**.
+- **JSON API**: Consumo de un archivo JSON para obtener información dinámica sobre los Pokémon, incluyendo sus características, habilidades y ataques.
+- **Cartas coleccionables**: El juego te permite coleccionar cartas de Pokémon con una pequeña posibilidad de que sean Shiny.
+- **Ataques**: Cada carta de Pokémon tiene habilidades y ataques especiales que se muestran junto con sus estadísticas.
 
-SASS 🎨 - Para estilos más organizados y reutilizables.
+## Cómo Empezar 🚀
 
-API 🐉 - Los datos de los Pokemons serán agregados desde un JSON.
+### Requisitos
 
+- **Node.js**: Asegúrate de tener [Node.js](https://nodejs.org) instalado en tu máquina.
+- **NPM** o **Yarn**: Necesitarás un gestor de paquetes para instalar las dependencias.
 
-## 🛠 Instalación y Configuración
+### Instalación
 
-Sigue estos pasos para clonar y ejecutar el proyecto en tu entorno local:
+1. Clona el repositorio:
+    ```bash
+    git clone https://github.com/tu-usuario/pokemon-duels.git
+    ```
 
-1️⃣ Clonar el repositorio
-   ```sh
-  git clone https://github.com/juanfranfdezGit/pokemonDuels
-  cd pokemonDuels
-  ```
+2. Navega a la carpeta del proyecto:
+    ```bash
+    cd pokemon-duels
+    ```
 
-2️⃣ Instalar dependencias
-   ```sh
-  npm install
-  ```
-3️⃣ Ejecutar el servidor de desarrollo
-   ```sh
-  npm start
+3. Instala las dependencias:
+    ```bash
+    npm install
+    ```
+    o si prefieres usar **Yarn**:
+    ```bash
+    yarn install
+    ```
+
+4. Inicia el servidor de desarrollo:
+    ```bash
+    npm start
+    ```
+    o con **Yarn**:
+    ```bash
+    yarn start
+    ```
+
+La aplicación estará disponible en [http://localhost:3000](http://localhost:3000).
+
+---
+
+### Contribuciones 💻
+Si deseas contribuir a este proyecto, por favor sigue estos pasos:
+
+1. Haz un fork del repositorio.
+
+2. Crea tu branch:
+```bash
+git checkout -b mi-feature
 ```
-Luego, abre http://localhost:3000 en tu navegador para ver el proyecto en acción.
 
-
-## 🌟 Contribuciones
-
-Este proyecto está en constante desarrollo, y cualquier aporte es bienvenido. Si deseas contribuir:
-
-Haz un fork del repositorio.
-
-Crea una rama con tu nueva funcionalidad o corrección de errores.
-   ```sh
-
-git checkout -b feature/nueva-funcionalidad
+3. Realiza los cambios y haz un commit:
+```bash
+git commit -m "Descripción de los cambios"
 ```
-Realiza tus cambios y haz un commit.
-   ```sh
-git commit -m "Agregada nueva funcionalidad X"
+4. Sube tus cambios:
+```bash
+git push origin mi-feature
 ```
-Envía un pull request y lo reviso. 😊
 
-## 📌 Roadmap y Futuras Mejoras
-
-🔜 Creación de la API .\
-🔜 Sistema de combate entre cartas.\
-🔜 Creación de oponentes a los que enfrentar.\
-🔜 Mejoras en el diseño y animaciones.\
-🔜 Guardar partida en local para no perder progreso.
-
-## 🤝 Contacto
-
-Si tienes dudas, sugerencias o simplemente quieres comentar sobre el proyecto, ¡no dudes en escribir un issue o unirte a la comunidad! 🎮
-
-📧 Email: jfranromfdez@gmail.com
+5. Abre un pull request con una descripción clara de los cambios.
