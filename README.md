@@ -11,6 +11,13 @@ Bienvenido a **Pokémon Duels**, un juego de cartas inspirado en el universo Pok
 - **Cartas coleccionables**: El juego te permite coleccionar cartas de Pokémon con una pequeña posibilidad de que sean Shiny.
 - **Ataques**: Cada carta de Pokémon tiene habilidades y ataques especiales que se muestran junto con sus estadísticas.
 
+## Estado Actual
+Actualmente, el sistema cuenta con 28 Pokémon disponibles en el JSON, aunque se planea ampliar esta cantidad próximamente. Además, ya está implementado el contexto de usuario, que incluye información como tu nombre, cartas y foto de perfil. También se encuentra disponible una tienda donde puedes abrir sobres, y los sobres se guardan en tu estado personal.
+
+Estoy trabajando en la creación de cuentas de usuario y en el sistema de guardado de estado para mejorar la experiencia general. Una vez completados estos elementos, procederé con la optimización para dispositivos móviles (responsive) y, tras ello, lanzaré una primera versión.
+
+Esta versión inicial incluirá las funciones básicas, como la tienda para abrir sobres, pero aún no tendrá combates ni dinero en la tienda. Además, la cantidad de Pokémon será limitada en esta primera fase.
+
 ## Cómo Empezar 🚀
 
 ### Requisitos
