@@ -7,6 +7,7 @@
 @import '_oponentsFight.scss';
 @import '_shop.scss';
 @import '_header.scss';
+@import '_newUser.scss';
 
 * {
     margin: 0;
@@ -40,7 +41,7 @@ button {
 .loading {
     width: 100vw;
     height: 100vh;
-    z-index: 100;
+    z-index: 1;
     position: absolute;
     top: 0;
     left: 0;

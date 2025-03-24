@@ -1,0 +1,10 @@
+
+
+.errorMessage {
+    display: none;
+    color: $primaryColor;
+
+    &.allow {
+        display: block;
+    }
+}

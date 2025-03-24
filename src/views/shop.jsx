@@ -1,6 +1,7 @@
 import Header from "../components/header";
 import { useNavigate } from "react-router-dom";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useContext } from "react";
+import { GameContext } from "../context/GameContext";
 
 function Shop() {
   const [opening, setOpening] = useState(false);
@@ -8,6 +9,8 @@ function Shop() {
   const [cards, setCards] = useState([]);
   const [randomCards, setRandomCards] = useState([[], [], [], []]);
   const [attack, setAttacks] = useState([]);
+
+  const { user, addCards } = useContext(GameContext);
 
   const Navigate = useNavigate();
 
@@ -26,25 +29,36 @@ function Shop() {
   }, []);
 
   function selectingEnvelop(i) {
-
     const selectEnvelop = selectedEnvelop.map((_, index) => index === i);
     setSelectedEnvelop(selectEnvelop);
 
-      const shuffle = [...cards].sort(() => Math.random() - 0.4);
-      const selected = shuffle.slice(0, 4);
-  
-      const shinyCards = selected.map(card => {
-        if (card.isShiny === false) {
-          card.isShiny = Math.random() < 0.2;
-        }
-        return card;
-      })
-  
-      const newRandomCards = [...randomCards];
-      newRandomCards[i] = shinyCards;
-      setRandomCards(newRandomCards);
-      console.log(`Sobre ${i} abierto`);
-  }
+    const shuffle = [...cards].sort(() => Math.random() - 0.4);
+    const selected = shuffle.slice(0, 4).map(card => {
+
+      if (card.isShiny === undefined) {
+          return {
+            ...card,
+            isShiny: false
+          };
+      }
+
+      if (card.isShiny === false) {
+          return {
+            ...card,
+            isShiny: Math.random() < 0.2  
+          };
+      }
+
+      return { ...card };
+  });
+
+    setRandomCards(prev => prev.map((envelop, index) => (index === i ? selected : envelop)));
+
+    addCards(selected.map(card => ({
+      id: card.id,
+      isShiny: card.isShiny
+    })));
+}
 
   function navPokedex() {
     Navigate('/pokedex')
@@ -61,6 +75,10 @@ function Shop() {
   function startOpening() {
     setOpening(true);
     setSelectedEnvelop([null, null, null, null]);
+  }
+
+  if (!user) {
+    return <div><img className="loading" src="/assets/images/pokeballLoading.gif" alt="loading" /></div>;
   }
 
   return (

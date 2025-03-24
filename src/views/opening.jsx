@@ -1,9 +1,10 @@
 import { useState, useEffect, useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import { GameContext } from "../context/GameContext";
+import { getUserData } from "../tools/gameDB";
 
 function Opening() {
-  const { user } = useContext(GameContext);
+  const { user, updateUser } = useContext(GameContext);
   const Navigate = useNavigate();
 
   const backgrounds = [
@@ -21,11 +22,26 @@ function Opening() {
   }
 
   useEffect(() => {
+    const loadUser = async () => {
+      try {
+        const fetchedUser = await getUserData("user1");
+
+        if (fetchedUser) {
+          updateUser(fetchedUser);
+          Navigate("/menu");
+        }
+      } catch (err) {
+        console.error("Error al obtener los datos del usuario:", err);
+      }
+    }
+
+    loadUser();
+  }, [Navigate, updateUser])
+
+  useEffect(() => {
     const randomBg = backgrounds[Math.floor(Math.random() * backgrounds.length)];
     setBackground(randomBg);
-
-    console.log("User in context: ", user);
-  }, [user]);
+  }, []);
 
   function navNewUser() {
     Navigate("/newUser")

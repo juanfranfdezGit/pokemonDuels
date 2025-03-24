@@ -2,6 +2,7 @@
 .myCards{
     .myCards__container {
         width: 100vw;
+        padding-top: 2vh;
 
         .myCards__container__list {
             @include set-flex;

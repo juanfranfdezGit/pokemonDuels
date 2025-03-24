@@ -1,6 +1,10 @@
 import { useNavigate } from "react-router-dom";
+import { useContext } from "react";
+import { GameContext } from "../context/GameContext";
 
 function MainMenu() {
+
+  const { deleteUser } = useContext(GameContext)
 
   const Navigate = useNavigate();
 
@@ -25,6 +29,7 @@ function MainMenu() {
   }
 
   function closeUser() {
+    deleteUser();
     Navigate('/')
   }
 

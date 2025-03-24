@@ -1,5 +1,5 @@
 import { createContext, useEffect, useState } from "react";
-import { getUserData, saveUserData } from "../tools/gameDB";
+import { getUserData, saveUserData, deleteUserData } from "../tools/gameDB";
 
 export const GameContext = createContext();
 
@@ -9,23 +9,23 @@ export function GameProvider({ children }) {
   const [error, setError] = useState(null);
 
     useEffect(() => {
-        const userId = "user123"; 
+    const userId = "user1"; 
         
-        getUserData(userId)
-            .then((fetchedUser) => {
-                if (fetchedUser) {
-                    setUser(fetchedUser);
-                }  else {
-                    setUser(null);
-                }
-                setLoading(false)
-            })
-            .catch((err) => {
-                console.error("Error al obtener los datos del usuario:", err);
-                setError("No se pudo cargar el usuario.");
-                setLoading(false); 
-            });
-        }, []);
+    getUserData(userId)
+        .then((fetchedUser) => {
+            if (fetchedUser) {
+                setUser(fetchedUser);
+            }  else {
+                setUser(null);
+            }
+            setLoading(false)
+        })
+        .catch((err) => {
+            console.error("Error al obtener los datos del usuario:", err);
+            setError("No se pudo cargar el usuario.");
+            setLoading(false); 
+        });
+    }, []);
 
     const createNewUser = async (newUserData) => {
         try {
@@ -39,11 +39,35 @@ export function GameProvider({ children }) {
 
     const updateUser = async (newUserData) => {
         try {
-        await saveUserData(newUserData);
-        setUser(newUserData);
+            await saveUserData(newUserData);
+            setUser(newUserData);
         } catch (err) {
-        console.error("Error al guardar los datos del usuario:", err);
-        setError("No se pudo guardar la información del usuario.");
+            console.error("Error al guardar los datos del usuario:", err);
+            setError("No se pudo guardar la información del usuario.");
+        }
+    };
+
+    const addCards = (cardId) => {
+        if (!user) return;
+
+        if (user.cards.includes(cardId)) return;
+
+        const updatedUser = {
+            ...user,
+            cards: [...user.cards, cardId]
+        }
+
+        setUser(updatedUser);
+        saveUserData(updatedUser);
+    }
+
+    const deleteUser = async () => {
+        try {
+          await deleteUserData(user.id); 
+          setUser(null);
+        } catch (err) {
+          console.error("Error al eliminar el usuario:", err);
+          setError("No se pudo eliminar la información del usuario.");
         }
     };
 
@@ -56,7 +80,7 @@ export function GameProvider({ children }) {
     }
 
     return (
-        <GameContext.Provider value={{ user, createNewUser, updateUser }}>
+        <GameContext.Provider value={{ user, createNewUser, updateUser, addCards, deleteUser }}>
             {children}
         </GameContext.Provider>
     );

@@ -34,3 +34,15 @@ export async function getUserData(userId) {
         request.onerror = () => reject("Error al obtener los datos del usuario");
     });
 }
+
+export async function deleteUserData(userId) {
+    const db = await openDB();
+    const tx = db.transaction("users", "readwrite");
+    const store = tx.objectStore("users");
+
+    return new Promise((resolve, reject) => {
+        const request = store.delete(userId);
+        request.onsuccess = () => resolve(); 
+        request.onerror = () => reject("Error al eliminar los datos del usuario");
+    });
+}

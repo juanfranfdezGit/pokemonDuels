@@ -456,6 +456,7 @@
 
 .myCards .myCards__container {
   width: 100vw;
+  padding-top: 2vh;
 }
 .myCards .myCards__container .myCards__container__list {
   display: flex;
@@ -1305,6 +1306,14 @@
   color: #f1f1f1;
 }
 
+.errorMessage {
+  display: none;
+  color: #FF0000;
+}
+.errorMessage.allow {
+  display: block;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -1336,7 +1345,7 @@ button:hover {
 .loading {
   width: 100vw;
   height: 100vh;
-  z-index: 100;
+  z-index: 1;
   position: absolute;
   top: 0;
   left: 0;
