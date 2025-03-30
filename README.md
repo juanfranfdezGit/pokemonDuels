@@ -6,7 +6,7 @@ Bienvenido a **Pokémon Duels**, un juego de cartas inspirado en el universo Pok
 
 ## Características del Proyecto 🔧
 
-- **Interfaz de usuario**: Un diseño atractivo y funcional creado con **React** y **SASS**.
+- **Interfaz de usuario**: Diseño atractivo y funcional creado con **React** y **SASS**.
 - **JSON API**: Consumo de un archivo JSON para obtener información dinámica sobre los Pokémon, incluyendo sus características, habilidades y ataques.
 - **Cartas coleccionables**: El juego te permite coleccionar cartas de Pokémon con una pequeña posibilidad de que sean Shiny.
 - **Ataques**: Cada carta de Pokémon tiene habilidades y ataques especiales que se muestran junto con sus estadísticas.
