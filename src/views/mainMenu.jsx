@@ -47,7 +47,7 @@ function MainMenu() {
         <div className="gameMenu__sidebar">
           <ul className="gameMenu__sidebar-list">
             <div className="gameMenu__logo__container">
-                <img className="gameMenu__logo__container-logo" src="/assets/images/pokemonLogo.png" alt="Pokemon logo" />
+                <img className="gameMenu__logo__container-logo" src="/assets/images/PokemonLogo.png" alt="Pokemon logo" />
                 <h1 className="gameMenu__logo__container-title">Duels!</h1>
             </div>
             <li><button className="gameMenu__sidebar-button" onClick={navPokedex}>Pokedex</button></li>

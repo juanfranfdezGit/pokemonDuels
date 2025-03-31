@@ -62,7 +62,7 @@ function Opening() {
 
           <section className="mainMenu" style={{ backgroundImage: `url(${background})` }}> 
             <div className="mainMenu__container">
-              <img className="mainMenu__container-logo" src="/assets/images/pokemonLogo.png" alt="Pokemon logo" />
+              <img className="mainMenu__container-logo" src="/assets/images/PokemonLogo.png" alt="Pokemon logo" />
               <h1 className="mainMenu__container-title">Duels!</h1>
               <button className="mainMenu__container-button" onClick={navNewUser}>Nuevo Usuario</button>
               <button className="mainMenu__container-button" onClick={navUpload}>Cargar Datos</button>
