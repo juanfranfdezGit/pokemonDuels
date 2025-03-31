@@ -1,10 +1,11 @@
 import { useNavigate } from "react-router-dom";
-import { useContext, useEffect } from "react";
+import { useContext, useEffect, useState } from "react";
 import { GameContext } from "../context/GameContext";
 
 function MainMenu() {
 
   const { deleteUser, user } = useContext(GameContext)
+  const [loading, setLoading] = useState(true);
 
   const Navigate = useNavigate();
 
@@ -34,12 +35,20 @@ function MainMenu() {
   }
 
   useEffect(() => {
-    if (!user) {
-      Navigate('/404');
+    if (user === undefined) {
+      return;
     }
-  }, [user, Navigate])
 
-  if (!user) return null;
+    if (!user) {
+      Navigate("/");
+    } else {
+      setLoading(false);
+    }
+  }, [user, Navigate]);
+
+  if (loading) {
+    return <div><img className="loading" src="/assets/images/pokeballLoading.gif" alt="loading" /></div>;
+  }
   
   return (
     <>
