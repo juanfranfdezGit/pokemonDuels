@@ -145,5 +145,12 @@
         "PH": 5,
         "Efecto": "Ceguera",
         "Tipo": "Roca"
+    },
+    {
+        "id": 23,
+        "Habilidad": "Colmillo Venenoso",
+        "PH": 5,
+        "Efecto": "Veneno",
+        "Tipo": "Veneno"
     }
 ]
