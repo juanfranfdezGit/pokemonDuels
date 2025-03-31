@@ -47,8 +47,8 @@ function Opening() {
     Navigate("/newUser")
   }
 
-  function navMenu() {
-    Navigate("/menu")
+  function navUpload() {
+    Navigate("/upload")
   }
 
   return (
@@ -65,7 +65,7 @@ function Opening() {
               <img className="mainMenu__container-logo" src="/assets/images/pokemonLogo.png" alt="Pokemon logo" />
               <h1 className="mainMenu__container-title">Duels!</h1>
               <button className="mainMenu__container-button" onClick={navNewUser}>Nuevo Usuario</button>
-              <button className="mainMenu__container-button" onClick={navMenu}>Cargar Datos</button>
+              <button className="mainMenu__container-button" onClick={navUpload}>Cargar Datos</button>
             </div>
           </section>
         </>

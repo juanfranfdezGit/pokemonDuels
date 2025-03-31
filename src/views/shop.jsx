@@ -77,10 +77,6 @@ function Shop() {
     setSelectedEnvelop([null, null, null, null]);
   }
 
-  if (!user) {
-    return <div><img className="loading" src="/assets/images/pokeballLoading.gif" alt="loading" /></div>;
-  }
-
   return (
     <>
         <Header />

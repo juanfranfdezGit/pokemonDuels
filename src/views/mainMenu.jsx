@@ -1,10 +1,10 @@
 import { useNavigate } from "react-router-dom";
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { GameContext } from "../context/GameContext";
 
 function MainMenu() {
 
-  const { deleteUser } = useContext(GameContext)
+  const { deleteUser, user } = useContext(GameContext)
 
   const Navigate = useNavigate();
 
@@ -33,6 +33,14 @@ function MainMenu() {
     Navigate('/')
   }
 
+  useEffect(() => {
+    if (!user) {
+      Navigate('/404');
+    }
+  }, [user, Navigate])
+
+  if (!user) return null;
+  
   return (
     <>
       <section className="gameMenu goGame">

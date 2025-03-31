@@ -1304,14 +1304,286 @@
   font-size: 2.5rem;
   font-weight: 600;
   color: #f1f1f1;
+  position: absolute;
+}
+.header .header__user {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  margin-left: auto;
+}
+.header .header__user .pokecuarto {
+  width: 14px;
+  filter: invert(1);
+  margin-left: -10px;
+}
+.header .header__user .header__user__money {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #f1f1f1;
+}
+.header .header__user .header__user__profImg {
+  width: 70px;
+  height: 70px;
+  overflow: hidden;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 8px #111;
+  background: #f1f1f1;
+}
+.header .header__user .header__user__profImg:hover {
+  cursor: pointer;
+}
+.header .header__user .header__user__profImg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+}
+.header .header__user .header__user__profImg-overlay {
+  position: absolute;
+  transition: all 1s;
+  top: -50px;
+  right: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  background: #3466af;
+  padding: 8px 2rem;
+  border-radius: 15px;
+  box-shadow: 0 0 8px #111;
+  opacity: 0;
+}
+.header .header__user .header__user__profImg-overlay p {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #f1f1f1;
+}
+.header .header__user .header__user__profImg-overlay img {
+  width: 32px;
+}
+.header .header__user .header__user__profImg-overlay:hover {
+  cursor: pointer;
+}
+.header .header__user .header__user__profImg-overlay.active {
+  position: absolute;
+  transition: all 0.5s;
+  top: 120px;
+  opacity: 1;
 }
 
-.errorMessage {
+.formContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+}
+.formContainer .form {
+  width: 30%;
+  height: 60%;
+  border: 1px solid #9e9e9e;
+  background: #fff;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
+  box-shadow: 0 0 8px #111;
+}
+.formContainer .form .form__item {
+  position: relative;
+}
+.formContainer .form .form__item .form__item__imgContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.formContainer .form .form__item .form__item__imgContainer .form__item__imgContainer-input {
+  position: absolute;
+  top: -8vh;
+  left: -50px;
+  height: 124px;
+  width: 124px;
+  z-index: 2;
+  appearance: none;
+  border-radius: 50%;
+}
+.formContainer .form .form__item .form__item__imgContainer .form__item__imgContainer-input:hover {
+  cursor: pointer;
+}
+.formContainer .form .form__item .form__item__imgContainer .form__item__imgContainer-input.selected {
+  box-shadow: 0 0 25px #1abb65;
+  border: 1px solid #1abb65;
+}
+.formContainer .form .form__item .form__item__imgContainer .form__item__imgContainer-input--view {
+  position: absolute;
+  top: -8vh;
+  left: -50px;
+  height: 124px;
+  width: 124px;
+  border-radius: 50%;
+  box-shadow: 0 0 8px #111;
+  background: url(../../public/assets/images/profileImg/prof01.webp);
+  background-size: cover;
+  filter: drop-shadow(0 0 2px #111);
+}
+.formContainer .form .form__item .form__item__imgContainer:nth-child(2) .form__item__imgContainer-input {
+  left: 100px;
+}
+.formContainer .form .form__item .form__item__imgContainer:nth-child(2) .form__item__imgContainer-input--view {
+  left: 100px;
+  background: url(../../public/assets/images/profileImg/prof02.webp);
+  background-size: cover;
+  filter: drop-shadow(0 0 2px #111);
+}
+.formContainer .form .form__item .form__item__imgContainer:nth-child(3) .form__item__imgContainer-input {
+  left: -200px;
+}
+.formContainer .form .form__item .form__item__imgContainer:nth-child(3) .form__item__imgContainer-input--view {
+  left: -200px;
+  background: url(../../public/assets/images/profileImg/prof03.webp);
+  background-size: cover;
+  filter: drop-shadow(0 0 2px #111);
+}
+.formContainer .form .form__item:nth-child(2) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 4.5rem;
+}
+.formContainer .form .form__item:nth-child(2) .form__item-username {
+  padding: 4px 8px;
+  border-radius: 25px;
+  width: 240px;
+  text-align: center;
+}
+.formContainer .form .form__item:nth-child(2) .form__item-username--label {
+  margin-bottom: 8px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #111;
+}
+.formContainer .form .form__item .form__item-submit {
+  padding: 4px 16px;
+  border-radius: 15px;
+  background: #3466af;
+  color: #f1f1f1;
+  font-size: 1rem;
+}
+.formContainer .form .form__item .form__item-submit:hover {
+  cursor: pointer;
+}
+.formContainer .form .form__item .errorMessage {
   display: none;
   color: #FF0000;
 }
-.errorMessage.allow {
+.formContainer .form .form__item .errorMessage.allow {
   display: block;
+}
+.formContainer .form .form__item .errorMessage.errorImg {
+  position: absolute;
+  width: 400px;
+  left: -110px;
+  top: 70px;
+}
+
+.upload {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding-bottom: 35vh;
+  background: url(/public/assets/images/backGameMenu.png);
+  background-position: center;
+  background-size: cover;
+}
+.upload .upload__form {
+  background: #f1f1f1;
+  padding: 3rem 4rem;
+  border-radius: 15px;
+  box-shadow: 0 0 15px #111;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
+}
+.upload .upload__form .upload__dropzone {
+  border: 3px dashed #3466af;
+  border-radius: 8px;
+  padding: 4rem 4rem 3rem 4rem;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+.upload .upload__form .upload__dropzone.dragging {
+  background-color: #f1f1f1;
+}
+.upload .upload__form .upload__button {
+  display: inline-block;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #f1f1f1;
+  margin-top: 1rem;
+  padding: 8px 15px;
+  background-color: #3466af;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0 0 5px #111;
+}
+.upload .upload__form p {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #111;
+  margin-top: 2rem;
+}
+.upload .upload__form .upload__form--upload input {
+  background: #fff;
+  box-shadow: 0 0 5px #111;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+}
+
+.page404 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10rem;
+}
+.page404 .page404__img {
+  height: 60vh;
+  margin-right: 5vw;
+}
+.page404 .page404__title {
+  font-size: 4rem;
+  font-weight: 900;
+  color: #3466af;
+  line-height: 4rem;
+  margin-bottom: 2rem;
+}
+.page404 .page404__description {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #111;
+  line-height: 1.5rem;
+  margin-bottom: 2rem;
+  width: 30vw;
+}
+.page404 .page404__button {
+  background: #3466af;
+  padding: 0.7rem 3rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #f1f1f1;
+  border-radius: 30px;
+  box-shadow: 0 0 5px #111;
 }
 
 * {

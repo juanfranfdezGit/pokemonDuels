@@ -68,39 +68,48 @@ function NewUser() {
             <div className='formContainer'>
                 <form onSubmit={handleSubmit} action="post" className='form'>
                     <div className='form__item'>
-                        <input 
-                            className={selectedImage === "user01" ? "selected" : ""} 
-                            checked={selectedImage === "user01"} 
-                            type="radio" 
-                            id="user01" 
-                            name="userImage" 
-                            onChange={() => handleImageChange('user01')} 
-                        />
-                        <input 
-                            className={selectedImage === "user02" ? "selected" : ""} 
-                            checked={selectedImage === "user02"} 
-                            type="radio" 
-                            id="user02" 
-                            name="userImage" 
-                            onChange={() => handleImageChange('user02')} 
-                        />
-                        <input 
-                            className={selectedImage === "user03" ? "selected" : ""} 
-                            checked={selectedImage === "user03"} 
-                            type="radio" 
-                            id="user03" 
-                            name="userImage"
-                            onChange={() => handleImageChange('user03')} 
-                        />
-                        <p className={`errorMessage ${imgError ? "allow" : "disallow"}`}>Por favor, selecciona una imagen</p>
+                        <div className='form__item__imgContainer'>
+                            <input
+                                className={`form__item__imgContainer-input ${selectedImage === "user01" ? "selected" : ""}`}
+                                checked={selectedImage === "user01"}
+                                type="radio"
+                                id="user01"
+                                name="userImage"
+                                onChange={() => handleImageChange('user01')}
+                            />
+                            <span className='form__item__imgContainer-input--view'></span>
+                        </div>
+                        <div className='form__item__imgContainer'>
+                            <input
+                                className={`form__item__imgContainer-input ${selectedImage === "user02" ? "selected" : ""}`}
+                                checked={selectedImage === "user02"}
+                                type="radio"
+                                id="user02"
+                                name="userImage"
+                                onChange={() => handleImageChange('user02')}
+                            />
+                            <span className='form__item__imgContainer-input--view'></span>
+                        </div>
+                        <div className='form__item__imgContainer'>
+                            <input
+                                className={`form__item__imgContainer-input ${selectedImage === "user03" ? "selected" : ""}`}
+                                checked={selectedImage === "user03"}
+                                type="radio"
+                                id="user03"
+                                name="userImage"
+                                onChange={() => handleImageChange('user03')}
+                            />
+                            <span className='form__item__imgContainer-input--view'></span>
+                        </div>
+                        <p className={`errorMessage errorImg ${imgError ? "allow" : "disallow"}`}>Por favor, selecciona una imagen</p>
                     </div>
                     <div className='form__item'>
-                        <label htmlFor="username">Usuario</label>
-                        <input type="text" value={username}  id='username' onChange={handleUsernameChange} />
+                        <label className='form__item-username--label' htmlFor="username">Usuario</label>
+                        <input className='form__item-username' type="text" value={username}  id='username' onChange={handleUsernameChange} />
                         <p className={`errorMessage ${usernameError ? "allow" : "disallow"}`}>Elija un nombre de usuario de entre 4 y 10 caracteres</p>
                     </div>
                     <div className='form__item'>
-                        <input type="submit" onChange={handleSubmit} />
+                        <input className='form__item-submit' type="submit" onChange={handleSubmit} value="Crear Usuario" />
                     </div>
                 </form>
             </div>

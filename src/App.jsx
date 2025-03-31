@@ -8,6 +8,8 @@ import OponentsFight from "./views/oponentFight";
 import Help from "./views/help"
 import NewUser from "./views/newUser";
 import MainMenu from "./views/mainMenu";
+import Upload from "./views/upload";
+import Page404 from "./views/page404";
 import { GameProvider } from "./context/GameContext"; 
 
 function App() {
@@ -25,6 +27,8 @@ function App() {
             <Route path="/oponents/:name" element={<OponentsFight />} />
             <Route path="/help" element={<Help />} />
             <Route path="/newUser" element={<NewUser />} />
+            <Route path="/upload" element={<Upload />} />
+            <Route path="*" element={<Page404 />} />
         </Routes>
       </GameProvider>
     </>
