@@ -17,17 +17,29 @@
 }
 
 .myCards__container__list__item {
-    width: 17vw;
-    height: 50vh;
+    width: 370px;
+    height: 500px;
     border-radius: 12px;
-    padding: 2rem;
+    padding: 48px;
     position: relative;
     box-shadow: 0 0 15px $secondaryColor;
+
+    &::before {
+        content: '';
+        width: 92%;
+        height: 95%;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        position: absolute;
+        z-index: 1;
+        border-radius: 8px;
+    }
 
     .myCards__container__list__item-nameContainer {
         @include set-flex;
         justify-content: space-between;
-        margin-bottom: 1rem;
+        margin-bottom: 20px;
         position: relative;
         z-index: 10;
 
@@ -52,6 +64,7 @@
         position: relative;
         z-index: 6;
         border-radius: 4px;
+        box-shadow: inset 0 0 25px $secondaryColor;
 
         .myCards__container__list__item-image {
             width: 100%;
@@ -106,8 +119,8 @@
     .myCards__container__list__item-description {
         position: relative;
         z-index: 10;
-        margin-top: 38px;
-        @include font(.9rem, 500, $secondaryColor);
+        margin-top: 42px;
+        @include font(.9rem, 700, $secondaryColor);
         line-height: 1.1rem;
     }
 
@@ -156,16 +169,7 @@
     border: 1px solid $grey;
 
     &::before {
-        content: '';
-        width: 92%;
-        height: 95%;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
         @include typeColor($backElectrico, $white);
-        position: absolute;
-        z-index: 1;
-        border-radius: 8px;
     }
 }
 
@@ -174,16 +178,7 @@
     border: 1px solid $typeNormal;
 
     &::before {
-        content: '';
-        width: 92%;
-        height: 95%;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
         @include typeColor($backPlanta, $white);
-        position: absolute;
-        z-index: 1;
-        border-radius: 8px;
     }
 }
 
@@ -192,16 +187,7 @@
     border: 1px solid $typeElectrico;
 
     &::before {
-        content: '';
-        width: 92%;
-        height: 95%;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
         @include typeColor($backVeneno, $white);
-        position: absolute;
-        z-index: 1;
-        border-radius: 8px;
     }
 }
 
@@ -210,16 +196,7 @@
     border: 1px solid $typeElectrico;
 
     &::before {
-        content: '';
-        width: 92%;
-        height: 95%;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
         @include typeColor($backFuego, $white);
-        position: absolute;
-        z-index: 1;
-        border-radius: 8px;
     }
 }
 
@@ -233,16 +210,7 @@
     border: 1px solid $typeNormal;
 
     &::before {
-        content: '';
-        width: 92%;
-        height: 95%;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
         @include typeColor($backAgua, $white);
-        position: absolute;
-        z-index: 1;
-        border-radius: 8px;
     }
 }
 
@@ -251,16 +219,7 @@
     border: 1px solid $backElectrico;
 
     &::before {
-        content: '';
-        width: 92%;
-        height: 95%;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
         @include typeColor($backBicho, $white);
-        position: absolute;
-        z-index: 1;
-        border-radius: 8px;
     }
 }
 
@@ -279,16 +238,7 @@
     border: 1px solid $backElectrico;
 
     &::before {
-        content: '';
-        width: 92%;
-        height: 95%;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
         @include typeColor($backTierra, $white);
-        position: absolute;
-        z-index: 1;
-        border-radius: 8px;
     }
 }
 
@@ -303,16 +253,7 @@
     z-index: 2;
 
     &::before {
-        content: '';
-        width: 92%;
-        height: 95%;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
         @include typeColor($backNormal, $white);
-        position: absolute;
-        z-index: 1;
-        border-radius: 8px;
     }
 }
 
@@ -323,40 +264,32 @@
 
 .myCards__container__list__item-imgContainer--Eléctrico {
     background: $imgBackElectrico;
-    box-shadow: inset 0 0 25px $secondaryColor;
 }
 
 .myCards__container__list__item-imgContainer--Tierra {
     background: $imgBackTierra;
-    box-shadow: inset 0 0 25px $secondaryColor;
 }
 
 .myCards__container__list__item-imgContainer--Normal {
     background: $imgBackNormal;
-    box-shadow: inset 0 0 25px $secondaryColor;
 }
 
 .myCards__container__list__item-imgContainer--Planta {
     background: $imgBackPlanta;
-    box-shadow: inset 0 0 25px $secondaryColor;
 }
 
 .myCards__container__list__item-imgContainer--Fuego {
     background: $imgBackFuego;
-    box-shadow: inset 0 0 25px $secondaryColor;
 }
 
 .myCards__container__list__item-imgContainer--Agua {
     background: $imgBackAgua;
-    box-shadow: inset 0 0 25px $secondaryColor;
 }
 
 .myCards__container__list__item-imgContainer--Bicho {
     background: $imgBackBicho;
-    box-shadow: inset 0 0 25px $secondaryColor;
 }
 
 .myCards__container__list__item-imgContainer--Veneno {
     background: $imgBackVeneno;
-    box-shadow: inset 0 0 25px $secondaryColor;
 }

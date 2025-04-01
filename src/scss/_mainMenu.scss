@@ -57,6 +57,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    overflow: hidden;
 
     &.goGame {
         display: flex;
@@ -116,6 +117,32 @@
                     &:hover {
                         transform: scale(1);
                     }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1540px) {
+    .gameMenu {          
+        .gameMenu__sidebar {
+            width: 35%;
+    
+            .gameMenu__sidebar-list {
+                gap: 2rem;
+
+                .gameMenu__logo__container {       
+                    .gameMenu__logo__container-logo {
+                        width: 22vw;
+                    }
+
+                    .gameMenu__logo__container-title {
+                        @include font(3.5rem, 400, $secondaryColor);
+                    }
+                }
+    
+                .gameMenu__sidebar-button {
+                    width: 20vw;
                 }
             }
         }
