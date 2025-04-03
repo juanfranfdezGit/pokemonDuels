@@ -354,18 +354,16 @@
 }
 .pokedex .pokedex__pokemons .pokedex__pokemons__list {
   width: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
   margin-left: 55%;
-  padding: 5vh 0;
+  padding: 5vh 1vw;
   background: rgba(255, 255, 255, 0.7882352941);
 }
 .pokedex .pokedex__pokemons .pokedex__pokemons__list .pokedex__pokemons__list__item {
-  width: 13vw;
-  height: 30vh;
+  width: 100%;
+  height: 100%;
   padding: 2rem;
   transition: all 0.5s;
   border-radius: 5px;
@@ -408,72 +406,70 @@
   font-weight: 500;
   color: #111;
 }
-
-.pokedex-type--Eléctrico {
-  background: #f4c454;
-  color: #111;
-}
-
 .pokedex-type--Planta {
   background: #007336;
   color: #f1f1f1;
 }
-
+.pokedex-type--Eléctrico {
+  background: #f4c454;
+  color: #111;
+}
 .pokedex-type--Veneno {
   background: #642b72;
   color: #f1f1f1;
 }
-
 .pokedex-type--Fuego {
   background: #ff5f1f;
   color: #f1f1f1;
 }
-
 .pokedex-type--Volador {
   background: #bceeff;
   color: #111;
 }
-
 .pokedex-type--Agua {
   background: #02d8e9;
   color: #111;
 }
-
 .pokedex-type--Bicho {
   background: #87b690;
   color: #111;
 }
-
 .pokedex-type--Hielo {
   background: #b5d7dc;
   color: #111;
 }
-
 .pokedex-type--Psíquico {
   background: #c47ac0;
   color: #f1f1f1;
 }
-
 .pokedex-type--Tierra {
   background: #997700;
   color: #f1f1f1;
 }
-
 .pokedex-type--Roca {
   background: #513a2a;
   color: #f1f1f1;
 }
-
 .pokedex-type--Normal {
   background: #8a9597;
   color: #f1f1f1;
 }
-
 .pokedex-type--Lucha {
   background: #8f4931;
   color: #f1f1f1;
 }
 
+@media (max-width: 1540px) {
+  .pokedex .pokedex__pokemons .pokedex__pokemons__selected .pokedex__pokemons__selected-info .pokedex__pokemons__selected-info-data01 {
+    margin-bottom: 1.5rem;
+  }
+  .pokedex .pokedex__pokemons .pokedex__pokemons__selected .pokedex__pokemons__selected-info .pokedex__pokemons__selected-info-data02 .pokedex__pokemons__selected-info-imageContainer {
+    width: 50%;
+  }
+  .pokedex .pokedex__pokemons .pokedex__pokemons__list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
 .myCards .myCards__container {
   width: 100vw;
   padding-top: 2vh;
@@ -1177,9 +1173,9 @@
     height: 0vh;
   }
   to {
-    left: 27vw;
-    width: 16vw;
-    height: 50vh;
+    left: 29vw;
+    width: 350px;
+    height: 520px;
   }
 }
 @keyframes appear02 {
@@ -1189,9 +1185,9 @@
     height: 0vh;
   }
   to {
-    left: 45vw;
-    width: 16vw;
-    height: 50vh;
+    left: 49vw;
+    width: 350px;
+    height: 520px;
   }
 }
 @keyframes appear03 {
@@ -1201,9 +1197,9 @@
     height: 0vh;
   }
   to {
-    left: 63vw;
-    width: 16vw;
-    height: 50vh;
+    left: 69vw;
+    width: 350px;
+    height: 520px;
   }
 }
 @keyframes appear04 {
@@ -1213,9 +1209,80 @@
     height: 0vh;
   }
   to {
-    left: 81vw;
-    width: 16vw;
-    height: 50vh;
+    left: 89vw;
+    width: 350px;
+    height: 520px;
+  }
+}
+@media (max-width: 1540px) {
+  .shop .shop__menu .shop__menu-item {
+    width: 25vw;
+  }
+  .opening .envelops .envelops__container {
+    position: absolute;
+    left: -50vw;
+    transition: all 2s;
+  }
+  .opening .envelops .envelops__container:nth-child(2) {
+    left: -27vw;
+  }
+  .opening .envelops .envelops__container:nth-child(3) {
+    left: -5vw;
+  }
+  .opening .envelops .envelops__container:nth-child(4) {
+    left: 17vw;
+  }
+  @keyframes appear01 {
+    from {
+      left: 50%;
+      width: 0vw;
+      height: 0vh;
+    }
+    to {
+      left: 29vw;
+      width: 320px;
+      height: 490px;
+      z-index: 10;
+    }
+  }
+  @keyframes appear02 {
+    from {
+      left: 50%;
+      width: 0vw;
+      height: 0vh;
+    }
+    to {
+      left: 48vw;
+      width: 320px;
+      height: 490px;
+      z-index: 11;
+    }
+  }
+  @keyframes appear03 {
+    from {
+      left: 50%;
+      width: 0vw;
+      height: 0vh;
+    }
+    to {
+      left: 68vw;
+      width: 320px;
+      height: 490px;
+      z-index: 12;
+    }
+  }
+  @keyframes appear04 {
+    from {
+      left: 50%;
+      width: 0vw;
+      height: 0vh;
+    }
+    to {
+      left: 87vw;
+      width: 320px;
+      height: 490px;
+      z-index: 13;
+    }
   }
 }
 .header {
@@ -1328,6 +1395,11 @@
   opacity: 1;
 }
 
+@media (max-width: 1540px) {
+  .header {
+    height: 15vh;
+  }
+}
 .formContainer {
   display: flex;
   justify-content: center;

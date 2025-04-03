@@ -127,16 +127,16 @@
 
         .pokedex__pokemons__list {
             width: 50%;
-            @include set-flex;
-            flex-wrap: wrap;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
             gap: 2rem;
             margin-left: 55%;
-            padding: 5vh 0;
+            padding: 5vh 1vw;
             background: $whiteOpacity;
 
             .pokedex__pokemons__list__item {
-                width: 13vw;
-                height: 30vh;
+                width: 100%;
+                height: 100%;
                 padding: 2rem;
                 transition: all .5s;
                 border-radius: 5px;
@@ -180,56 +180,80 @@
     padding: 4px 12px;
     border-radius: 5px;
     @include font(1rem, 500, $secondaryColor);
+
+    &--Planta {
+        @include typeColor($typePlanta, $white);
+    }
+
+    &--Eléctrico {
+        @include typeColor($typeElectrico, $secondaryColor);
+    }
+
+    &--Veneno {
+        @include typeColor($typeVeneno, $white);
+    }
+
+    &--Fuego {
+        @include typeColor($typeFuego, $white);
+    }
+    
+    &--Volador {
+        @include typeColor($typeVolador, $secondaryColor);
+    }
+    
+    &--Agua {
+        @include typeColor($typeAgua, $secondaryColor);
+    }
+    
+    &--Bicho {
+        @include typeColor($typeBicho, $secondaryColor);
+    }
+    
+    &--Hielo {
+        @include typeColor($typeHielo, $secondaryColor);
+    }
+    
+    &--Psíquico {
+        @include typeColor($typePsiquico, $white);
+    }
+    
+    &--Tierra {
+        @include typeColor($typeTierra, $white);
+    }
+    
+    &--Roca {
+        @include typeColor($typeRoca, $white);
+    }
+    
+    &--Normal {
+        @include typeColor($typeNormal, $white);
+    }
+    
+    &--Lucha {
+        @include typeColor($typeLucha, $white);
+    }
 }
 
-.pokedex-type--Eléctrico {
-    @include typeColor($typeElectrico, $secondaryColor);
-}
-
-.pokedex-type--Planta {
-    @include typeColor($typePlanta, $white);
-}
-
-.pokedex-type--Veneno {
-    @include typeColor($typeVeneno, $white);
-}
-
-.pokedex-type--Fuego {
-    @include typeColor($typeFuego, $white);
-}
-
-.pokedex-type--Volador {
-    @include typeColor($typeVolador, $secondaryColor);
-}
-
-.pokedex-type--Agua {
-    @include typeColor($typeAgua, $secondaryColor);
-}
-
-.pokedex-type--Bicho {
-    @include typeColor($typeBicho, $secondaryColor);
-}
-
-.pokedex-type--Hielo {
-    @include typeColor($typeHielo, $secondaryColor);
-}
-
-.pokedex-type--Psíquico {
-    @include typeColor($typePsiquico, $white);
-}
-
-.pokedex-type--Tierra {
-    @include typeColor($typeTierra, $white);
-}
-
-.pokedex-type--Roca {
-    @include typeColor($typeRoca, $white);
-}
-
-.pokedex-type--Normal {
-    @include typeColor($typeNormal, $white);
-}
-
-.pokedex-type--Lucha {
-    @include typeColor($typeLucha, $white);
+@media (max-width: 1540px) {
+    .pokedex {
+        .pokedex__pokemons {
+            .pokedex__pokemons__selected {
+                .pokedex__pokemons__selected-info {
+                    .pokedex__pokemons__selected-info-data01 {
+                        margin-bottom: 1.5rem;
+                    }
+    
+                    .pokedex__pokemons__selected-info-data02 {
+                        .pokedex__pokemons__selected-info-imageContainer {
+                            width: 50%;
+                        }
+                    }
+                }
+            }
+    
+            .pokedex__pokemons__list {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    }
 }

@@ -190,11 +190,12 @@
         height: 0vh;
     }
     to {
-        left: 27vw;
-        width: 16vw;
-        height: 50vh;
+        left: 29vw;
+        width: 350px;
+        height: 520px;
     }
 }
+
 @keyframes appear02 {
     from {
         left: 50%;
@@ -202,11 +203,12 @@
         height: 0vh;
     }
     to {
-        left: 45vw;
-        width: 16vw;
-        height: 50vh;
+        left: 49vw;
+        width: 350px;
+        height: 520px;
     }
 }
+
 @keyframes appear03 {
     from {
         left: 50%;
@@ -214,11 +216,12 @@
         height: 0vh;
     }
     to {
-        left: 63vw;
-        width: 16vw;
-        height: 50vh;
+        left: 69vw;
+        width: 350px;
+        height: 520px;
     }
 }
+
 @keyframes appear04 {
     from {
         left: 50%;
@@ -226,8 +229,96 @@
         height: 0vh;
     }
     to {
-        left: 81vw;
-        width: 16vw;
-        height: 50vh;
+        left: 89vw;
+        width: 350px;
+        height: 520px;
+    }
+}
+
+@media (max-width: 1540px) {
+    .shop {
+        .shop__menu {
+            .shop__menu-item {
+                width: 25vw;
+            }
+        }
+    }
+
+    .opening {
+        .envelops {
+            .envelops__container {
+                position: absolute;
+                left: -50vw;
+                transition: all 2s;
+    
+                &:nth-child(2) {
+                    left: -27vw;
+                }
+    
+                &:nth-child(3) {
+                    left: -5vw;
+                }
+    
+                &:nth-child(4) {
+                    left: 17vw;
+                }
+            }
+        }
+    }
+
+    @keyframes appear01 {
+        from {
+            left: 50%;
+            width: 0vw;
+            height: 0vh;
+        }
+        to {
+            left: 29vw;
+            width: 320px;
+            height: 490px;
+            z-index: 10;
+        }
+    }
+    
+    @keyframes appear02 {
+        from {
+            left: 50%;
+            width: 0vw;
+            height: 0vh;
+        }
+        to {
+            left: 48vw;
+            width: 320px;
+            height: 490px;
+            z-index: 11;
+        }
+    }
+    
+    @keyframes appear03 {
+        from {
+            left: 50%;
+            width: 0vw;
+            height: 0vh;
+        }
+        to {
+            left: 68vw;
+            width: 320px;
+            height: 490px;
+            z-index: 12;
+        }
+    }
+    
+    @keyframes appear04 {
+        from {
+            left: 50%;
+            width: 0vw;
+            height: 0vh;
+        }
+        to {
+            left: 87vw;
+            width: 320px;
+            height: 490px;
+            z-index: 13;
+        }
     }
 }
