@@ -1,0 +1,51 @@
+.help {
+    @include set-flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 1rem;
+    padding: 2rem 4rem;
+    position: relative;
+    overflow-y: scroll;
+    height: 90vh;
+
+    .help__title {
+        width: 100%;
+        background: $primaryColor;
+        padding: 4px 16px;
+        color: $white;
+    }
+
+    .help__index {
+        padding: 4px 32px;
+        background: $bluePoke;
+        width: 100%;
+        color: $white;
+
+        &.primary {
+            background: none;
+            color: $secondaryColor;
+        }
+
+        &-description {
+            margin-left: 2rem;
+        }
+    }
+
+    .help__index__list {
+        margin-left: 4rem;
+        
+        li {
+            list-style: upper-alpha;
+            font-weight: 600;
+        }
+
+        li:last-child {
+            margin-bottom: 1rem;
+        }
+
+        a {
+            text-decoration: none;
+        }
+    }
+}

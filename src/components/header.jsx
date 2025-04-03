@@ -48,6 +48,8 @@ function BackButton() {
         pageTitle = "Nuevo Usuario";
     }  else if (pathname === "upload") {
         pageTitle = "Cargar Datos";
+    }   else if (pathname === "help") {
+        pageTitle = "Ayuda";
     }
 
     function handleOverlay() {
