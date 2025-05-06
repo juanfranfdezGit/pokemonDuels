@@ -2,7 +2,7 @@
 # Pokémon Duels!
 
 
-Bienvenido a **Pokémon Duels**, un juego de cartas inspirado en el universo Pokémon, construido con **React**, **SASS** y utilizando **JSON** como API para obtener datos dinámicos sobre los Pokémon. Este proyecto ha sido creado con fines educativos y sin ánimo de lucro, con el objetivo de practicar y mejorar mis habilidades de programación en JavaScript, React y el uso de APIs.
+Bienvenido a Pokémon Duels, un juego de cartas inspirado en el universo Pokémon, creado con React, SASS y utilizando JSON como API para obtener datos dinámicos sobre los Pokémon. Este proyecto es fan-made, sin fines comerciales y con fines educativos, desarrollado para practicar y mejorar mis habilidades en programación con JavaScript, React y el uso de APIs. No está asociado con Nintendo ni con The Pokémon Company, y todos los derechos de los personajes y marcas de Pokémon pertenecen a sus respectivos propietarios.
 
 ## Características del Proyecto 🔧
 
