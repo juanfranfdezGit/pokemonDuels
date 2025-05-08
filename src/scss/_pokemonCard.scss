@@ -1,0 +1,161 @@
+@import './_variables.scss';
+@import './_mixin.scss';
+
+.pokemonCard {
+    width: 340px;
+    height: 460px;
+    border-radius: 12px;
+    padding: 16px;
+    position: relative;
+    box-shadow: 0 0 15px $secondaryColor;
+	display: flex;
+	flex-direction: column;
+
+    &::before {
+        content: '';
+        width: calc(100% - 10px);
+        height: calc(100% - 12px);
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        position: absolute;
+        z-index: 1;
+        border-radius: 8px;
+    }
+
+    .pokemonCard-nameContainer {
+        @include set-flex;
+        justify-content: space-between;
+        position: relative;
+		padding: 0 8px 4px;
+        margin-bottom: 16px;
+		border-bottom: 1px solid #0009;
+        z-index: 10;
+
+        .pokemonCard-name {
+            @include font(1.15rem, 700, $secondaryColor);
+        }
+
+        .pokemonCard-PS {
+            @include font(1.4rem, 700, $secondaryColor);
+
+            span {
+                @include font(1rem, 700, $secondaryColor);
+                opacity: .8;
+                margin-right: 4px;
+            }
+        }
+    }
+
+    .pokemonCard-imgContainer {
+        width: 100%;
+        height: 45%;
+        position: relative;
+        z-index: 6;
+        border-radius: 4px;
+        box-shadow: inset 0 0 25px $secondaryColor;
+
+        .pokemonCard-image {
+            width: 100%;
+            height: 90%;
+            object-fit: contain;
+            position: absolute;
+            top: 5%;
+            left: 0;
+            filter: drop-shadow(0 5px 8px $secondaryColor);
+            z-index: 2;
+        }
+
+        .pokemonCard-back {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
+        }
+
+        .cards-typeContainer {
+            @include set-flex;
+            position: absolute;
+            width: 100%;
+            bottom: -5px;
+            left: 50%;
+            transform: translate(-50%);
+            z-index: 3;
+			
+
+            .cards-type:first-child {
+                @include font(1rem, 600, $secondaryColor);
+                width: 60%;
+                clip-path: polygon(0 0, 100% 0, 72% 100%, 0% 100%);
+                position: absolute;
+                left: 0;
+                padding: 4px 4px 4px 20px;
+            }
+
+            .cards-type:nth-child(2) {
+                @include font(1rem, 600, $secondaryColor);
+                width: 60%;
+                clip-path: polygon(29% 0, 100% 0, 100% 100%, 0% 100%);
+                position: absolute;
+                right: 0;
+                padding: 4px 4px 4px 20%;
+            }
+        }               
+    }
+
+    .pokemonCard-description {
+		background: #fff6;
+		padding: 6px 8px;
+		position: relative;
+        z-index: 10;
+        margin-top: 32px;
+		border-radius: 4px;
+        @include font(.9rem, 700, $secondaryColor);
+        line-height: 1.1rem;
+    }
+
+    .pokemonCard-abilityContainer {
+        @include set-flex;
+		flex-grow: 1;
+        justify-content: space-between;
+		align-items: end;
+        position: relative;
+		padding: 0 8px;
+		margin-bottom: 6px;
+        z-index: 10;
+        transition: all .5s;
+
+        .pokemonCard-ability {
+            @include font(1.15rem, 700, $secondaryColor);
+            @include set-flex;
+            gap: 8px;
+            
+            &:hover {
+                cursor: pointer;
+            }
+
+            span {
+                @include font(.8rem, 600, $bluePoke);
+                @include set-flex;
+                width: 12px;
+                height: 12px;
+                padding: 8px;
+                background: $white;
+                border-radius: 50%;
+                position: relative;
+                top: 2px;
+            }
+        }
+
+        .pokemonCard-PH {
+            @include font(1.15rem, 700, $secondaryColor);
+
+            span {
+                @include font(1rem, 700, $secondaryColor);
+            }
+        }
+    }
+}

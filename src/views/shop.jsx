@@ -1,4 +1,5 @@
 import Header from "../components/header";
+import PokemonCard from '../components/pokemonCard';
 import { useNavigate } from "react-router-dom";
 import { useEffect, useState, useContext } from "react";
 import { GameContext } from "../context/GameContext";
@@ -94,33 +95,20 @@ function Shop() {
               <div className={`envelops__container ${isSelected === null ? "" : isSelected === true ? "selectedCard" : "nonSelected"}`}>
               <img onClick={() => selectingEnvelop(i)} className="envelops__container-img" src="/assets/images/envelop.webp" alt="card envelop" />
               <ul className="envelops__container-cards">
-              {randomCards[i].map((card) => (
-                <li 
-                    key={card.id}
-                    className={`shopCards myCards__container__list__item card-type--`+card.tipo[0]}>
-                    <div className="myCards__container__list__item-nameContainer">
-                        <p className="myCards__container__list__item-name">{card.name}</p>
-                        <p className="myCards__container__list__item-PS"><span>PS</span>{card.stats[0].toString().padEnd(2, '0')}</p>
-                    </div>
-                    <div className={`myCards__container__list__item-imgContainer myCards__container__list__item-imgContainer--`+card.tipo[0]}>
-                        <img className="myCards__container__list__item-image" src={card.isShiny ? card.imageShiny : card.image} alt={card.name+` image`} />
-                        <img className="myCards__container__list__item-back" src="/assets/images/brillo.png" alt={card.name+` image`} />
-                        <div className="cards-typeContainer">
-                            {card.tipo.map((type, index) => (
-                              <p key={index} className={`cards-type pokedex-type--`+type}>{type}</p>
-                            ))}
-                        </div>
-                    </div>
-                    <p className="myCards__container__list__item-description">{card.description}</p>
-                    <div className="myCards__container__list__item-habilityContainer">
-                        <p className="myCards__container__list__item-hability">{card.Habilidad} <span>?</span></p>
-                        {(() => {
-                            const attackFind = attack.find(a => a.Habilidad === card.Habilidad);
-                            return attackFind ? <p className="myCards__container__list__item-PH"><span>PH:</span> {attackFind.PH}</p> : "Ataque no encontrado";
-                        })()}
-                    </div>
-                </li>
-              ))}
+              {randomCards[i].map((card) => {
+				const isShiny = card.isShiny;
+				const attackFind = attack.find(a => a.Habilidad === card.Habilidad);
+
+				return (
+					<li key={card.id}>
+						<PokemonCard 
+							card={card}
+							isShiny={card.isShiny}
+							attack={attackFind}
+						/>
+                	</li>
+				)
+              })}
               </ul>
             </div>
             ))}
