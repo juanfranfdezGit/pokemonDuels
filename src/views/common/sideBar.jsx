@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import { useContext, useEffect, useState } from "react";
-import { GameContext } from "../context/GameContext";
+import { GameContext } from "../../context/GameContext";
 
 function MainMenu() {
 
@@ -19,10 +19,6 @@ function MainMenu() {
 
   function navShop() {
     Navigate('/shop')
-  }
-
-  function navOponents() {
-    Navigate('/oponents')
   }
 
   function navHelp() {
@@ -61,7 +57,6 @@ function MainMenu() {
             </div>
             <li><button className="gameMenu__sidebar-button" onClick={navPokedex}>Pokedex</button></li>
             <li><button className="gameMenu__sidebar-button" onClick={navMyCards}>Mis Cartas</button></li>
-            <li><button className="gameMenu__sidebar-button disabled" disabled onClick={navOponents}>Oponentes</button></li>
             <li><button className="gameMenu__sidebar-button" onClick={navShop}>Tienda de Sobres</button></li>
             <li><button className="gameMenu__sidebar-button" onClick={navHelp}>Ayuda</button></li>
             <li><button className="gameMenu__sidebar-button" onClick={closeUser}>Cerrar Sesión</button></li>

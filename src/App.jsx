@@ -1,15 +1,13 @@
-import Opening from "./views/opening";
 import { Routes, Route } from 'react-router-dom'; 
-import Pokedex from "./views/pokedex";
-import MyCards from "./views/myCards";
-import Shop from "./views/shop";
-import Oponents from "./views/oponents";
-import OponentsFight from "./views/oponentFight";
-import Help from "./views/help"
-import NewUser from "./views/newUser";
-import MainMenu from "./views/mainMenu";
-import Upload from "./views/upload";
-import Page404 from "./views/page404";
+import MainMenu from "./views/mainMenu/mainMenu";
+import Pokedex from "./views/home/pokedex/pokedex";
+import MyCards from "./views/home/myCards/myCards";
+import Shop from "./views/home/shop/shop";
+import Help from "./views/home/help/help"
+import NewUser from "./views/mainMenu/newUser/newUser";
+import Upload from "./views/mainMenu/continue/upload";
+import SideBar from "./views/common/sideBar";
+import Page404 from "./views/404/page404";
 import { GameProvider } from "./context/GameContext"; 
 
 function App() {
@@ -18,13 +16,11 @@ function App() {
     <>
       <GameProvider>
         <Routes>
-            <Route path="/" element={<Opening />} />
-            <Route path="/menu" element={<MainMenu />} />
+            <Route path="/" element={<MainMenu />} />
+            <Route path="/menu" element={<SideBar />} />
             <Route path="/pokedex" element={<Pokedex />} />
             <Route path="/myCards" element={<MyCards />} />
             <Route path="/shop" element={<Shop />} />
-            <Route path="/oponents" element={<Oponents />} />
-            <Route path="/oponents/:name" element={<OponentsFight />} />
             <Route path="/help" element={<Help />} />
             <Route path="/newUser" element={<NewUser />} />
             <Route path="/upload" element={<Upload />} />

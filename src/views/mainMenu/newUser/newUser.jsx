@@ -1,6 +1,6 @@
-import Header from '../components/header'
+import Header from '../../common/header'
 import { useState } from "react";
-import { saveUserData } from "../tools/gameDB";
+import { saveUserData } from "../../../tools/gameDB";
 import { useNavigate } from 'react-router-dom';
 
 function NewUser() {

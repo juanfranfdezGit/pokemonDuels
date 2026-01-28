@@ -1,7 +1,7 @@
 import { useState, useEffect, useContext } from "react";
 import { useNavigate } from "react-router-dom";
-import { GameContext } from "../context/GameContext";
-import { getUserData } from "../tools/gameDB";
+import { GameContext } from "../../context/GameContext";
+import { getUserData } from "../../tools/gameDB";
 
 function Opening() {
   const { user, updateUser } = useContext(GameContext);

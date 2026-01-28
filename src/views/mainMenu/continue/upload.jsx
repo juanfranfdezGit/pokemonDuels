@@ -1,6 +1,6 @@
-import Header from "../components/header";
+import Header from "../../common/header";
 import { useContext, useState } from "react";
-import { GameContext } from '../context/GameContext';
+import { GameContext } from '../../../context/GameContext';
 import { useNavigate } from "react-router-dom";
 
 export default function Upload() {

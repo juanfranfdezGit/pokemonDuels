@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import Header from "../components/header";
+import Header from "../../common/header";
 
 function Pokedex() {
     const [cards, setCards] = useState([]);

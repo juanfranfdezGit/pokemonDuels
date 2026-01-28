@@ -1,6 +1,6 @@
 import { useEffect, useState, useContext  } from "react";
-import { GameContext } from "../context/GameContext";
-import Header from "../components/header";
+import { GameContext } from "../../../context/GameContext";
+import Header from "../../common/header";
 
 
 function MyCards() {

@@ -1,4 +1,4 @@
-import Header from "../components/header";
+import Header from "../../common/header";
 
 function Help() {
 
