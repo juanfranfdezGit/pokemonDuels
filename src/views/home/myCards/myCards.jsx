@@ -26,7 +26,7 @@ function MyCards() {
 
     useEffect(() => {
         setMyCards(user.cards);
-    })
+    }, [user.cards])
 
     console.log("Cartas filtradas:", cards.filter(card => myCards.flat().map(myCard => myCard.id).includes(card.id)));
 
