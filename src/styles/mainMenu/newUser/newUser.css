@@ -11,10 +11,15 @@
   flex-direction: column;
   gap: 2rem;
   box-shadow: 0 0 8px var(--secondaryColor);
+  padding-top: 120px;
 }
 
 .form__item {
   position: relative;
+}
+
+.form__item:first-child {
+  top: -80px;
 }
 
 .form__item__imgContainer {
@@ -54,33 +59,26 @@
   filter: drop-shadow(0 0 2px var(--secondaryColor));
 }
 
-.form__item__imgContainer-input:nth-child(2) .form__item__imgContainer-input {
+.form__item__imgContainer-input.second {
   left: 100px;
 }
 
-.form__item__imgContainer-input:nth-child(2)
-  .form__item__imgContainer-input--view {
+.form__item__imgContainer-input--view.second {
   left: 100px;
   background: url(../../../../public/assets/images/profileImg/prof02.webp);
   background-size: cover;
   filter: drop-shadow(0 0 2px var(--secondaryColor));
 }
 
-.form__item__imgContainer-input:nth-child(3) .form__item__imgContainer-input {
+.form__item__imgContainer-input.third {
   left: -200px;
 }
 
-.form__item__imgContainer-input:nth-child(3)
-  .form__item__imgContainer-input--view {
+.form__item__imgContainer-input--view.third {
   left: -200px;
   background: url(../../../../public/assets/images/profileImg/prof03.webp);
   background-size: cover;
   filter: drop-shadow(0 0 2px var(--secondaryColor));
-}
-
-.form__item__imgContainer-input:nth-child(2) {
-  flex-direction: column;
-  padding-top: 4.5rem;
 }
 
 .form__item-username {

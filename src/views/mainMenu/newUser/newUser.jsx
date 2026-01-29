@@ -70,7 +70,7 @@ function NewUser() {
                     <div className='form__item'>
                         <div className='form__item__imgContainer flex'>
                             <input
-                                className={`form__item__imgContainer-input ${selectedImage === "user01" ? "selected" : ""}`}
+                                className={`form__item__imgContainer-input flex ${selectedImage === "user01" ? "selected" : ""}`}
                                 checked={selectedImage === "user01"}
                                 type="radio"
                                 id="user01"
@@ -79,27 +79,27 @@ function NewUser() {
                             />
                             <span className='form__item__imgContainer-input--view'></span>
                         </div>
-                        <div className='form__item__imgContainer'>
+                        <div className='form__item__imgContainer flex'>
                             <input
-                                className={`form__item__imgContainer-input flex ${selectedImage === "user02" ? "selected" : ""}`}
+                                className={`form__item__imgContainer-input second flex ${selectedImage === "user02" ? "selected" : ""}`}
                                 checked={selectedImage === "user02"}
                                 type="radio"
                                 id="user02"
                                 name="userImage"
                                 onChange={() => handleImageChange('user02')}
                             />
-                            <span className='form__item__imgContainer-input--view'></span>
+                            <span className='form__item__imgContainer-input--view second'></span>
                         </div>
-                        <div className='form__item__imgContainer'>
+                        <div className='form__item__imgContainer flex'>
                             <input
-                                className={`form__item__imgContainer-input ${selectedImage === "user03" ? "selected" : ""}`}
+                                className={`form__item__imgContainer-input third flex ${selectedImage === "user03" ? "selected" : ""}`}
                                 checked={selectedImage === "user03"}
                                 type="radio"
                                 id="user03"
                                 name="userImage"
                                 onChange={() => handleImageChange('user03')}
                             />
-                            <span className='form__item__imgContainer-input--view'></span>
+                            <span className='form__item__imgContainer-input--view third'></span>
                         </div>
                         <p className={`errorMessage errorImg ${imgError ? "allow" : "disallow"}`}>Por favor, selecciona una imagen</p>
                     </div>
