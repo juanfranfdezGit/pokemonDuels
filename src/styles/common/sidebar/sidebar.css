@@ -1,0 +1,82 @@
+@import url("./responsive/sidebarLaptop.css");
+
+.gameMenu {
+  width: 100vw;
+  height: 100vh;
+  background: var(--white);
+  z-index: 10;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+  background: url(../../../../public/assets/images/backGameMenu.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+
+.gameMenu.goGame {
+  display: flex;
+}
+
+.gameMenu__sidebar {
+  width: 25%;
+  height: 100%;
+  background: var(--primaryColorOp);
+  position: absolute;
+  right: 0;
+  box-shadow: 0 5px 15px var(--secondaryColor);
+  border-left: 1px solid var(--primaryColor);
+}
+
+.gameMenu__sidebar-list {
+  flex-direction: column;
+  gap: 2.8rem;
+}
+
+.gameMenu__logo__container {
+  flex-direction: column;
+  padding: 3rem 5rem 0 5rem;
+  border-radius: 15px;
+  margin-bottom: -3vh;
+}
+
+.gameMenu__logo__container-logo {
+  width: 20vw;
+  filter: drop-shadow(0 0 15px var(--secondaryColor));
+}
+
+.gameMenu__logo__container-title {
+  font-family: "graffiti";
+  font-size: 5rem;
+  font-weight: 400;
+  color: var(--secondaryColor);
+  position: relative;
+  bottom: 30px;
+}
+
+.gameMenu__sidebar-button {
+  width: 15vw;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--white);
+  background: var(--bluePoke);
+  padding: 1rem;
+  box-shadow: 0 0 15px var(--secondaryColor);
+  border-radius: 15px;
+}
+
+.gameMenu__sidebar-button:hover {
+  cursor: pointer;
+  transform: scale(1.09);
+}
+
+.gameMenu__sidebar-button.disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+.gameMenu__sidebar-button:hover {
+  transform: scale(1);
+}

@@ -1,0 +1,75 @@
+.pokedex-type {
+  display: inline-flex;
+  margin-top: 12px;
+  margin-right: 8px;
+  padding: 4px 12px;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--secondaryColor);
+}
+
+.pokedex-type--Planta {
+  background: var(--typePlanta);
+  color: var(--white);
+}
+
+.pokedex-type--Eléctrico {
+  background: var(--typeElectrico);
+  color: var(--secondaryColor);
+}
+
+.pokedex-type--Veneno {
+  background: var(--typeVeneno);
+  color: var(--white);
+}
+
+.pokedex-type--Fuego {
+  background: var(--typeFuego);
+  color: var(--white);
+}
+
+.pokedex-type--Volador {
+  background: var(--typeVolador);
+  color: var(--secondaryColor);
+}
+
+.pokedex-type--Agua {
+  background: var(--typeAgua);
+  color: var(--secondaryColor);
+}
+
+.pokedex-type--Bicho {
+  background: var(--typeBicho);
+  color: var(--secondaryColor);
+}
+
+.pokedex-type--Hielo {
+  background: var(--typeHielo);
+  color: var(--secondaryColor);
+}
+
+.pokedex-type--Psíquico {
+  background: var(--typePsiquico);
+  color: var(--white);
+}
+
+.pokedex-type--Tierra {
+  background: var(--typeTierra);
+  color: var(--white);
+}
+
+.pokedex-type--Roca {
+  background: var(--typeRoca);
+  color: var(--white);
+}
+
+.pokedex-type--Normal {
+  background: var(--typeNormal);
+  color: var(--white);
+}
+
+.pokedex-type--Lucha {
+  background: var(--typeLucha);
+  color: var(--white);
+}

@@ -1,0 +1,23 @@
+@media (max-width: 1540px) {
+  .gameMenu__sidebar {
+    width: 35%;
+  }
+
+  .gameMenu__sidebar-list {
+    gap: 2rem;
+  }
+
+  .gameMenu__logo__container-logo {
+    width: 22vw;
+  }
+
+  .gameMenu__logo__container-title {
+    font-size: 3.5rem;
+    font-weight: 400;
+    color: var(--secondaryColor);
+  }
+
+  .gameMenu__sidebar-button {
+    width: 20vw;
+  }
+}

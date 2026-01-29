@@ -1,0 +1,102 @@
+.opening {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  transition: all 3s;
+}
+
+.envelops {
+  position: relative;
+  transition: all 2s;
+}
+
+.envelops__container {
+  position: absolute;
+  left: -45vw;
+  transition: all 2s;
+}
+
+.envelops__container:nth-child(2) {
+  left: -27vw;
+}
+
+.envelops__container:nth-child(3) {
+  left: -8vw;
+}
+
+.envelops__container:nth-child(4) {
+  left: 10vw;
+}
+
+.envelops__container-img {
+  transform: scale(1.1);
+  cursor: pointer;
+  filter: drop-shadow(0 0 25px var(--secondaryColor));
+  transition: all 0.5s;
+  z-index: 10;
+  position: relative;
+}
+
+.envelops__container-img:hover {
+  transform: scale(1.2);
+  filter: drop-shadow(0 0 35px var(--secondaryColor));
+}
+
+.shopCards {
+  z-index: 1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 0vw;
+  height: 0vh;
+  overflow: hidden;
+  transition: all 2s;
+}
+
+.shopCards:hover {
+  transform: translate(-50%, -50%) scale(1.1);
+  cursor: pointer;
+}
+
+.nonSelectedEnvelop {
+  transform: translateY(100vh);
+}
+
+.selectedEnvelop {
+  left: -52vw !important;
+}
+
+.envelops__container-img {
+  pointer-events: none;
+}
+
+.shopCards:first-child {
+  animation: appear01 1s forwards;
+  animation-delay: 1.5s;
+}
+
+.shopCards:nth-child(2) {
+  animation: appear02 1s forwards;
+  animation-delay: 1.7s;
+}
+
+.shopCards:nth-child(3) {
+  animation: appear03 1s forwards;
+  animation-delay: 1.9s;
+}
+
+.shopCards:nth-child(4) {
+  animation: appear04 1s forwards;
+  animation-delay: 2.1s;
+}
+
+.opening.disallow {
+  top: 100vh;
+  left: 0;
+}
+
+.opening.allow {
+  top: 0;
+  left: 0;
+}

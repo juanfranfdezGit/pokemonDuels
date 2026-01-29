@@ -92,33 +92,33 @@ function Shop() {
   return (
     <>
       <Header />
-      <section className="shop">
+      <section className="shop flex">
         <ul
           className={
-            opening === true ? "shop__menu disallow" : "shop__menu allow"
+            opening === true ? "shop__menu flex disallow" : "shop__menu flex allow"
           }
         >
-          <li className="shop__menu-item" onClick={startOpening}>
+          <li className="shop__menu-item flex" onClick={startOpening}>
             Abrir Sobres
           </li>
-          <li className="shop__menu-item" onClick={navMyCards}>
+          <li className="shop__menu-item flex" onClick={navMyCards}>
             Mis Cartas
           </li>
-          <li className="shop__menu-item" onClick={navPokedex}>
+          <li className="shop__menu-item flex" onClick={navPokedex}>
             Pokédex
           </li>
-          <li className="shop__menu-item" onClick={navHelp}>
+          <li className="shop__menu-item flex" onClick={navHelp}>
             Información
           </li>
         </ul>
       </section>
       <section
-        className={opening === true ? "opening allow" : "opening disallow"}
+        className={opening === true ? "opening flex allow" : "opening flex disallow"}
       >
-        <div className="envelops">
+        <div className="envelops flex">
           {selectedEnvelop.map((isSelected, i) => (
             <div
-              className={`envelops__container ${isSelected === null ? "" : isSelected === true ? "selectedCard" : "nonSelected"}`}
+              className={`envelops__container ${isSelected === null ? "" : isSelected === true ? "selectedEnvelop" : "nonSelectedEnvelop"}`}
             >
               <img
                 onClick={() => selectingEnvelop(i)}
@@ -126,7 +126,7 @@ function Shop() {
                 src="/assets/images/envelop.webp"
                 alt="card envelop"
               />
-              <ul className="envelops__container-cards">
+              <ul className="envelops__container-cards flex">
                 {randomCards[i].map((card) => (
                   <li
                     key={card.id}
@@ -200,12 +200,12 @@ function Shop() {
 
         {selectedEnvelop.map((isSelected, _) => (
           <div
-            className={isSelected === true ? "actionsAllow" : "actionsDisallow"}
+            className={isSelected === true ? "actionsAllow flex" : "actionsDisallow flex"}
           >
-            <button className="actionsAllow-item" onClick={startOpening}>
+            <button className="actionsAllow-item flex" onClick={startOpening}>
               Abrir Más
             </button>
-            <button className="actionsAllow-item" onClick={navMyCards}>
+            <button className="actionsAllow-item flex" onClick={navMyCards}>
               Mis Cartas
             </button>
           </div>

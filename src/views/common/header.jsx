@@ -74,25 +74,25 @@ function BackButton() {
 
   return (
     <>
-      <header className="header">
-        <button className="back__button" onClick={navMainMenu}>
+      <header className="header flex">
+        <button className="back__button flex" onClick={navMainMenu}>
           <img src="/assets/logos/arrowBack.png" alt="back button" />
           Menú Principal
         </button>
         <h2 className="pages__title">{pageTitle}</h2>
         {(pageTitle === "Mis Cartas" || pageTitle === "Tienda") && (
-          <div className="header__user">
+          <div className="header__user flex">
             <p className="header__user__money">{user.money}</p>
             <img
               className="pokecuarto"
               src="/assets/images/profileImg/pokecuartos.webp"
               alt="pokecuarto"
             />
-            <div className="header__user__profImg" onClick={handleOverlay}>
+            <div className="header__user__profImg flex" onClick={handleOverlay}>
               <img src={profImg} alt={user.username} />
             </div>
             <div
-              className={`header__user__profImg-overlay ${overlay ? "active" : ""}`}
+              className={`header__user__profImg-overlay flex ${overlay ? "active" : ""}`}
               onClick={download}
             >
               <p>Descargar Datos</p>

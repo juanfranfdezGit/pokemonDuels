@@ -48,10 +48,10 @@ function MainMenu() {
   
   return (
     <>
-      <section className="gameMenu goGame">
+      <section className="gameMenu flex goGame">
         <div className="gameMenu__sidebar">
-          <ul className="gameMenu__sidebar-list">
-            <div className="gameMenu__logo__container">
+          <ul className="gameMenu__sidebar-list flex">
+            <div className="gameMenu__logo__container flex">
                 <img className="gameMenu__logo__container-logo" src="/assets/images/PokemonLogo.png" alt="Pokemon logo" />
                 <h1 className="gameMenu__logo__container-title">Duels!</h1>
             </div>

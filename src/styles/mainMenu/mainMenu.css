@@ -1,0 +1,44 @@
+.mainMenu {
+  width: 100vw;
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.mainMenu__container {
+  flex-direction: column;
+  background: var(--whiteOpacity);
+  padding: 5rem 5rem 10rem 5rem;
+  border-radius: 15px;
+}
+
+.mainMenu__container-logo {
+  width: 20vw;
+  filter: drop-shadow(0 0 5px var(--secondaryColor));
+}
+
+.mainMenu__container-title {
+  font-family: "graffiti";
+  font-size: 5rem;
+  font-weight: 400;
+  color: var(--secondaryColor);
+  position: relative;
+  bottom: 30px;
+}
+
+.mainMenu__container-button {
+  padding: 1rem 4rem;
+  background: var(--bluePoke);
+  border-radius: 28px;
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: var(--white);
+  margin-top: 2rem;
+}
+
+.mainMenu__container-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 5px var(--secondaryColor);
+}

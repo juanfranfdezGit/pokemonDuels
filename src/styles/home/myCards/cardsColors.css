@@ -1,0 +1,148 @@
+.card-type--Eléctrico {
+  background: var(--backNormal);
+  border: 1px solid var(--grey);
+}
+
+.card-type--Eléctrico::before {
+  background: var(--backElectrico);
+  color: var(--white);
+}
+
+.card-type--Planta {
+  background: var(--backNormal);
+  color: var(--white);
+  border: 1px solid var(--typeNormal);
+}
+
+.card-type--Planta::before {
+  background: var(--backPlanta);
+  color: var(--white);
+}
+
+.card-type--Veneno {
+  background: var(--backVeneno);
+  color: var(--white);
+  border: 1px solid var(--typeVeneno);
+}
+
+.card-type--Veneno::before {
+  background: var(--backVeneno);
+  color: var(--white);
+}
+
+.card-type--Fuego {
+  background: var(--backElectrico);
+  color: var(--white);
+  border: 1px solid var(--typeElectrico);
+}
+
+.card-type--Fuego::before {
+  background: var(--backFuego);
+  color: var(--white);
+}
+
+.card-type--Volador {
+  background: var(--backVolador);
+  color: var(--secondaryColor);
+  border: 1px solid var(--typeVolador);
+}
+
+.card-type--Agua {
+  background: var(--backAgua);
+  color: var(--secondaryColor);
+  border: 1px solid var(--typeNormal);
+}
+
+.card-type--Agua::before {
+  background: var(--backAgua);
+  color: var(--white);
+}
+
+.card-type--Bicho {
+  background: var(--typeElectrico);
+  color: var(--secondaryColor);
+  border: 1px solid var(--backElectrico);
+}
+
+.card-type--Bicho::before {
+  background: var(--backBicho);
+  color: var(--white);
+}
+
+.card-type--Hielo {
+  background: var(--backHielo);
+  color: var(--secondaryColor);
+  border: 1px solid var(--typeHielo);
+}
+
+.card-type--Psíquico {
+  background: var(--backPsiquico);
+  color: var(--white);
+  border: 1px solid var(--typePsiquico);
+}
+
+.card-type--Tierra {
+  background: var(--typeElectrico);
+  color: var(--white);
+  border: 1px solid var(--backElectrico);
+}
+
+.card-type--Tierra::before {
+  background: var(backTierra);
+  color: var(--white);
+}
+
+.card-type--Roca {
+  background: var(--backRoca);
+  color: var(--white);
+  border: 1px solid var(--typeRoca);
+}
+
+.card-type--Normal {
+  background: var(--yellowPoke);
+  border: 1px solid var(--typeElectrico);
+  z-index: 2;
+}
+
+.card-type--Normal::before {
+  background: var(--backNormal);
+  color: var(--white);
+}
+
+.card-type--Lucha {
+  background: var(--backLucha);
+  color: var(--white);
+  border: 1px solid var(--typeLucha);
+}
+
+.myCards__container__list__item-imgContainer--Eléctrico {
+  background: var(--imgBackElectrico);
+}
+
+.myCards__container__list__item-imgContainer--Tierra {
+  background: var(--imgBackTierra);
+}
+
+.myCards__container__list__item-imgContainer--Normal {
+  background: var(--imgBackNormal);
+}
+
+.myCards__container__list__item-imgContainer--Planta {
+  background: var(--imgBackPlanta);
+}
+
+.myCards__container__list__item-imgContainer--Fuego {
+  background: var(--imgBackFuego);
+}
+
+.myCards__container__list__item-imgContainer--Agua {
+  background: var(--imgBackAgua);
+}
+
+.myCards__container__list__item-imgContainer--Bicho {
+  background: var(--imgBackBicho);
+}
+
+.myCards__container__list__item-imgContainer--Veneno {
+  background: var(--imgBackVeneno);
+}

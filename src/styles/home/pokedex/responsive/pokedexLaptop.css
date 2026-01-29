@@ -1,0 +1,13 @@
+@media (max-width: 1540px) {
+  .pokedex__pokemons__selected-info-data01 {
+    margin-bottom: 1.5rem;
+  }
+
+  .pokedex__pokemons__selected-info-imageContainer {
+    width: 50%;
+  }
+
+  .pokedex__pokemons__list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

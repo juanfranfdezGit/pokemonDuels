@@ -1,0 +1,56 @@
+.upload {
+  height: 100vh;
+  padding-bottom: 35vh;
+  background: url(/public/assets/images/backGameMenu.png);
+  background-position: center;
+  background-size: cover;
+}
+
+.upload__form {
+  background: var(--white);
+  padding: 3rem 4rem;
+  border-radius: 15px;
+  box-shadow: 0 0 15px var(--secondaryColor);
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.upload__dropzone {
+  border: 3px dashed var(--bluePoke);
+  border-radius: 8px;
+  padding: 4rem 4rem 3rem 4rem;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+.upload__dropzone.dragging {
+  background-color: var(--white);
+}
+
+.upload__button {
+  display: inline-block;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--white);
+  margin-top: 1rem;
+  padding: 8px 15px;
+  background-color: var(--bluePoke);
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0 0 5px var(--secondaryColor);
+}
+
+.upload__form p {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--secondaryColor);
+  margin-top: 2rem;
+}
+
+.upload__form--upload input {
+  background: var(--whitePure);
+  box-shadow: 0 0 5px var(--secondaryColor);
+  padding: 1rem 2rem;
+  border-radius: 8px;
+}

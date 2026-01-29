@@ -10,7 +10,7 @@ export default function Page404() {
 
     return (
         <>
-            <div className="page404">
+            <div className="page404 flex">
                 <div>
                     <img className="page404__img" src="/assets/images/page404.png" alt="dective pikachu" />
                 </div>

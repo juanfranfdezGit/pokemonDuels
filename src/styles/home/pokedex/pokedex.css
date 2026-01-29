@@ -1,0 +1,185 @@
+@import url("./pokedexTypes.css");
+@import url("./responsive/pokedexLaptop.css");
+
+.pokedex {
+  flex-direction: column;
+}
+
+.pokedex__pokemons {
+  width: 100vw;
+  align-items: flex-start;
+  height: 90vh;
+  overflow-y: scroll;
+  position: relative;
+}
+
+.pokedex__pokemons__selected {
+  width: 55%;
+  position: fixed;
+  left: -1vw;
+  top: 0;
+  height: 100vh;
+}
+
+.pokedex__pokemons__selected-info {
+  flex-direction: column;
+  width: 95%;
+  height: 90%;
+  margin: 10% 0 0 0;
+}
+
+.pokedex__pokemons__selected-info-data01 {
+  gap: 1rem;
+}
+
+.pokedex__pokemons__selected-info--id,
+.pokedex__pokemons__selected-info--name {
+  font-weight: 700;
+  font-size: 2rem;
+  color: var(--secondaryColor);
+}
+
+.pokedex__pokemons__selected-info--id {
+  color: var(--grey);
+}
+
+.pokedex__pokemons__selected-info-data02 {
+  gap: 2rem;
+  height: 50%;
+  width: 100%;
+}
+
+.pokedex__pokemons__selected-info-imageContainer {
+  width: 70%;
+  height: 100%;
+  padding: 2rem;
+}
+
+.pokedex__pokemons__selected-info-imageContainer-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: drop-shadow(0 5px 5px var(--secondaryColor));
+}
+
+.pokedex__pokemons__selected-info-dataTable {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  width: 60%;
+  background: var(--bluePoke);
+  padding: 2rem;
+  border-radius: 5px;
+  border: 1px solid var(--whiteOpacity);
+  box-shadow: 0 0 5px var(--secondaryColor);
+}
+
+.pokedex__pokemons__selected-info--descriptionContainer {
+  grid-column: span 2;
+}
+
+.pokedex__pokemons__selected-info--description {
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--white);
+  line-height: 1.2rem;
+}
+
+.pokedex__pokemons__selected-info--label {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--white);
+  margin-bottom: 4px;
+}
+
+.pokedex__pokemons__selected-info--data {
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: var(--white);
+}
+
+.pokedex__pokemons__selected-info--data.pokedex__pokemons__selected-info--data-move {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.pokedex__pokemons__selected-info--data.pokedex__pokemons__selected-info--data-move:hover {
+  cursor: pointer;
+}
+
+.pokedex__pokemons__selected-info--data.pokedex__pokemons__selected-info--data-move
+  span {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--bluePoke);
+  width: 12px;
+  height: 12px;
+  padding: 8px;
+  background: var(--white);
+  border-radius: 50%;
+  position: relative;
+  top: 2px;
+}
+
+.pokedex__pokemons__selected-info-data03 {
+  width: 100%;
+  gap: 100px;
+  margin-top: 2rem;
+}
+
+.pokedex-type-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--secondaryColor);
+}
+
+.pokedex__pokemons__list {
+  width: 50%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-left: 55%;
+  padding: 5vh 1vw;
+  background: var(--whiteOpacity);
+}
+
+.pokedex__pokemons__list__item {
+  width: 100%;
+  height: 100%;
+  padding: 2rem;
+  transition: all 0.5s;
+  border-radius: 5px;
+}
+
+.pokedex__pokemons__list__item:hover {
+  cursor: pointer;
+  background: var(--greyLight);
+  border: var(--whiteOpacity);
+  box-shadow: 0 0 5px var(--secondaryColor);
+}
+
+.pokedex__pokemons__list__item-imgContainer {
+  width: 100%;
+  height: 60%;
+}
+
+.pokedex__pokemons__list__item-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: drop-shadow(0 5px 5px var(--secondaryColor));
+}
+
+.pokedex__pokemons__list__item-id {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--grey);
+  margin-top: 1rem;
+}
+
+.pokedex__pokemons__list__item-name {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--secondaryColor);
+}

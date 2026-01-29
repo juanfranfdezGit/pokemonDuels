@@ -65,10 +65,10 @@ function NewUser() {
         <>
             <Header></Header>
 
-            <div className='formContainer'>
-                <form onSubmit={handleSubmit} action="post" className='form'>
+            <div className='formContainer flex'>
+                <form onSubmit={handleSubmit} action="post" className='form flex'>
                     <div className='form__item'>
-                        <div className='form__item__imgContainer'>
+                        <div className='form__item__imgContainer flex'>
                             <input
                                 className={`form__item__imgContainer-input ${selectedImage === "user01" ? "selected" : ""}`}
                                 checked={selectedImage === "user01"}
@@ -81,7 +81,7 @@ function NewUser() {
                         </div>
                         <div className='form__item__imgContainer'>
                             <input
-                                className={`form__item__imgContainer-input ${selectedImage === "user02" ? "selected" : ""}`}
+                                className={`form__item__imgContainer-input flex ${selectedImage === "user02" ? "selected" : ""}`}
                                 checked={selectedImage === "user02"}
                                 type="radio"
                                 id="user02"

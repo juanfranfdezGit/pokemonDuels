@@ -5,7 +5,7 @@ function Help() {
   return (
     <>
       <Header />
-      <section className="help">
+      <section className="help flex">
         <h1 className="help__title">Guía de uso de la App</h1>
         
         <h2 className="help__index primary">Indice</h2>

@@ -1,0 +1,111 @@
+@import url("./responsive/headerLaptop.css");
+
+.header {
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  height: 10vh;
+  background: var(--bluePoke);
+  padding: 2rem;
+  position: relative;
+  border-bottom: 4px solid var(--bluePokeDark);
+  box-shadow: 0 0 15px var(--secondaryColor);
+  z-index: 20;
+}
+
+.back__button {
+  background: none;
+  font-size: 1.7rem;
+  font-weight: 500;
+  color: var(--white);
+  gap: 8px;
+  position: absolute;
+  left: 2rem;
+}
+
+.back__button img {
+  width: 32px;
+}
+
+.back__button:hover {
+  cursor: pointer;
+  transform: scale(1.02);
+}
+
+.pages__title {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: var(--white);
+  position: absolute;
+}
+
+.header__user {
+  gap: 12px;
+  margin-left: auto;
+}
+
+.pokecuarto {
+  width: 14px;
+  filter: invert(1);
+  margin-left: -10px;
+}
+
+.header__user__money {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--white);
+}
+
+.header__user__profImg {
+  width: 70px;
+  height: 70px;
+  overflow: hidden;
+  border-radius: 50%;
+  box-shadow: 0 0 8px var(--secondaryColor);
+  background: var(--white);
+}
+
+.header__user__profImg:hover {
+  cursor: pointer;
+}
+
+.header__user__profImg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+}
+
+.header__user__profImg-overlay {
+  position: absolute;
+  transition: all 1s;
+  top: -50px;
+  right: 30px;
+  gap: 8px;
+  background: var(--bluePoke);
+  padding: 8px 2rem;
+  border-radius: 15px;
+  box-shadow: 0 0 8px var(--secondaryColor);
+  opacity: 0;
+}
+
+.header__user__profImg-overlay p {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--white);
+}
+
+.header__user__profImg-overlay img {
+  width: 32px;
+}
+
+.header__user__profImg-overlay:hover {
+  cursor: pointer;
+}
+
+.header__user__profImg-overlay.active {
+  position: absolute;
+  transition: all 0.5s;
+  top: 120px;
+  opacity: 1;
+}

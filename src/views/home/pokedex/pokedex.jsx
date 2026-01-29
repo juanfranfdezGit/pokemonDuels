@@ -23,19 +23,19 @@ function Pokedex() {
 
     return (
         <>
-            <section className="pokedex">
+            <section className="pokedex flex">
                 <Header></Header>
 
-                <div className="pokedex__pokemons">
+                <div className="pokedex__pokemons flex">
                     <div className="pokedex__pokemons__selected">
                         {selectedPokemon ? (
-                            <div className="pokedex__pokemons__selected-info">
-                                <div className="pokedex__pokemons__selected-info-data01">
+                            <div className="pokedex__pokemons__selected-info flex">
+                                <div className="pokedex__pokemons__selected-info-data01 flex">
                                     <p className="pokedex__pokemons__selected-info--id">N.º {selectedPokemon.id.toString().padStart(4, '0')}</p>
                                     <p className="pokedex__pokemons__selected-info--name">-</p>
                                     <p className="pokedex__pokemons__selected-info--name">{selectedPokemon.name}</p>
                                 </div>
-                                <div className="pokedex__pokemons__selected-info-data02">
+                                <div className="pokedex__pokemons__selected-info-data02 flex">
                                     <div className="pokedex__pokemons__selected-info-imageContainer">
                                         <img className="pokedex__pokemons__selected-info-imageContainer-img" src={selectedPokemon.image} alt={selectedPokemon.name+` image`} />
                                     </div>
@@ -58,11 +58,11 @@ function Pokedex() {
                                         <div>
                                             <p className="pokedex__pokemons__selected-info--label">Habilidad:</p>
                                             <p className="pokedex__pokemons__selected-info--data 
-                                            pokedex__pokemons__selected-info--data-move">{selectedPokemon.Habilidad} <span>?</span></p>
+                                            pokedex__pokemons__selected-info--data-move">{selectedPokemon.Habilidad} <span className="flex">?</span></p>
                                         </div>         
                                     </div>
                                 </div>
-                                <div className="pokedex__pokemons__selected-info-data03">
+                                <div className="pokedex__pokemons__selected-info-data03 flex">
                                     <div className="pokedex__pokemons__selected-info-typeContainer">
                                         <p className="pokedex-type-title">Tipo:</p>
                                         {selectedPokemon.tipo.map((type, index) => (

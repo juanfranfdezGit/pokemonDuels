@@ -54,8 +54,8 @@ export default function Upload() {
         <>
             <Header></Header>
 
-            <div className="upload">
-                <form action="post" className="upload__form">
+            <div className="upload flex">
+                <form action="post" className="upload__form flex">
                     <div 
                         className={`upload__dropzone ${dragging ? "dragging" : ""}`}
                         onDragOver={handleDragOver}

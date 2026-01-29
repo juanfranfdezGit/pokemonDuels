@@ -1,0 +1,51 @@
+@keyframes appear01 {
+  from {
+    left: 50%;
+    width: 0vw;
+    height: 0vh;
+  }
+  to {
+    left: 29vw;
+    width: 350px;
+    height: 520px;
+  }
+}
+
+@keyframes appear02 {
+  from {
+    left: 50%;
+    width: 0vw;
+    height: 0vh;
+  }
+  to {
+    left: 49vw;
+    width: 350px;
+    height: 520px;
+  }
+}
+
+@keyframes appear03 {
+  from {
+    left: 50%;
+    width: 0vw;
+    height: 0vh;
+  }
+  to {
+    left: 69vw;
+    width: 350px;
+    height: 520px;
+  }
+}
+
+@keyframes appear04 {
+  from {
+    left: 50%;
+    width: 0vw;
+    height: 0vh;
+  }
+  to {
+    left: 89vw;
+    width: 350px;
+    height: 520px;
+  }
+}

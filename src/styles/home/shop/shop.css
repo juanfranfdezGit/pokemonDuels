@@ -1,0 +1,77 @@
+@import url("./openingEnvelops.css");
+@import url("./shopKeyframes.css");
+@import url("./responsive/shopLaptop.css");
+
+.shop {
+  width: 100vw;
+  height: 100vh;
+  background: url(../../../../public/assets/images/shopBack.webp);
+  background-size: cover;
+  background-position: center;
+}
+
+.shop__menu {
+  flex-direction: column;
+  gap: 2rem;
+  transition: all 2s;
+  position: relative;
+}
+
+.shop__menu.allow {
+  bottom: 12vh;
+}
+
+.shop__menu.disallow {
+  bottom: 80vh;
+}
+
+.shop__menu-item {
+  padding: 1.4rem;
+  background: var(--primaryColorOp);
+  border-radius: 40px;
+  transition: all 0.5s;
+  width: 20vw;
+  box-shadow: 0 0 5px var(--secondaryColor);
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--white);
+}
+
+.shop__menu-item:hover {
+  cursor: pointer;
+  background: var(--primaryColor);
+  transform: scale(1.05);
+}
+
+.actionsAllow {
+  position: fixed;
+  z-index: 10;
+  bottom: 4vh;
+  gap: 2rem;
+  transition: all 4s;
+}
+
+.actionsAllow-item {
+  padding: 1.4rem;
+  background: var(--primaryColorOp);
+  border-radius: 40px;
+  transition: all 0.5s;
+  width: 16vw;
+  box-shadow: 0 0 5px var(--secondaryColor);
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--white);
+}
+
+.actionsAllow-item:hover {
+  cursor: pointer;
+  background: var(--primaryColor);
+  transform: scale(1.05);
+}
+
+.actionsDisallow {
+  position: fixed;
+  z-index: 10;
+  bottom: -4vh;
+  gap: 2rem;
+}

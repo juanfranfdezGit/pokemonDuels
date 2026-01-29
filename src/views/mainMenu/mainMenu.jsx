@@ -63,10 +63,10 @@ function Opening() {
           </main>
 
           <section
-            className="mainMenu"
+            className="mainMenu flex"
             style={{ backgroundImage: `url(${background})` }}
           >
-            <div className="mainMenu__container">
+            <div className="mainMenu__container flex">
               <img
                 className="mainMenu__container-logo"
                 src="/assets/images/PokemonLogo.png"
