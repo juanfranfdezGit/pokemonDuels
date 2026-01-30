@@ -72,6 +72,6 @@
 .actionsDisallow {
   position: fixed;
   z-index: 10;
-  bottom: -4vh;
+  bottom: -10vh;
   gap: 2rem;
 }

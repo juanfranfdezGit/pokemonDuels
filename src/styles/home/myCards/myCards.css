@@ -18,6 +18,7 @@
   width: 370px;
   height: 500px;
   border-radius: 12px;
+  overflow: hidden;
   padding: 48px;
   position: relative;
   box-shadow: 0 0 15px var(--secondaryColor);

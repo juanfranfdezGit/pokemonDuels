@@ -67,10 +67,6 @@
   left: -52vw !important;
 }
 
-.envelops__container-img {
-  pointer-events: none;
-}
-
 .shopCards:first-child {
   animation: appear01 1s forwards;
   animation-delay: 1.5s;
