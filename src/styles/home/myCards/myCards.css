@@ -37,7 +37,7 @@
 }
 
 .myCards__container__list__item-nameContainer {
-  justify-content: space-between;
+  justify-content: space-between !important;
   margin-bottom: 20px;
   position: relative;
   z-index: 10;
@@ -135,7 +135,7 @@
 }
 
 .myCards__container__list__item-habilityContainer {
-  justify-content: space-between;
+  justify-content: space-between !important;
   position: relative;
   z-index: 10;
   margin-top: 2rem;
@@ -164,6 +164,9 @@
   background: var(--white);
   border-radius: 50%;
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   top: 2px;
 }
 
@@ -171,6 +174,8 @@
   font-size: 1.15rem;
   font-weight: 700;
   color: var(--secondaryColor);
+  display: flex;
+  gap: .2rem;
 }
 
 .myCards__container__list__item-PH span {

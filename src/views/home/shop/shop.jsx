@@ -87,6 +87,7 @@ function Shop() {
   function startOpening() {
     setOpening(true);
     setSelectedEnvelop([null, null, null, null]);
+    setRandomCards([[], [], [], []]);
   }
 
   return (

@@ -20,7 +20,7 @@
 }
 
 .card-type--Veneno {
-  background: var(--backVeneno);
+  background: var(--backElectrico);
   color: var(--white);
   border: 1px solid var(--typeVeneno);
 }
@@ -48,7 +48,7 @@
 }
 
 .card-type--Agua {
-  background: var(--backAgua);
+  background: var(--backElectrico);
   color: var(--secondaryColor);
   border: 1px solid var(--typeNormal);
 }
@@ -88,7 +88,7 @@
 }
 
 .card-type--Tierra::before {
-  background: var(backTierra);
+  background: var(--backTierra);
   color: var(--white);
 }
 
